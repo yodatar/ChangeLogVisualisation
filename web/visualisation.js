@@ -14,12 +14,12 @@ var bubble = d3.layout.pack()
     .size([diameter, diameter])
     .padding(1.5);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#vis").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
     .attr("class", "bubble");
 
-d3.json("json", function (error, root) {
+d3.json("ajaxGetAllUsers", function (error, root) {
     var node = svg.selectAll(".node")
         .data(bubble.nodes(classes(root))
             .filter(function (d) {return !d.children;}))

@@ -4,13 +4,13 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
     <servlet>
-        <servlet-name>json</servlet-name>
+        <servlet-name>ajaxGetAllUsers</servlet-name>
         <servlet-class>sk.GetAllUsersServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>json</servlet-name>
-        <url-pattern>/json</url-pattern>
+        <servlet-name>ajaxGetAllUsers</servlet-name>
+        <url-pattern>/ajaxGetAllUsers</url-pattern>
     </servlet-mapping>
 
 </web-app>
