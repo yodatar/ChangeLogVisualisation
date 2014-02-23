@@ -19,6 +19,7 @@ var svg = d3.select("#vis").append("svg")
     .attr("height", diameter)
     .attr("class", "bubble");
 
+//d3.json("flare.json", function (error, root) {
 d3.json("ajaxGetAllUsers", function (error, root) {
     var node = svg.selectAll(".node")
         .data(bubble.nodes(classes(root))

@@ -10,9 +10,9 @@ import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
  */
 
 
-public class AstRcsDatabase {
+public class AstRcsDatabaseFactory {
     private IAstRcsWcfSvc iAstRcsWcfSvc;
-    public AstRcsDatabase() {
+    public AstRcsDatabaseFactory() {
         Client client = new Client();
         iAstRcsWcfSvc = client.connection();
     }

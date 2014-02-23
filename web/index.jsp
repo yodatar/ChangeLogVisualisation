@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<h2>Ahoj, Pali!</h2>
+<h2>Ahoj, svet!</h2>
 
 <div id="vis">
     <script src="visualisation.js"></script>

@@ -29,7 +29,7 @@ public class GetAllUsersServlet extends HttpServlet {
     IAstRcsWcfSvc iAstRcsWcfSvc;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        AstRcsDatabase astRcsDatabase = new AstRcsDatabase();
+        AstRcsDatabaseFactory astRcsDatabase = new AstRcsDatabaseFactory();
         iAstRcsWcfSvc = astRcsDatabase.getIAstRcsWcfSvc();
 
         SearchUsersResponse resp = iAstRcsWcfSvc.searchUsers(new SearchUsersRequest());
