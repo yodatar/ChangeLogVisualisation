@@ -1,3 +1,4 @@
+<%@ page import="sk.GetAllUsersServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,8 +15,14 @@
 <body>
 <h2>Ahoj, svet!</h2>
 
-<div id="vis">
-    <script src="visualisation.js"></script>
-</div>
+<%
+    GetAllUsersServlet getIt = new GetAllUsersServlet();
+    getIt.doGet(request,response);
+%>
+
+
+<div id="vis"><script src="visualisation.js"></script></div>
+
+
 </body>
 </html>

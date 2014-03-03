@@ -21,6 +21,7 @@ var svg = d3.select("#vis").append("svg")
 
 //d3.json("flare.json", function (error, root) {
 d3.json("ajaxGetAllUsers", function (error, root) {
+
     var node = svg.selectAll(".node")
         .data(bubble.nodes(classes(root))
             .filter(function (d) {return !d.children;}))
@@ -49,7 +50,6 @@ d3.json("ajaxGetAllUsers", function (error, root) {
         .text(function (d) {
             return d.className.substring(0, d.r / 3);
         });
-
 });
 
 function classes(root) {
@@ -64,6 +64,8 @@ function classes(root) {
 
     recurse(null, root);
     return {children: classes};
+
+
 }
 
 d3.select(self.frameElement).style("height", diameter + "px");
