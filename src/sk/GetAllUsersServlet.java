@@ -2,12 +2,23 @@ package sk;
 
 import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.CodeEntityVersionDto;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.GetChangesetRequest;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.GetChangesetResponse;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.GetCodeEntityContentRequest;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.GetCodeEntityContentResponse;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.GetCodeEntityRequest;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.GetCodeEntityResponse;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.RcsProjectDto;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchChangesetsRequest;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchCodeEntitiesRequest;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchCodeEntitiesResponse;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchFilesRequest;
-import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchFilesResponse;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchFoldersRequest;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchFoldersResponse;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchRcsProjectsRequest;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchRcsProjectsResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -17,6 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,68 +45,103 @@ public class GetAllUsersServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         iAstRcsWcfSvc = new AstRcsDatabaseFactory().getIAstRcsWcfSvc();
         JSONArray list = new JSONArray();
+        Map pairs;
 
+        SearchRcsProjectsRequest projectsRequest = new SearchRcsProjectsRequest();
+        projectsRequest.setPageSize(100);
+        SearchRcsProjectsResponse projectsResponse = iAstRcsWcfSvc.searchRcsProjects(projectsRequest);
+        List<RcsProjectDto> listRcsProjectDto = projectsResponse.getRcsProjects().getValue().getRcsProjectDto();
+        for(RcsProjectDto rcsProjectDto : listRcsProjectDto) {
+            pairs = new LinkedHashMap();
+            pairs.put("<br>name", rcsProjectDto.getUrl().getValue());
+            pairs.put("size",rcsProjectDto.getId());
+            //list.add(pairs);
+        }
+
+        SearchChangesetsRequest changesetsRequest = new SearchChangesetsRequest();
+        changesetsRequest.setRcsProjectId(1);
+        changesetsRequest.setPageSize(100);
+        changesetsRequest.setPageIndex(2);
+        for(ChangesetDto changesetDto : iAstRcsWcfSvc.searchChangesets(changesetsRequest).getChangesets().getValue().getChangesetDto())
+        {
+            pairs = new LinkedHashMap();
+            pairs.put("<br>id",changesetDto.getId());
+            pairs.put("time",changesetDto.getTimeStamp().toGregorianCalendar().getTime());
+           // list.add(pairs);
+        }
 
         /////////////////////////
         GetChangesetRequest req3 = new GetChangesetRequest();
-        req3.setChangesetId(100);
+        req3.setChangesetId(2203);
         GetChangesetResponse resp3 = iAstRcsWcfSvc.getChangeset(req3);
         ChangesetDto dto = resp3.getChangeset().getValue();
 
-        Map pairs = new LinkedHashMap();
-        pairs.put("name",dto.getCommitter().getValue().getLogin().getValue());
-        pairs.put("size",dto.getId());
-        list.add(pairs);
+        pairs = new LinkedHashMap();
+        pairs.put("commiter",dto.getCommitter().getValue().getLogin().getValue());
+        pairs.put("id",dto.getId());
+        //list.add(pairs);
 
-        ///////////
+        // SearchFiles
         SearchFilesRequest req4 = new SearchFilesRequest();
-        req4.setChangesetId(500);
-        req4.setPageSize(10);
-        SearchFilesResponse resp4 = iAstRcsWcfSvc.searchFiles(req4);
-/*
-        for(FileVersionDto file : resp4.getFileVersions().getValue().getFileVersionDto()) {
+        req4.setChangesetId(2203);
+        req4.setPageSize(5);
+        List<FileVersionDto> listFileVersionDto = iAstRcsWcfSvc.searchFiles(req4).getFileVersions().getValue().getFileVersionDto();
+
+        for(FileVersionDto file : listFileVersionDto ) {
             pairs = new LinkedHashMap();
-            pairs.put("name",file.getUrl().getValue());
-            pairs.put("size", file.getUrl().getValue());
+            pairs.put("<br>FileName",file.getUrl().getValue());
+            pairs.put("change",file.getId());
             list.add(pairs);
         }
-*/
+
+        // SearchFolders
         SearchFoldersRequest req5 = new SearchFoldersRequest();
-        req5.setChangesetId(500);
-        req5.setPageSize(50);
+        req5.setChangesetId(2203);
+        req5.setPageSize(10);
         SearchFoldersResponse resp5 = iAstRcsWcfSvc.searchFolders(req5);
 
         for(String folder : resp5.getFolders().getValue().getString()) {
             pairs = new LinkedHashMap();
-            pairs.put("<br>name",folder);
+            pairs.put("<br>Folder",folder);
             pairs.put("size","");
             list.add(pairs);
         }
 
-        /*
-        ObjectFactory objectFactory = new ObjectFactory();
-        GetFilesByGitIdentifiersRequest req2 = new GetFilesByGitIdentifiersRequest();
-        ArrayOfFileGitIdentifierDto gitId = new ArrayOfFileGitIdentifierDto();
-        FileGitIdentifierDto asdf = new FileGitIdentifierDto();
-        asdf.setChangesetIdInRcs(dto.getIdInRcs());
-        gitId.getFileGitIdentifierDto().add(asdf);
-        GetFilesByGitIdentifiers identifiers = objectFactory.createGetFilesByGitIdentifiers();
+        // SearchCodeEntities
+        MyObjectFactory myObjectFactory = new MyObjectFactory();
+        org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ObjectFactory gratexObjFact = new org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ObjectFactory();
+        SearchCodeEntitiesRequest searchCodeEntitiesRequest = gratexObjFact.createSearchCodeEntitiesRequest();
+        searchCodeEntitiesRequest.setFileVersionId(myObjectFactory.createFileVersionIdInteger(2203));
 
-        req2.setIdentifiers();
-
-        JAXBElement<GetFilesByGitIdentifiersRequest> request1 = objectFactory.createGetFilesByGitIdentifiersRequest(req2);
-
-
-        GetFilesByGitIdentifiersResponse resp2 = iAstRcsWcfSvc.getFilesByGitIdentifiers(request1.getValue());
-        ArrayOfFileVersionDto listDto2 = resp2.getVersions().getValue();
-
-        for (FileVersionDto fileVersionList : listDto2.getFileVersionDto()) {
+        SearchCodeEntitiesResponse searchCodeEntitiesResponse = iAstRcsWcfSvc.searchCodeEntities(searchCodeEntitiesRequest);
+        List<CodeEntityVersionDto> listCodeEntityVersionDto = searchCodeEntitiesResponse.getCodeEntityVersions().getValue().getCodeEntityVersionDto();
+        for(CodeEntityVersionDto codeEntityVersionDto : listCodeEntityVersionDto ){
             pairs = new LinkedHashMap();
-            pairs.put("name",fileVersionList.getUrl().getValue());
-            pairs.put("size",fileVersionList.getId());
+            pairs.put("<br>EntityType",codeEntityVersionDto.getDeclaration().getValue().getModifier().getValue());
+            pairs.put("id",codeEntityVersionDto.getDeclaration().getValue().getName().getValue());
             list.add(pairs);
         }
-*/
+
+
+
+        // GetCodeEntities
+        GetCodeEntityRequest getCodeEntityRequest = gratexObjFact.createGetCodeEntityRequest();
+        getCodeEntityRequest.setVersionId(25416);
+        GetCodeEntityResponse getCodeEntityResponse = iAstRcsWcfSvc.getCodeEntity(getCodeEntityRequest);
+        pairs = new LinkedHashMap();
+        pairs.put("<br>ENTITAtype",getCodeEntityResponse.getVersion().getValue().getEntityType().value());
+        pairs.put("ENTITA",getCodeEntityResponse.getVersion().getValue().getDeclaration().getValue().getName().getValue());
+        list.add(pairs);
+
+        // GetCodeEntities
+        GetCodeEntityContentRequest getCodeEntityContentRequest = gratexObjFact.createGetCodeEntityContentRequest();
+        getCodeEntityContentRequest.setVersionId(25416);
+        GetCodeEntityContentResponse getCodeEntityContentResponse = iAstRcsWcfSvc.getCodeEntityContent(getCodeEntityContentRequest);
+        pairs = new LinkedHashMap();
+        pairs.put("<br>ENTITAtypeCONTENT",getCodeEntityContentResponse.getContent().getValue());
+        pairs.put("ENTITA_CONTENT",getCodeEntityContentResponse.getContent().getName().toString());
+        list.add(pairs);
+
 
 
         JSONObject obj = new JSONObject();
