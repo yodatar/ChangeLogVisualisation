@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="074b9915-dbaa-4d9a-9abf-c6845a54b763" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/MyObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/GetAllUsersServlet.java" afterPath="$PROJECT_DIR$/src/sk/GetAllUsersServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ChangeLogVisualisation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393974995578" ignored="false" />
+    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394029148839" ignored="false" />
     <file path="/GetAllUsersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393981869093" ignored="false" />
     <file path="/visualisation.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393180082495" ignored="false" />
     <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393181153472" ignored="false" />
@@ -81,7 +79,7 @@
       <file leaf-file-name="GetAllUsersServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sk/GetAllUsersServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="32" selection-start="7505" selection-end="7505" vertical-scroll-proportion="1.1478261">
+            <state line="134" column="0" selection-start="6833" selection-end="6833" vertical-scroll-proportion="0.8275362">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -660,7 +658,11 @@
       <created>1393839244758</created>
       <updated>1393839244758</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Search/Get Entities Request">
+      <created>1394029163797</created>
+      <updated>1394029163797</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -765,7 +767,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="files, folders, changeSets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search/Get Entities Request" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -783,6 +785,7 @@
     <MESSAGE value="some changes" />
     <MESSAGE value="review 2014" />
     <MESSAGE value="files, folders, changeSets" />
+    <MESSAGE value="Search/Get Entities Request" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -897,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/GetAllUsersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="32" selection-start="7505" selection-end="7505" vertical-scroll-proportion="1.1478261">
+        <state line="134" column="0" selection-start="6833" selection-end="6833" vertical-scroll-proportion="0.8275362">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
