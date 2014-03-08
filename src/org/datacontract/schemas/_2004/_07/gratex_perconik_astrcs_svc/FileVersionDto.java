@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlType;
+import java.util.Comparator;
 
 
 /**
@@ -31,12 +32,28 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "FileVersionDto", propOrder = {
     "url"
 })
-public class FileVersionDto
-    extends EntityVersionDto
+public class FileVersionDto extends EntityVersionDto implements Comparable<FileVersionDto>
 {
 
     @XmlElementRef(name = "Url", namespace = "http://schemas.datacontract.org/2004/07/Gratex.PerConIK.AstRcs.Svc.Interfaces", type = JAXBElement.class, required = false)
     protected JAXBElement<String> url;
+
+
+    /////////////////////////
+    // due to sorting FileVersionDto by its URL
+    public int compareTo(FileVersionDto f) {
+        return Comparators.URL.compare(this,f);
+    }
+
+    public static class Comparators {
+        public static Comparator<FileVersionDto> URL = new Comparator<FileVersionDto>() {
+            @Override
+            public int compare(FileVersionDto o1, FileVersionDto o2) {
+                return o1.getUrl().getValue().compareTo(o2.getUrl().getValue());
+            }
+        };
+    }
+    /////////////////////////
 
     /**
      * Gets the value of the url property.
@@ -46,6 +63,8 @@ public class FileVersionDto
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
+
+
     public JAXBElement<String> getUrl() {
         return url;
     }

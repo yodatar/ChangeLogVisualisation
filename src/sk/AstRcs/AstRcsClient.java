@@ -1,4 +1,4 @@
-package sk;
+package sk.AstRcs;
 
 import com.gratex.perconik.astrcs.iastrcswcfsvc.AstRcsWcfSvc;
 import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
@@ -13,7 +13,7 @@ import java.net.PasswordAuthentication;
  * Time: 0:37
  */
 
-public class Client {
+public class AstRcsClient {
 
     private final static String USERNAME = "Steltecia\\PublicServices";
     private final static String PASSWORD = "FiitSvc123.";

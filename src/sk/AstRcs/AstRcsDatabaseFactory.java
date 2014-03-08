@@ -1,4 +1,4 @@
-package sk;
+package sk.AstRcs;
 
 import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 
@@ -13,8 +13,8 @@ import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 public class AstRcsDatabaseFactory {
     private IAstRcsWcfSvc iAstRcsWcfSvc;
     public AstRcsDatabaseFactory() {
-        Client client = new Client();
-        iAstRcsWcfSvc = client.connection();
+        AstRcsClient astRcsClient = new AstRcsClient();
+        iAstRcsWcfSvc = astRcsClient.connection();
     }
 
     public IAstRcsWcfSvc getIAstRcsWcfSvc() {

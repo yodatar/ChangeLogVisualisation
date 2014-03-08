@@ -1,4 +1,4 @@
-package sk;
+package sk.AjaxRequestServlet;
 
 import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
@@ -21,6 +21,8 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchRcsPr
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchRcsProjectsResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import sk.AstRcs.AstRcsDatabaseFactory;
+import sk.AstRcs.MyObjectFactory;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,7 +41,7 @@ import java.util.Map;
  */
 
 
-public class GetAllUsersServlet extends HttpServlet {
+public class GetServlet extends HttpServlet {
    IAstRcsWcfSvc iAstRcsWcfSvc;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -148,10 +150,11 @@ public class GetAllUsersServlet extends HttpServlet {
         obj.put("name", "name");
         obj.put("children", list);
 
+
         System.out.println(obj);
 
         //response.setContentType("application/json");
-        PrintWriter out=response.getWriter();
+        PrintWriter out = response.getWriter();
         out.print(obj);
     }
 }
