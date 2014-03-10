@@ -7,7 +7,7 @@
  */
 
 var w = 1000;
-var h = 650;
+var h = 480;
 var x = d3.scale.linear().range([ 0, w ]);
 var y = d3.scale.linear().range([ 0, h ]);
 

@@ -33,7 +33,7 @@ public class BusinessLogic {
 
         // Search Changesets
         SearchChangesetsRequest changesetsRequest = new SearchChangesetsRequest();
-        changesetsRequest.setRcsProjectId(1);
+        changesetsRequest.setRcsProjectId(2);
         changesetsRequest.setPageSize(100);
         SearchChangesetsResponse searchChangesetsResponse = iAstRcsWcfSvc.searchChangesets(changesetsRequest);
         int pageCount = searchChangesetsResponse.getPageCount();
@@ -62,13 +62,15 @@ public class BusinessLogic {
         iAstRcsWcfSvc = new AstRcsDatabaseFactory().getIAstRcsWcfSvc();
         List<FileVersionDto> listFileVersionDto = new LinkedList<>();
 
+
+
+
         // SearchFiles
         SearchFilesRequest searchFilesRequest = new SearchFilesRequest();
         searchFilesRequest.setChangesetId(2203);
         searchFilesRequest.setPageSize(100);
         SearchFilesResponse searchFilesResponse = iAstRcsWcfSvc.searchFiles(searchFilesRequest);
         int pageCount = searchFilesResponse.getPageCount();
-
 
         if(pageCount > 1) {
             for(int i=0;i<pageCount;i++) {
