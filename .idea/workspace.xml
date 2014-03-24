@@ -2,31 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="074b9915-dbaa-4d9a-9abf-c6845a54b763" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/AppServletContextListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetAllChangesetsServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/ProjectsEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/SetResourcesServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/setResources.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/slider.js" />
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\src\sk\AjaxRequestServlet\SetProjectServlet.java" afterPath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetProjectsServlet.java" />
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\src\sk\BusinessLogic\BusinessLogic.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseRequestHandlers.java" />
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\src\sk\JsonConverter\PathTreeCreator.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\src\sk\JsonConverter\TransformToJson.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/TransformToJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChangeLogVisualisation.iml" afterPath="$PROJECT_DIR$/ChangeLogVisualisation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetAllUsersServlet.java" afterPath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetAllUsersServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetProjectTreeServlet.java" afterPath="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetProjectTreeServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/visualisation3.js" afterPath="$PROJECT_DIR$/web/visualisation3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ChangeLogVisualisation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395674960920" ignored="false" />
+    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395692480447" ignored="false" />
     <file path="/GetAllUsersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394045335870" ignored="false" />
     <file path="/visualisation.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393180082495" ignored="false" />
     <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394752939902" ignored="false" />
@@ -165,10 +145,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AstRcsClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AstRcsClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sk/AstRcs/AstRcsClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="1" selection-start="986" selection-end="986" vertical-scroll-proportion="0.56856185">
+            <state line="34" column="1" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityDto.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gratex/perconik/astrcs/iactivitysvc/ActivityDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="24" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.26532888">
               <folding />
             </state>
           </provider>
@@ -197,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/BusinessLogic.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java" />
         <option value="$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetAllChangesetsPerProject.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseRequestHandlers.java" />
@@ -213,6 +201,7 @@
         <option value="$PROJECT_DIR$/web/js/setResources.js" />
         <option value="$PROJECT_DIR$/web/visualisation3.js" />
         <option value="$PROJECT_DIR$/src/sk/AstRcs/AstRcsClient.java" />
+        <option value="$PROJECT_DIR$/src/com/gratex/perconik/astrcs/iactivitysvc/ActivityDto.java" />
       </list>
     </option>
   </component>
@@ -323,7 +312,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="wsdl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsdl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gratex" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,10 +351,6 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -355,29 +362,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,11 +380,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessLogic" />
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -417,73 +398,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JsonConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AstRcs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AjaxRequestServlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="astrcs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,11 +428,11 @@
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -523,11 +442,11 @@
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\src\com\gratex\perconik\astrcs" />
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web" />
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\WEB-INF" />
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js" />
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\src\sk" />
-      <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\res" />
     </key>
   </component>
   <component name="RunManager" selected="Glassfish Server.glassfish">
@@ -558,19 +477,6 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -597,6 +503,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -790,7 +709,11 @@
       <created>1394471550302</created>
       <updated>1394471550302</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="before second wsdl">
+      <created>1395683722306</created>
+      <updated>1395683722306</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -815,7 +738,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-320" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33959043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -835,7 +758,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24583334" sideWeight="0.716143" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17447917" sideWeight="0.716143" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.283857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -895,7 +818,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="real page look" />
+    <option name="LAST_COMMIT_MESSAGE" value="before second wsdl" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -916,6 +839,7 @@
     <MESSAGE value="Search/Get Entities Request" />
     <MESSAGE value="BootStrap added" />
     <MESSAGE value="real page look" />
+    <MESSAGE value="before second wsdl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,64 +851,45 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/TransformToJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="13" selection-start="2261" selection-end="2261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="43" column="13" selection-start="2261" selection-end="2261" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/AppServletContextListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="32" selection-start="590" selection-end="590" vertical-scroll-proportion="0.43589744">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="32" selection-start="590" selection-end="590" vertical-scroll-proportion="0.43589744" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="35" selection-start="1956" selection-end="1969" vertical-scroll-proportion="0.6421053">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetAllUsersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="715" selection-end="787" vertical-scroll-proportion="0.694">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="715" selection-end="787" vertical-scroll-proportion="0.694" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetProjectTreeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="78" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="78" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetProjectsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/img/loading.jpg">
@@ -994,25 +899,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="4446" selection-end="4446" vertical-scroll-proportion="3.1561182">
-          <folding />
-        </state>
+        <state line="106" column="0" selection-start="4446" selection-end="4446" vertical-scroll-proportion="3.1561182" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AjaxRequestServlet/SetResourcesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.68">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="26" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.68" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseRequestHandlers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="3793" selection-end="3793" vertical-scroll-proportion="0.034">
-          <folding />
-        </state>
+        <state line="88" column="0" selection-start="3793" selection-end="3793" vertical-scroll-proportion="0.034" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/slider.js">
@@ -1022,9 +919,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/setResources.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AjaxRequestServlet/GetAllChangesetsServlet.java">
@@ -1043,7 +938,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/AstRcs/AstRcsClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="1" selection-start="986" selection-end="986" vertical-scroll-proportion="0.56856185">
+        <state line="34" column="1" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gratex/perconik/astrcs/iactivitysvc/ActivityDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="24" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.26532888">
           <folding />
         </state>
       </provider>
