@@ -3,14 +3,54 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
+    <listener>
+        <listener-class>sk.BusinessLogic.AppServletContextListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>ajaxGetAllUsers</servlet-name>
-        <servlet-class>sk.GetAllUsersServlet</servlet-class>
+        <servlet-class>sk.AjaxRequestServlet.GetAllUsersServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>ajaxGetAllUsers</servlet-name>
         <url-pattern>/ajaxGetAllUsers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ajaxGetProjectTree</servlet-name>
+        <servlet-class>sk.AjaxRequestServlet.GetProjectTreeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ajaxGetProjectTree</servlet-name>
+        <url-pattern>/ajaxGetProjectTree</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ajaxGetAllChangesets</servlet-name>
+        <servlet-class>sk.AjaxRequestServlet.GetAllChangesetsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ajaxGetAllChangesets</servlet-name>
+        <url-pattern>/ajaxGetAllChangesets</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getProjects</servlet-name>
+        <servlet-class>sk.AjaxRequestServlet.GetProjectsServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getProjects</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>setResouerces</servlet-name>
+        <servlet-class>sk.AjaxRequestServlet.SetResourcesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>setResouerces</servlet-name>
+        <url-pattern>/setResouerces</url-pattern>
     </servlet-mapping>
 
 </web-app>

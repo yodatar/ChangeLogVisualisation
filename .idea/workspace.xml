@@ -6,7 +6,7 @@
     </list>
     <ignored path="ChangeLogVisualisation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395692826633" ignored="false" />
+    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395692902244" ignored="false" />
     <file path="/GetAllUsersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394045335870" ignored="false" />
     <file path="/visualisation.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393180082495" ignored="false" />
     <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394752939902" ignored="false" />
@@ -171,6 +171,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="pali" />
+      </list>
+    </option>
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
@@ -721,7 +726,11 @@
       <created>1395692830374</created>
       <updated>1395692830374</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="after second wsdl">
+      <created>1395692924480</created>
+      <updated>1395692924480</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -790,7 +799,7 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -826,11 +835,11 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="before second wsdl" />
+    <option name="LAST_COMMIT_MESSAGE" value="after second wsdl" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
@@ -848,6 +857,7 @@
     <MESSAGE value="BootStrap added" />
     <MESSAGE value="real page look" />
     <MESSAGE value="before second wsdl" />
+    <MESSAGE value="after second wsdl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
