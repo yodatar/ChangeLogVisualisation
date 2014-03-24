@@ -1,6 +1,6 @@
 package sk.AjaxRequestServlet;
 
-import sk.BusinessLogic.BusinessLogic;
+import sk.BusinessLogic.DatabaseRequestHandlers;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +20,8 @@ import java.util.List;
 public class GetAllUsersServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        BusinessLogic businessLogic = new BusinessLogic();
-        List<String> list = businessLogic.getAllUsers(request.getSession());
+        DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
+        List<String> list = databaseRequestHandlers.getAllUsers(request.getSession());
         PrintWriter out = response.getWriter();
         out.print(list);
     }

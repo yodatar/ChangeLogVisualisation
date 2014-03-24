@@ -1,9 +1,10 @@
 package sk.AjaxRequestServlet;
 
-import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
-import org.json.simple.JSONObject;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
+import org.json.simple.JSONArray;
 import sk.BusinessLogic.DatabaseRequestHandlers;
 import sk.BusinessLogic.JsonConverter.TransformToJson;
+import sk.BusinessLogic.Resources;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,25 +16,23 @@ import java.util.List;
 /**
  * Created with IntelliJ IDEA.
  * User: pipo
- * Date: 5.3.2014
- * Time: 16:48
+ * Date: 7.12.2013
+ * Time: 20:16
  */
 
 
-public class GetProjectTreeServlet extends HttpServlet {
-
-    JSONObject jsonObject = new JSONObject();
+public class GetAllChangesetsServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
         DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
-        List<FileVersionDto> fileVersionDtos = databaseRequestHandlers.getProjectTree(request.getSession());
+        List<ChangesetDto> changesetDtoList = databaseRequestHandlers.getChangesetList(Resources.getInstance().getProjectId());
 
         TransformToJson transformToJson = new TransformToJson();
-        jsonObject = transformToJson.projectTreeToJson(fileVersionDtos);
+        JSONArray jsonArray = transformToJson.changesetListToJson(changesetDtoList);
+        //JSONObject jsonObject = transformToJson.changesetListToJson(changesetDtoList);
 
-        response.setContentType("application/json");
+        //response.setContentType("application/json");
         PrintWriter out = response.getWriter();
-        out.print(jsonObject);
+        out.print(jsonArray);
     }
 }

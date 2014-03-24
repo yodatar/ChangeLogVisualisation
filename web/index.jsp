@@ -1,6 +1,6 @@
-<%@ page import="sk.AjaxRequestServlet.GetAllUsersServlet" %>
-<%@ page import="sk.AjaxRequestServlet.GetProjectTreeServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix ="c" %>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -12,8 +12,8 @@
 
     <title>Bakalaris</title>
 
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -22,14 +22,18 @@
     <![endif]-->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/docs.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
     <script src="js/d3.v3.min.js"></script>
     <script src="js/d3.v3.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/setResources.js"></script>
+
 
 </head>
-
 <body>
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -72,16 +76,26 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li>
-                    <select class="form-control">
-<%
 
-%>>
-                    </select>
-                </li>
+                    <li class="active"><a href="#">Overview</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li>
+                            Projects
+                            <select class="form-control" id="projectSelect">
+                                <c:forEach var="projects" items="${allProjects}">
+                                    <option value="${projects.id}">${projects.name}</option>
+                                </c:forEach>
+                            </select>
+
+                            <br>
+
+                            Changesets
+                            <input type="text" id="amount" value="1" class="form-control" /><br>
+                            <div id="slider-range"></div><br>
+                            <input type="submit" value="filter" class="form-control" onclick="setResources()"/>
+
+                    </li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

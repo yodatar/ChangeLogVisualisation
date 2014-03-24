@@ -1,6 +1,8 @@
-package sk.JsonConverter;
+package sk.BusinessLogic.JsonConverter;
 
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.Collections;
@@ -32,7 +34,19 @@ public class TransformToJson  {
         return pathTreeCreator.getJsonObject();
     }
 
+    public JSONArray changesetListToJson(List<ChangesetDto> changesetDtoList) {
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
 
+        for (ChangesetDto changesetDto : changesetDtoList)
+        {
+            jsonArray.add(changesetDto.getId());
+        }
+
+        jsonObject.put("id", jsonArray);
+
+        return jsonArray;
+    }
 
 }
 
