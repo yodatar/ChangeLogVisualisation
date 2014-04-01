@@ -13,15 +13,16 @@ import javax.servlet.ServletContextListener;
 
 public class AppServletContextListener implements ServletContextListener {
 
-    @Override
-    public void contextDestroyed(ServletContextEvent arg0) {
-        System.out.println("ServletContextListener destroyed");
-    }
+	@Override
+	public void contextDestroyed(ServletContextEvent arg0) {
+		System.out.println("ServletContextListener destroyed");
+	}
 
-    @Override
-    public void contextInitialized(ServletContextEvent arg0) {
-        Resources resources = Resources.getInstance();
-        resources.setProjectId(1);
-        resources.setChangesetId(1);
-    }
+	@Override
+	public void contextInitialized(ServletContextEvent arg0) {
+		Resources resources = Resources.getInstance();
+		resources.setProjectId(1);
+		resources.setChangesetFromId(2);
+		resources.setChangesetToId(2);
+	}
 }

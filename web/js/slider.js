@@ -5,29 +5,53 @@
  * Time: 14:30
  * To change this template use File | Settings | File Templates.
  */
-var valMap=[],
-    maxi,
-    mini;
 
-$(function() {
+function slider() {
+	var idArray = new Array(),
+		dateArray = new Array();
 
+	var e = document.getElementById("projectSelect");
+	var projectId = e.options[e.selectedIndex].value;
 
-    $.getJSON( "ajaxGetAllChangesets", {
-        tags: "changesets",
-        tagmode: "any",
-        format: "json"
-    })
-        .done(function( data ) {
-            valMap = data.slice();
-            $("#slider-range").slider('option','max', valMap.length -1);
-        });
+	//alert(projectId);
 
+	$.getJSON("ajaxGetAllChangesets", {
+		dataType: 'JSON',
+		data: projectId
+	})
+		.done(function (data) {
+			var i = 0;
+			$.each(data, function () {
+				idArray[i] = this['id'];
+				dateArray[i] = this['date'];
+				i++
+			});
 
-    $("#slider-range").slider({
-        min: 1,
-        max: 1,
-        slide: function(event, ui) {
-            $("#amount").val(valMap[ui.value]);
-        }
-    });
-});
+			var changesetFromId = document.getElementById("changesetFromId").value;
+			var changesetToId = document.getElementById("changesetToId").value;
+
+			$("#slider-range")
+				.slider("option", "min", 0)
+				.slider("option", "max", idArray.length - 1)
+				.slider("option", "values", [changesetFromId, changesetToId]);
+
+			document.getElementById("changesetFromDate").innerHTML = dateArray[idArray.indexOf(Number(changesetFromId))];
+			document.getElementById("changesetToDate").innerHTML = dateArray[idArray.indexOf(Number(changesetToId))];
+		});
+
+	$("#slider-range").slider({
+		range: true,
+		values: [0, 1],
+		slide: function (event, ui) {
+			document.getElementById("changesetFromDate").innerHTML = dateArray[ui.values[0] - 1];
+			document.getElementById("changesetToDate").innerHTML = dateArray[ui.values[1] - 1];
+
+			$("#changesetFromId").val(idArray[ui.values[0]]);
+			$("#changesetToId").val(idArray[ui.values[1]]);
+		}
+	});
+}
+
+function sliderDestroy() {
+	$("#slider-range").slider("destroy");
+}

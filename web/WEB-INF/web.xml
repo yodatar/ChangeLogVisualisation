@@ -1,56 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
-    <listener>
-        <listener-class>sk.BusinessLogic.AppServletContextListener</listener-class>
-    </listener>
+	<listener>
+		<listener-class>sk.BusinessLogic.AppServletContextListener</listener-class>
+	</listener>
 
-    <servlet>
-        <servlet-name>ajaxGetAllUsers</servlet-name>
-        <servlet-class>sk.AjaxRequestServlet.GetAllUsersServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ajaxGetAllUsers</servlet-name>
-        <url-pattern>/ajaxGetAllUsers</url-pattern>
-    </servlet-mapping>
+	<servlet>
+		<servlet-name>GetAllUsers</servlet-name>
+		<servlet-class>sk.AjaxRequestServlet.GetAllUsersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAllUsers</servlet-name>
+		<url-pattern>/GetAllUsers</url-pattern>
+	</servlet-mapping>
 
-    <servlet>
-        <servlet-name>ajaxGetProjectTree</servlet-name>
-        <servlet-class>sk.AjaxRequestServlet.GetProjectTreeServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ajaxGetProjectTree</servlet-name>
-        <url-pattern>/ajaxGetProjectTree</url-pattern>
-    </servlet-mapping>
+	<servlet>
+		<servlet-name>ajaxGetProjectTree</servlet-name>
+		<servlet-class>sk.AjaxRequestServlet.GetProjectTreeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ajaxGetProjectTree</servlet-name>
+		<url-pattern>/ajaxGetProjectTree</url-pattern>
+	</servlet-mapping>
 
-    <servlet>
-        <servlet-name>ajaxGetAllChangesets</servlet-name>
-        <servlet-class>sk.AjaxRequestServlet.GetAllChangesetsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ajaxGetAllChangesets</servlet-name>
-        <url-pattern>/ajaxGetAllChangesets</url-pattern>
-    </servlet-mapping>
+	<servlet>
+		<servlet-name>ajaxGetAllChangesets</servlet-name>
+		<servlet-class>sk.AjaxRequestServlet.GetAllChangesetsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ajaxGetAllChangesets</servlet-name>
+		<url-pattern>/ajaxGetAllChangesets</url-pattern>
+	</servlet-mapping>
 
-    <servlet>
-        <servlet-name>getProjects</servlet-name>
-        <servlet-class>sk.AjaxRequestServlet.GetProjectsServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>getProjects</servlet-name>
-        <url-pattern>/index</url-pattern>
-    </servlet-mapping>
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<servlet-class>sk.AjaxRequestServlet.IndexServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
 
-    <servlet>
-        <servlet-name>setResouerces</servlet-name>
-        <servlet-class>sk.AjaxRequestServlet.SetResourcesServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>setResouerces</servlet-name>
-        <url-pattern>/setResouerces</url-pattern>
-    </servlet-mapping>
+	<servlet>
+		<servlet-name>getActivities</servlet-name>
+		<servlet-class>sk.AjaxRequestServlet.GetActivityServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getActivities</servlet-name>
+		<url-pattern>/getActivities</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>setResources</servlet-name>
+		<servlet-class>sk.AjaxRequestServlet.SetResourcesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>setResources</servlet-name>
+		<url-pattern>/setResources</url-pattern>
+	</servlet-mapping>
 
 </web-app>

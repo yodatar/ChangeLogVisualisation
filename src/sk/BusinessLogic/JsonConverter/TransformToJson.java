@@ -4,7 +4,9 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDt
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import sk.BusinessLogic.entities.FileVersionExtendedDto;
 
+import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,37 +18,42 @@ import java.util.List;
  */
 
 
-public class TransformToJson  {
+public class TransformToJson {
 
-    public JSONObject projectTreeToJson(List<FileVersionDto> fileVersionDtoList) {
+	public JSONObject projectTreeToJson(List<FileVersionDto> fileVersionDtoList, List<FileVersionExtendedDto> changedFilesList) {
 
-        Collections.sort(fileVersionDtoList,FileVersionDto.Comparators.URL);
+		Collections.sort(fileVersionDtoList, FileVersionDto.Comparators.URL);
 
-        JSONObject jsonObject = new JSONObject();
-        PathTreeCreator pathTreeCreator = new PathTreeCreator(jsonObject);
+		JSONObject jsonObject = new JSONObject();
+		PathTreeCreator pathTreeCreator = new PathTreeCreator(jsonObject);
 
-        for(FileVersionDto fileVersionDto : fileVersionDtoList) {
-            pathTreeCreator.addPath(fileVersionDto.getUrl().getValue());
-        }
+		for (FileVersionDto fileVersionDto : fileVersionDtoList) { // all files
+			pathTreeCreator.addPath(fileVersionDto.getUrl().getValue());
+		}
 
-        pathTreeCreator.buildJsonTree();
+		for (FileVersionDto fileVersionDto : changedFilesList) { // changed files names
+			pathTreeCreator.addChangedFilesName(fileVersionDto.getUrl().getValue());
+		}
 
-        return pathTreeCreator.getJsonObject();
-    }
+		pathTreeCreator.addChangedFiles(changedFilesList); // changed files
 
-    public JSONArray changesetListToJson(List<ChangesetDto> changesetDtoList) {
-        JSONObject jsonObject = new JSONObject();
-        JSONArray jsonArray = new JSONArray();
+		pathTreeCreator.buildJsonTree();
 
-        for (ChangesetDto changesetDto : changesetDtoList)
-        {
-            jsonArray.add(changesetDto.getId());
-        }
+		return pathTreeCreator.getJsonObject();
+	}
 
-        jsonObject.put("id", jsonArray);
+	public JSONArray changesetListToJson(List<ChangesetDto> changesetDtoList) {
+		JSONArray jsonArray = new JSONArray();
 
-        return jsonArray;
-    }
+		for (ChangesetDto changesetDto : changesetDtoList) {
+			JSONObject jsonObject = new JSONObject();
+			jsonObject.put("id", changesetDto.getId());
+			jsonObject.put("date", new SimpleDateFormat("dd.MM.yyyy HH:mm").format(changesetDto.getTimeStamp().toGregorianCalendar().getTime()));
+			jsonArray.add(jsonObject);
+		}
+
+		return jsonArray;
+	}
 
 }
 

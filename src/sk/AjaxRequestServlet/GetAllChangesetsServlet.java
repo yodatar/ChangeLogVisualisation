@@ -23,16 +23,18 @@ import java.util.List;
 
 public class GetAllChangesetsServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
-        List<ChangesetDto> changesetDtoList = databaseRequestHandlers.getChangesetList(Resources.getInstance().getProjectId());
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		if (request.getParameter("data") != null && request.getParameter("data") != "")
+			Resources.getInstance().setProjectId(Integer.parseInt(request.getParameter("data")));
 
-        TransformToJson transformToJson = new TransformToJson();
-        JSONArray jsonArray = transformToJson.changesetListToJson(changesetDtoList);
-        //JSONObject jsonObject = transformToJson.changesetListToJson(changesetDtoList);
+		DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
+		List<ChangesetDto> changesetDtoList = databaseRequestHandlers.getChangesetList(null, null);
 
-        //response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(jsonArray);
-    }
+		TransformToJson transformToJson = new TransformToJson();
+		JSONArray jsonArray = transformToJson.changesetListToJson(changesetDtoList);
+
+		response.setContentType("application/json");
+		PrintWriter out = response.getWriter();
+		out.print(jsonArray);
+	}
 }

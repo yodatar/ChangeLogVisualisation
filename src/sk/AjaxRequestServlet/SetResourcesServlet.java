@@ -16,17 +16,19 @@ import java.io.PrintWriter;
  * Time: 17:36
  */
 
+// TODO: to delete
+
 public class SetResourcesServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer projectId = Integer.parseInt(request.getParameter("projectId"));
-        //Integer changesetId = Integer.parseInt(request.getParameter("changesetId"));
-        Resources.getInstance().setProjectId(projectId);
-        //Resources.getInstance().setChangesetId(changesetId);
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Integer projectId = Integer.parseInt(request.getParameter("projectId"));
+		//Integer changesetId = Integer.parseInt(request.getParameter("changesetId"));
+		Resources.getInstance().setProjectId(projectId);
+		//Resources.getInstance().setChangesetFromId(changesetId);
 
-        PrintWriter out = response.getWriter();
-        out.print("true");
-    }
+		PrintWriter out = response.getWriter();
+		out.print("true");
+	}
 }
 

@@ -9,30 +9,40 @@ package sk.BusinessLogic;
 
 
 public class Resources {
-    private static Resources _instance;
-    private Integer projectId;
-    private Integer changesetId;
+	private static Resources _instance;
+	private Integer projectId;
+	private Integer changesetFromId;
+	private Integer changesetToId;
 
-    private Resources() {}
+	private Resources() {
+	}
 
-    public static Resources getInstance() {
-        if (_instance == null) _instance = new Resources();
-        return _instance;
-    }
+	public static Resources getInstance() {
+		if (_instance == null) _instance = new Resources();
+		return _instance;
+	}
 
-    public Integer getProjectId() {
-        return projectId;
-    }
+	public Integer getProjectId() {
+		return projectId;
+	}
 
-    public void setProjectId(Integer projectId) {
-        this.projectId = projectId;
-    }
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
+	}
 
-    public Integer getChangesetId() {
-        return changesetId;
-    }
+	public Integer getChangesetFromId() {
+		return changesetFromId;
+	}
 
-    public void setChangesetId(Integer changesetId) {
-        this.changesetId = changesetId;
-    }
+	public void setChangesetFromId(Integer changesetFromId) {
+		this.changesetFromId = changesetFromId;
+	}
+
+	public Integer getChangesetToId() {
+		return changesetToId;
+	}
+
+	public void setChangesetToId(Integer changesetToId) {
+		this.changesetToId = changesetToId;
+	}
 }

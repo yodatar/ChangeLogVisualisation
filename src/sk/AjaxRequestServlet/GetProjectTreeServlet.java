@@ -1,16 +1,13 @@
 package sk.AjaxRequestServlet;
 
-import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
 import org.json.simple.JSONObject;
 import sk.BusinessLogic.DatabaseRequestHandlers;
-import sk.BusinessLogic.JsonConverter.TransformToJson;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,18 +19,15 @@ import java.util.List;
 
 public class GetProjectTreeServlet extends HttpServlet {
 
-    JSONObject jsonObject = new JSONObject();
+	JSONObject jsonObject = new JSONObject();
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
-        List<FileVersionDto> fileVersionDtos = databaseRequestHandlers.getProjectTree(request.getSession());
+		DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
+		jsonObject = databaseRequestHandlers.getProjectTree();
 
-        TransformToJson transformToJson = new TransformToJson();
-        jsonObject = transformToJson.projectTreeToJson(fileVersionDtos);
-
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-        out.print(jsonObject);
-    }
+		response.setContentType("application/json");
+		PrintWriter out = response.getWriter();
+		out.print(jsonObject);
+	}
 }
