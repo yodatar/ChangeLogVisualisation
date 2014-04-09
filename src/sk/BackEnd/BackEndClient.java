@@ -7,6 +7,9 @@ import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 
 import javax.xml.ws.WebServiceException;
 import java.net.Authenticator;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
 import java.net.PasswordAuthentication;
 
 /**
@@ -31,21 +34,27 @@ public class BackEndClient {
 	public IAstRcsWcfSvc connection() {
 		IAstRcsWcfSvc basicBinding = null;
 		Authenticator.setDefault(new MyNtlmAuth());
-		AstRcsWcfSvc astRcsWcfSvc;
+		CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
 		try {
-			astRcsWcfSvc = new AstRcsWcfSvc();
+			AstRcsWcfSvc astRcsWcfSvc = new AstRcsWcfSvc();
 			basicBinding = astRcsWcfSvc.getBasicHttpBindingIAstRcsWcfSvc();
 		} catch (WebServiceException e) {
-
+			e.printStackTrace();
 		}
 
 		return basicBinding;
 	}
 
 	public IActivitySvc connection2() {
+		IActivitySvc basicBinding = null;
 		Authenticator.setDefault(new MyNtlmAuth());
-		ActivitySvc activitySvc = new ActivitySvc();
-		IActivitySvc basicBinding = activitySvc.getBasicHttpBindingIActivitySvc();
+		CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
+		try {
+			ActivitySvc activitySvc = new ActivitySvc();
+			basicBinding = activitySvc.getBasicHttpBindingIActivitySvc();
+		} catch (WebServiceException e) {
+			e.printStackTrace();
+		}
 
 		return basicBinding;
 	}

@@ -152,9 +152,10 @@ function visualisation() {
 // Restore everything to full opacity when moving off the visualization.
 	function mouseleave(d) {
 
-		// Hide the breadcrumb trail
-		d3.select("#trail")
-			.style("visibility", "hidden");
+		/* Hide the breadcrumb trail
+		 d3.select("#trail")
+		 .style("visibility", "hidden");
+		 */
 
 		// Deactivate all segments during transition.
 		d3.selectAll("g").on("mouseover", null);
@@ -174,7 +175,7 @@ function visualisation() {
 	function getAncestors(node) {
 		var path = [];
 		var current = node;
-		while (current.parent) {
+		while (current) {
 			path.unshift(current);
 			current = current.parent;
 		}
@@ -187,6 +188,7 @@ function visualisation() {
 			.attr("width", w)
 			.attr("height", 50)
 			.attr("id", "trail");
+
 		// Add the label at the end, for the percentage.
 		trail.append("svg:text")
 			.attr("id", "endlabel")
@@ -215,7 +217,9 @@ function visualisation() {
 			.selectAll("g")
 			.data(nodeArray, function (d) {
 				return d.name + d.depth;
-			});
+			})
+			.on("click", click)
+			.on("mouseover", mouseover);
 
 		// Add breadcrumb and label for entering nodes.
 		var entering = g.enter().append("svg:g");
@@ -253,4 +257,6 @@ function visualisation() {
 			.style("visibility", "");
 
 	}
+
+
 }

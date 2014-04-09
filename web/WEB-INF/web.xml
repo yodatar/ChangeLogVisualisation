@@ -7,6 +7,10 @@
 		<listener-class>sk.BusinessLogic.AppServletContextListener</listener-class>
 	</listener>
 
+	<welcome-file-list>
+		<welcome-file>index</welcome-file>
+	</welcome-file-list>
+
 	<servlet>
 		<servlet-name>GetAllUsers</servlet-name>
 		<servlet-class>sk.AjaxRequestServlet.GetAllUsersServlet</servlet-class>

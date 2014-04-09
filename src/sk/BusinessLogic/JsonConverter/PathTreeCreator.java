@@ -84,9 +84,9 @@ public class PathTreeCreator {
 				int index = changedFilesName.indexOf(child.getKey());
 				map.put("commiter", changedFiles.get(index).getCommiter().getId());
 
-				if (changedFiles.get(index).getAncestor1ChangeType().getValue().value().equals("Add")) {
+				if (changedFiles.get(index).getFileVersionDto().getAncestor1ChangeType().getValue().value().equals("Add")) {
 					map.put("color", "#1dd300");
-				} else if (changedFiles.get(index).getAncestor1ChangeType().getValue().value().equals("Edit")) {
+				} else if (changedFiles.get(index).getFileVersionDto().getAncestor1ChangeType().getValue().value().equals("Edit")) {
 					map.put("color", "#ffa500");
 				} else {
 					map.put("color", "#cccccc");
@@ -109,7 +109,7 @@ public class PathTreeCreator {
 	public void buildJsonTree() {
 		int r = 66, g = 139, b = 202;
 		JSONArray jsonArray = new JSONArray();
-		jsonObject.put("name", "PROJEKT");
+		jsonObject.put("name", "Project");
 		jsonObject.put("color", "#" + Integer.toHexString(r) + Integer.toHexString(g) + Integer.toHexString(b));
 		jsonObject.put("children", jsonArray);
 		buildJsonTree(root, jsonArray, r + 19, g + 12, b + 5);

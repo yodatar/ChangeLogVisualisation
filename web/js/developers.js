@@ -4,6 +4,9 @@
  * Date: 13.3.2014
  * Time: 23:59
  */
+
+// TODO: To delete...
+
 var options = {};
 
 $("#developersList")

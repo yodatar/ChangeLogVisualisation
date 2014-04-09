@@ -15,6 +15,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/dashboard.css" rel="stylesheet">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="./css/graph.css">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -62,7 +63,7 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-3 col-md-2 sidebar">
+		<div class="col-sm-3 col-md-2 sidebar" style="width:250px;">
 			<ul class="nav nav-sidebar">
 
 				<li class="active"><a href="#">Filter</a></li>
@@ -81,30 +82,33 @@
 						From:
 						<div class="well well-sm" id="changesetFromDate"
 						     style="display:inline-block;width:140px;"></div>
+						<br>
 						To:&nbsp;&nbsp;&nbsp;
 						<div class="well well-sm" id="changesetToDate" style="display:inline-block;width:140px;"></div>
+
 						<div id="slider-range"></div>
 						<br>
+
 						<input hidden id="changesetFromId" name="changesetFrom" value="${changesetFromId}"/>
 						<input hidden id="changesetToId" name="changesetTo" value="${changesetToId}"/>
-						<input type="submit" value="Display!" class="form-control" onclick="sliderDestroy()"/>
+						<input type="submit" value="Display!" class="form-control"/>
 					</form>
 				</li>
 
 				<li class="active">
 					<a href="#">Developers</a>
-
 				</li>
+
 				<li style="margin:10px">
+					<div id="chart-container"></div>
+					<!--
 					<div class="list-group" id="developersList">
 						<c:forEach var="users" items="${allUsers}">
 							<a href="#" id="${users.id}"
 							   class="list-group-item <c:if test="${commiterId == users.id}">active</c:if>">${users.name}</a>
 						</c:forEach>
 					</div>
-					<div id="developersStats" style="position:fixed;top:440px;left:200px;">
-						<img src="./img/graph.png" style="opacity: 0.8;">
-					</div>
+					-->
 				</li>
 
 			</ul>
@@ -112,7 +116,6 @@
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<div id="breadcrubms"></div>
 			<div id="canvas"></div>
-
 		</div>
 	</div>
 </div>
@@ -124,8 +127,9 @@
 <script src="js/d3.v3.min.js"></script>
 <script src="js/d3.v3.js"></script>
 <script src="js/slider.js"></script>
-<script src="js/developers.js"></script>
-<script src="visualisation3.js"></script>
+<script src="js/visualisation3.js"></script>
+<script src="js/main.js"></script>
+
 <script>
 	$(document).ready(function () {
 		$("#breadcrubms")

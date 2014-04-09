@@ -11,12 +11,11 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.UserDto;
  */
 
 
-public class FileVersionExtendedDto extends FileVersionDto {
+public class FileVersionExtendedDto {
 	private UserDto commiter;
 	private FileVersionDto fileVersionDto;
 
 	public FileVersionExtendedDto(UserDto commiter, FileVersionDto fileVersionDto) {
-		super();
 		this.commiter = commiter;
 		this.fileVersionDto = fileVersionDto;
 	}

@@ -31,8 +31,8 @@ public class TransformToJson {
 			pathTreeCreator.addPath(fileVersionDto.getUrl().getValue());
 		}
 
-		for (FileVersionDto fileVersionDto : changedFilesList) { // changed files names
-			pathTreeCreator.addChangedFilesName(fileVersionDto.getUrl().getValue());
+		for (FileVersionExtendedDto fileVersionDto : changedFilesList) { // changed files names
+			pathTreeCreator.addChangedFilesName(fileVersionDto.getFileVersionDto().getUrl().getValue());
 		}
 
 		pathTreeCreator.addChangedFiles(changedFilesList); // changed files
