@@ -22,6 +22,15 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<script src="js/jquery21.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/docs.min.js"></script>
+	<script src="js/d3.v3.min.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/visualisation3.js"></script>
+	<script src="js/graph.js"></script>
+
 </head>
 <body>
 
@@ -66,16 +75,16 @@
 		<div class="col-sm-3 col-md-2 sidebar" style="width:250px;">
 			<ul class="nav nav-sidebar">
 
-				<li class="active"><a href="#">Filter</a></li>
+				<%--<li class="active"><a href="#">Filter</a></li>--%>
 
 				<li style="margin:10px">
 					<form action="index" method="GET">
-						Projects
+						Project
 						<select class="form-control" name="projectSelect" id="projectSelect" onchange="slider()">
 							<c:forEach var="projects" items="${allProjects}">
-								<option value="${projects.id}"
-								        <c:if
-									        test="${projectSelect == projects.id}">selected</c:if> >${projects.name}</option>
+								<option value="${projects.id}" <c:if test="${projectSelect == projects.id}">selected</c:if> >
+									${projects.name}
+								</option>
 							</c:forEach>
 						</select>
 						<br>
@@ -91,15 +100,13 @@
 
 						<input hidden id="changesetFromId" name="changesetFrom" value="${changesetFromId}"/>
 						<input hidden id="changesetToId" name="changesetTo" value="${changesetToId}"/>
-						<input type="submit" value="Display!" class="form-control"/>
+						<input type="submit" value="Display!" class="btn btn-primary btn-sm btn-block"/>
 					</form>
-				</li>
 
-				<li class="active">
+			<%--	<li class="active">
 					<a href="#">Developers</a>
-				</li>
+				</li>--%>
 
-				<li style="margin:10px">
 					<div id="chart-container"></div>
 					<!--
 					<div class="list-group" id="developersList">
@@ -120,23 +127,9 @@
 	</div>
 </div>
 
-<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/docs.min.js"></script>
-<script src="js/d3.v3.min.js"></script>
-<script src="js/d3.v3.js"></script>
-<script src="js/slider.js"></script>
-<script src="js/visualisation3.js"></script>
-<script src="js/main.js"></script>
 
 <script>
 	$(document).ready(function () {
-		$("#breadcrubms")
-			.progressbar({
-				value: false})
-			.find(".ui-progressbar-value").css({"background": '#428bca'});
-
 		slider();
 		visualisation();
 	});

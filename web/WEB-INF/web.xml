@@ -12,17 +12,8 @@
 	</welcome-file-list>
 
 	<servlet>
-		<servlet-name>GetAllUsers</servlet-name>
-		<servlet-class>sk.AjaxRequestServlet.GetAllUsersServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GetAllUsers</servlet-name>
-		<url-pattern>/GetAllUsers</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
 		<servlet-name>ajaxGetProjectTree</servlet-name>
-		<servlet-class>sk.AjaxRequestServlet.GetProjectTreeServlet</servlet-class>
+		<servlet-class>sk.Servlets.GetProjectTreeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ajaxGetProjectTree</servlet-name>
@@ -31,7 +22,7 @@
 
 	<servlet>
 		<servlet-name>ajaxGetAllChangesets</servlet-name>
-		<servlet-class>sk.AjaxRequestServlet.GetAllChangesetsServlet</servlet-class>
+		<servlet-class>sk.Servlets.GetAllChangesetsServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ajaxGetAllChangesets</servlet-name>
@@ -40,7 +31,7 @@
 
 	<servlet>
 		<servlet-name>index</servlet-name>
-		<servlet-class>sk.AjaxRequestServlet.IndexServlet</servlet-class>
+		<servlet-class>sk.Servlets.IndexServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
@@ -50,8 +41,7 @@
 
 	<servlet>
 		<servlet-name>getActivities</servlet-name>
-		<servlet-class>sk.AjaxRequestServlet.GetActivityServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
+		<servlet-class>sk.Servlets.GetActivityServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>getActivities</servlet-name>
@@ -59,12 +49,12 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>setResources</servlet-name>
-		<servlet-class>sk.AjaxRequestServlet.SetResourcesServlet</servlet-class>
+		<servlet-name>ajaxGetDevelepers</servlet-name>
+		<servlet-class>sk.Servlets.GetDevelepersServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>setResources</servlet-name>
-		<url-pattern>/setResources</url-pattern>
+		<servlet-name>ajaxGetDevelepers</servlet-name>
+		<url-pattern>/ajaxGetDevelepers</url-pattern>
 	</servlet-mapping>
 
 </web-app>

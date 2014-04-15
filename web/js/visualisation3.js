@@ -14,6 +14,9 @@ var b = {
 };
 
 function visualisation() {
+	$("#breadcrubms")
+		.progressbar({ value: false});
+	//	.find(".ui-progressbar-value").css({"background": '#428bca'});
 
 	var vis = d3.select("#canvas")
 		.append("div")
@@ -50,7 +53,7 @@ function visualisation() {
 
 
 		kx = w / root.dx;
-		ky = h / 1;
+		ky = h;
 
 		g.append("svg:rect")
 			.attr("width", root.dy * kx)
@@ -75,7 +78,7 @@ function visualisation() {
 
 			.append("tspan")
 			.attr("x", "0")
-			.attr("y", "5")
+			.attr("y", "0")
 			.text(function (d) {
 				return d.name;
 			});
@@ -85,12 +88,15 @@ function visualisation() {
 		d3.select("#container").on("mouseleave", mouseleave);
 		d3.select("#page-header").on("click", click(root));
 
-		$("#breadcrubms").progressbar("destroy");
+		$("#breadcrubms").progressbar( "destroy" );
 	});
 
 
 	function click(d) {
-		if (!d.children) return;
+		if (!d.children) {
+			selectDevelopers(d);
+			return;
+		}
 
 		var kx = (d.y ? w - 40 : w) / (1 - d.y);
 		var ky = h / d.dx;
@@ -136,7 +142,6 @@ function visualisation() {
 
 		var sequenceArray = getAncestors(d);
 		updateBreadcrumbs(sequenceArray);
-
 		// Fade all the segments.
 		d3.selectAll("g")
 			.style("opacity", 0.9);
@@ -147,6 +152,9 @@ function visualisation() {
 				return (sequenceArray.indexOf(node) >= 0);
 			})
 			.style("opacity", 1);
+
+		if(!d.children) updateDevelopers(d);
+
 	}
 
 // Restore everything to full opacity when moving off the visualization.
@@ -255,8 +263,32 @@ function visualisation() {
 		// Make the breadcrumb trail visible, if it's hidden.
 		d3.select("#trail")
 			.style("visibility", "");
-
 	}
 
+	function updateDevelopers(data) {
+		d3.selectAll(".graph")
+			.style("fill", "#68a3d4")
 
-}
+		if(data.commiters) {
+			var selection = [];
+			for(var i in data.commiters) {
+				selection.push(".graph"+data.commiters[i].id)
+			}
+			var ids = selection.join();
+			d3.selectAll(ids)
+				.style("fill", data.color)
+		}
+	}
+
+	function selectDevelopers(data) {
+		if(data.commiters) {
+			var selection = [];
+			for(var i in data.commiters) {
+				selection.push(".graph"+data.commiters[i].id)
+			}
+			var ids = selection.join();
+			d3.selectAll(ids)
+				.style("fill", data.color)
+		}
+	}
+};

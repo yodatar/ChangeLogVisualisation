@@ -36,8 +36,8 @@ g.context rect.background {
     visibility: visible !important;
 }
 
-path.chart {
-    fill: rgba(127, 201, 127, 0.5);
+path.graph {
+    fill: #68a3d4;
 }
 
 .axis path, .axis line {
@@ -46,3 +46,7 @@ path.chart {
     shape-rendering: crispEdges;
 }
 
+.name-title {
+    text-shadow: 1px 1px #ffffff,-1px -1px #ffffff,-1px 1px #ffffff,1px -1px #ffffff;
+    font-weight: 700;
+}

@@ -38,8 +38,8 @@ function slider() {
 				min: 0,
 				max: idArray.length - 1,
 				slide: function (event, ui) {
-					document.getElementById("changesetFromDate").innerHTML = dateArray[ui.values[0] - 1];
-					document.getElementById("changesetToDate").innerHTML = dateArray[ui.values[1] - 1];
+					document.getElementById("changesetFromDate").innerHTML = dateArray[ui.values[0]];
+					document.getElementById("changesetToDate").innerHTML = dateArray[ui.values[1]];
 
 					$("#changesetFromId").val(idArray[ui.values[0]]);
 					$("#changesetToId").val(idArray[ui.values[1]]);
@@ -54,4 +54,4 @@ function slider() {
 
 function sliderDestroy() {
 	$("#slider-range").slider("destroy");
-}
+};

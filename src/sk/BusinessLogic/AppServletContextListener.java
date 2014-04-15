@@ -21,8 +21,8 @@ public class AppServletContextListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		Resources resources = Resources.getInstance();
-		resources.setProjectId(1);
-		resources.setChangesetFromId(2);
-		resources.setChangesetToId(2);
+		resources.setProjectId(3);
+		resources.setChangesetFromId(1045);
+		resources.setChangesetToId(1080);
 	}
 }

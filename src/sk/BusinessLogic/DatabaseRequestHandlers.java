@@ -2,6 +2,7 @@ package sk.BusinessLogic;
 
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityDto;
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityFilter;
+import com.gratex.perconik.astrcs.iactivitysvc.ArrayOfString;
 import com.gratex.perconik.astrcs.iactivitysvc.GetActivitiesResponse;
 import com.gratex.perconik.astrcs.iactivitysvc.IActivitySvc;
 import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
@@ -25,7 +26,6 @@ import sk.BusinessLogic.entities.FileVersionExtendedDto;
 import sk.BusinessLogic.entities.ProjectsEntity;
 import sk.BusinessLogic.entities.UsersEntity;
 
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -44,7 +44,7 @@ public class DatabaseRequestHandlers {
 	IAstRcsWcfSvc iAstRcsWcfSvc = new DatabaseFactory().getIAstRcsWcfSvc();
 	IActivitySvc iActivitySvc = new DatabaseFactory().getIActivitySvc();
 
-	public List<UsersEntity> getAllUsers() {
+	public JSONObject getAllUsers() {
 		ArrayList<UsersEntity> list = new ArrayList<>();
 		HashSet<UsersEntity> set = new HashSet<>();
 
@@ -54,12 +54,12 @@ public class DatabaseRequestHandlers {
 			set.add(usersEntity);
 		}
 
-		// simple distinct
-		//set.addAll(list);
-		//list.clear();
 		list.addAll(set);
 
-		return list;
+		TransformToJson transformToJson = new TransformToJson();
+		JSONObject jsonObject = transformToJson.UsersToJson(list);
+
+		return jsonObject;
 	}
 
 	public List<ChangesetDto> getChangesetList(Integer from, Integer to) {
@@ -104,9 +104,9 @@ public class DatabaseRequestHandlers {
 		return changesetDtoListResult;
 	}
 
-	public ChangesetDto getChangeset() {
+	public ChangesetDto getChangeset(Integer changesetId) {
 		GetChangesetRequest changesetRequest = new GetChangesetRequest();
-		changesetRequest.setChangesetId(Resources.getInstance().getChangesetToId());
+		changesetRequest.setChangesetId(changesetId);
 		GetChangesetResponse changesetResponse = iAstRcsWcfSvc.getChangeset(changesetRequest);
 
 		return changesetResponse.getChangeset().getValue();
@@ -185,36 +185,31 @@ public class DatabaseRequestHandlers {
 		return projectsEntityList;
 	}
 
-
-	public List<ActivityDto> getActivity() {
+	public List<ActivityDto> getActivities() {
 		List<ActivityDto> activityDtoList;
 		ActivityFilter activityFilter = new ActivityFilter();
-		XMLGregorianCalendar xmlGregorianCalendar;
 
-		List<ChangesetDto> changesetDtoList = this.getChangesetList(null, null);
-		ChangesetDto changesetDto1 = changesetDtoList.get(changesetDtoList.size() - 2);
-		ChangesetDto changesetDto2 = changesetDtoList.get(changesetDtoList.size() - 1);
+		ChangesetDto changesetDto1 = getChangeset(Resources.getInstance().getChangesetFromId());
+		ChangesetDto changesetDto2 = getChangeset(Resources.getInstance().getChangesetToId());
+		ArrayOfString arrayOfString = new ArrayOfString();
 
-		xmlGregorianCalendar = changesetDto1.getTimeStamp();
-
-		xmlGregorianCalendar.setDay(24);
-		System.out.println(xmlGregorianCalendar);
-		//System.out.println(changesetDto1.getTimeStamp());
-
-		activityFilter.setStartTimeFrom(xmlGregorianCalendar);
-		//xmlGregorianCalendar.setDay(24);
-		//System.out.println(xmlGregorianCalendar);
-		System.out.println(changesetDto2.getTimeStamp());
+		activityFilter.setStartTimeFrom(changesetDto1.getTimeStamp());
+		//activityFilter.setEndTimeFrom(changesetDto1.getTimeStamp());
 		activityFilter.setStartTimeTo(changesetDto2.getTimeStamp());
+		//activityFilter.setEndTimeTo(changesetDto2.getTimeStamp());
+		activityFilter.setUser("TFS\\xchlebana");
+		activityFilter.setPageSize(10000);
+		arrayOfString.getString().add("IdeCodeOperation");
+		activityFilter.setEventShortTypeNames(arrayOfString);
 
-		activityFilter.setUser("STELTECIA\\mkonopka");
-		//GetActivities getActivities = new GetActivities();
-		//getActivities.setFilter(activityFilter);
+		long start = System.currentTimeMillis();
 		GetActivitiesResponse getActivitiesResponse = new GetActivitiesResponse();
 		getActivitiesResponse.setGetActivitiesResult(iActivitySvc.getActivities(activityFilter));
 		activityDtoList = getActivitiesResponse.getGetActivitiesResult().getActivityDto();
+		long end = System.currentTimeMillis();
+		System.out.println("========================== Took : " + ((end - start) / 1000) + " sec.");
+
 
 		return activityDtoList;
 	}
-
 }

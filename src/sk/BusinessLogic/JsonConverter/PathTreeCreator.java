@@ -5,10 +5,14 @@ import org.json.simple.JSONObject;
 import sk.BusinessLogic.entities.FileVersionExtendedDto;
 
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.regex.Pattern;
 
@@ -25,13 +29,11 @@ public class PathTreeCreator {
 		return jsonObject;
 	}
 
-	private JSONObject jsonObject;
+	private JSONObject jsonObject = new JSONObject();
 	private List<String> changedFilesName = new LinkedList<>();
 	private List<FileVersionExtendedDto> changedFiles = new LinkedList<>();
 
-	public PathTreeCreator(JSONObject jsonObject) {
-		this.jsonObject = jsonObject;
-	}
+	public PathTreeCreator() {	}
 
 	private static final Pattern PATH_SEPARATOR = Pattern.compile("/");
 
@@ -79,17 +81,32 @@ public class PathTreeCreator {
 			Map map = new LinkedHashMap();
 			map.put("name", child.getKey());
 			map.put("size", 1);
-			map.put("size", child.getValue().hashCode());
 			if (changedFilesName.contains(child.getKey())) {
 				int index = changedFilesName.indexOf(child.getKey());
-				map.put("commiter", changedFiles.get(index).getCommiter().getId());
+
+				Set<Integer> commitersSet = new HashSet();
+				ListIterator it = changedFilesName.listIterator();
+				while(it.hasNext()){
+					if(it.next().equals(child.getKey())){
+						commitersSet.add(changedFiles.get(it.previousIndex()).getCommiter().getId());
+					}
+				}
+
+				JSONArray jsonArrayCommiters = new JSONArray();
+				for(Integer commiterId : commitersSet) {
+					Map commitersMap = new HashMap();
+					commitersMap.put("id",commiterId);
+					jsonArrayCommiters.add(commitersMap);
+				}
+				map.put("commiters",jsonArrayCommiters);
+
 
 				if (changedFiles.get(index).getFileVersionDto().getAncestor1ChangeType().getValue().value().equals("Add")) {
 					map.put("color", "#1dd300");
 				} else if (changedFiles.get(index).getFileVersionDto().getAncestor1ChangeType().getValue().value().equals("Edit")) {
 					map.put("color", "#ffa500");
 				} else {
-					map.put("color", "#cccccc");
+					map.put("color", "#aaaaaa");
 				}
 			} else {
 				map.put("color", "#" + Integer.toHexString(r) + Integer.toHexString(g) + Integer.toHexString(b));

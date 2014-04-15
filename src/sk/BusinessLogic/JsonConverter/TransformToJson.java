@@ -5,10 +5,12 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersion
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import sk.BusinessLogic.entities.FileVersionExtendedDto;
+import sk.BusinessLogic.entities.UsersEntity;
 
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,8 +26,7 @@ public class TransformToJson {
 
 		Collections.sort(fileVersionDtoList, FileVersionDto.Comparators.URL);
 
-		JSONObject jsonObject = new JSONObject();
-		PathTreeCreator pathTreeCreator = new PathTreeCreator(jsonObject);
+		PathTreeCreator pathTreeCreator = new PathTreeCreator();
 
 		for (FileVersionDto fileVersionDto : fileVersionDtoList) { // all files
 			pathTreeCreator.addPath(fileVersionDto.getUrl().getValue());
@@ -55,5 +56,31 @@ public class TransformToJson {
 		return jsonArray;
 	}
 
-}
+	public JSONObject UsersToJson(List<UsersEntity> userDtoList) {
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArrayCommiters = new JSONArray();
 
+		for(UsersEntity usersEntity : userDtoList) {
+			JSONObject commiterObject = new JSONObject();
+			commiterObject.put("id",usersEntity.getId());
+			commiterObject.put("name",usersEntity.getName());
+			jsonArrayCommiters.add(commiterObject);
+		}
+		jsonObject.put("commiters",jsonArrayCommiters);
+
+		JSONArray jsonArrayIntervals = new JSONArray();
+		for(int i=0;i<10;i++) {
+			Random random = new Random();
+			JSONObject intervalObject = new JSONObject();
+			intervalObject.put("Date",i+1);
+
+			for(UsersEntity usersEntity : userDtoList) {
+				intervalObject.put(usersEntity.getId(),random.nextInt(11));
+			}
+			jsonArrayIntervals.add(intervalObject);
+		}
+		jsonObject.put("intervals",jsonArrayIntervals);
+
+		return jsonObject;
+	}
+}

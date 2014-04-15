@@ -1,59 +1,48 @@
-[
-	{
-		"Year": 2006,
-		"MIRAI\\Administrator": 0,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 0
-	},
-	{
-		"Year": 2007,
-		"MIRAI\\Administrator": 10,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 8
-	},
-	{
-		"Year": 2008,
-		"MIRAI\\Administrator": 9,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 5
-	},
-	{
-		"Year": 2009,
-		"MIRAI\\Administrator": 0,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 0
-	},
-	{
-		"Year": 2010,
-		"MIRAI\\Administrator": 9,
-		"STELTECIA\\krastocny": 1,
-		"STELTECIA\\mtomlein": 0
-	},
-	{
-		"Year": 2011,
-		"MIRAI\\Administrator": 7,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 0
-	},
-	{
-		"Year": 2012,
-		"MIRAI\\Administrator": 8,
-		"STELTECIA\\krastocny": 3,
-		"STELTECIA\\mtomlein": 0
-	},
-	{
-		"Year": 2013,
-		"MIRAI\\Administrator": 10,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 8
-	},
-	{
-		"Year": 2014,
-		"MIRAI\\Administrator": 6,
-		"STELTECIA\\krastocny": 0,
-		"STELTECIA\\mtomlein": 5
-	}
-]
+
+{
+	"commiters" :
+	[
+		{
+			"id" : 1,
+			"name": "MIRAI\\Administrator"
+		},
+		{
+			"id" : 2,
+			"name": "STELTECIA\\krastocny"
+		},
+		{
+			"id" : 3,
+			"name": "STELTECIA\\mtomlein"
+		}
+	],
+	"intervals" :
+	[
+		{
+			"Date": 2006,
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		{
+			"Date": 2007,
+			"1": 10,
+			"2": 0,
+			"3": 8
+		},
+		{
+			"Date": 2008,
+			"1": 9,
+			"2": 0,
+			"3": 5
+		},
+		{
+			"Date": 2009,
+			"1": 0,
+			"2": 0,
+			"3": 10
+		}
+	]
+}
 
 
 

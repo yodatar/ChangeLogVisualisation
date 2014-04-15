@@ -2,7 +2,6 @@
 package com.gratex.perconik.astrcs.iastrcswcfsvc;
 
 import javax.xml.namespace.QName;
-import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
 import javax.xml.ws.WebServiceClient;
@@ -10,7 +9,6 @@ import javax.xml.ws.WebServiceException;
 import javax.xml.ws.WebServiceFeature;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Map;
 
 
 /**
@@ -88,10 +86,6 @@ public class AstRcsWcfSvc
     public IAstRcsWcfSvc getBasicHttpBindingIAstRcsWcfSvc(WebServiceFeature... features) {
         IAstRcsWcfSvc iAstRcsWcfSvc =
         super.getPort(new QName("http://www.gratex.com/PerConIk/AstRcs/IAstRcsWcfSvc", "BasicHttpBinding_IAstRcsWcfSvc"), IAstRcsWcfSvc.class, features);
-
-        Map<String, Object> context =  ((BindingProvider)iAstRcsWcfSvc).getRequestContext();
-        context.put(BindingProvider.PASSWORD_PROPERTY, "");
-        context.put(BindingProvider.USERNAME_PROPERTY, "");
         return iAstRcsWcfSvc;
     }
 
