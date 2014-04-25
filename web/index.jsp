@@ -80,10 +80,11 @@
 				<li style="margin:10px">
 					<form action="index" method="GET">
 						Project
-						<select class="form-control" name="projectSelect" id="projectSelect" onchange="slider()">
+						<select class="form-control" name="projectSelect" id="projectSelect" onchange="clearPage()">
 							<c:forEach var="projects" items="${allProjects}">
-								<option value="${projects.id}" <c:if test="${projectSelect == projects.id}">selected</c:if> >
-									${projects.name}
+								<option value="${projects.id}"
+								        <c:if test="${projectSelect == projects.id}">selected</c:if> >
+										${projects.name}
 								</option>
 							</c:forEach>
 						</select>
@@ -95,7 +96,9 @@
 						To:&nbsp;&nbsp;&nbsp;
 						<div class="well well-sm" id="changesetToDate" style="display:inline-block;width:140px;"></div>
 
-						<div id="slider-range"></div>
+						<div id="slider">
+							<div id="slider-range"></div>
+						</div>
 						<br>
 
 						<input hidden id="changesetFromId" name="changesetFrom" value="${changesetFromId}"/>
@@ -103,9 +106,9 @@
 						<input type="submit" value="Display!" class="btn btn-primary btn-sm btn-block"/>
 					</form>
 
-			<%--	<li class="active">
-					<a href="#">Developers</a>
-				</li>--%>
+					<%--	<li class="active">
+							<a href="#">Developers</a>
+						</li>--%>
 
 					<div id="chart-container"></div>
 					<!--
@@ -127,14 +130,7 @@
 	</div>
 </div>
 
-
-<script>
-	$(document).ready(function () {
-		slider();
-		visualisation();
-	});
-</script>
-
+<script src="js/pageHandling.js"></script>
 
 </body>
 </html>

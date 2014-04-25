@@ -1,7 +1,7 @@
 package sk.Servlets;
 
 import org.json.simple.JSONObject;
-import sk.BusinessLogic.DatabaseRequestHandlers;
+import sk.BusinessLogic.DatabaseHandlers;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,12 +19,10 @@ import java.io.PrintWriter;
 
 public class GetProjectTreeServlet extends HttpServlet {
 
-	JSONObject jsonObject = new JSONObject();
-
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-		DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
-		jsonObject = databaseRequestHandlers.getProjectTree();
+		DatabaseHandlers databaseHandlers = new DatabaseHandlers();
+		JSONObject jsonObject = databaseHandlers.getProjectTree();
 
 		response.setContentType("application/json");
 		PrintWriter out = response.getWriter();

@@ -1,5 +1,7 @@
 package sk.BusinessLogic.entities;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: pipo
@@ -8,7 +10,7 @@ package sk.BusinessLogic.entities;
  */
 
 
-public class UsersEntity {
+public class UsersEntity implements Comparable<UsersEntity>, Serializable {
 
 	private Integer id;
 	private String name;
@@ -53,4 +55,11 @@ public class UsersEntity {
 		result = 31 * result + name.hashCode();
 		return result;
 	}
+
+	@Override
+	public int compareTo(UsersEntity d) {
+		return (this.id).compareTo(d.id);
+	}
+
+
 }

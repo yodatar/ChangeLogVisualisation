@@ -26,6 +26,7 @@ import sk.BusinessLogic.entities.FileVersionExtendedDto;
 import sk.BusinessLogic.entities.ProjectsEntity;
 import sk.BusinessLogic.entities.UsersEntity;
 
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -40,13 +41,13 @@ import java.util.Set;
  */
 
 
-public class DatabaseRequestHandlers {
-	IAstRcsWcfSvc iAstRcsWcfSvc = new DatabaseFactory().getIAstRcsWcfSvc();
-	IActivitySvc iActivitySvc = new DatabaseFactory().getIActivitySvc();
+public class DatabaseHandlers {
+	IAstRcsWcfSvc iAstRcsWcfSvc = DatabaseFactory.getInstance().getIAstRcsWcfSvc();
+	IActivitySvc iActivitySvc = DatabaseFactory.getInstance().getIActivitySvc();
 
-	public JSONObject getAllUsers() {
-		ArrayList<UsersEntity> list = new ArrayList<>();
-		HashSet<UsersEntity> set = new HashSet<>();
+	public List<UsersEntity> getUsersPerProject() {
+		List<UsersEntity> list = new ArrayList<>();
+		Set<UsersEntity> set = new HashSet<>();
 
 		List<ChangesetDto> changesetDtoList = this.getChangesetList(null, null);
 		for (ChangesetDto changesetDto : changesetDtoList) {
@@ -54,12 +55,10 @@ public class DatabaseRequestHandlers {
 			set.add(usersEntity);
 		}
 
+		//distinct
 		list.addAll(set);
 
-		TransformToJson transformToJson = new TransformToJson();
-		JSONObject jsonObject = transformToJson.UsersToJson(list);
-
-		return jsonObject;
+		return list;
 	}
 
 	public List<ChangesetDto> getChangesetList(Integer from, Integer to) {
@@ -72,7 +71,7 @@ public class DatabaseRequestHandlers {
 		SearchChangesetsResponse searchChangesetsResponse = iAstRcsWcfSvc.searchChangesets(changesetsRequest);
 		int pageCount = searchChangesetsResponse.getPageCount();
 
-		// iterate over all changesets to get all committers
+		// iterate over all paged changesets
 		if (pageCount > 1) {
 			for (int i = 0; i <= pageCount; i++) {
 				changesetsRequest.setPageIndex(i);
@@ -185,30 +184,26 @@ public class DatabaseRequestHandlers {
 		return projectsEntityList;
 	}
 
-	public List<ActivityDto> getActivities() {
+	public List<ActivityDto> getActivities(String user, XMLGregorianCalendar calendar1, XMLGregorianCalendar calendar2, ArrayOfString arrayOfString) {
 		List<ActivityDto> activityDtoList;
 		ActivityFilter activityFilter = new ActivityFilter();
 
-		ChangesetDto changesetDto1 = getChangeset(Resources.getInstance().getChangesetFromId());
-		ChangesetDto changesetDto2 = getChangeset(Resources.getInstance().getChangesetToId());
-		ArrayOfString arrayOfString = new ArrayOfString();
-
-		activityFilter.setStartTimeFrom(changesetDto1.getTimeStamp());
-		//activityFilter.setEndTimeFrom(changesetDto1.getTimeStamp());
-		activityFilter.setStartTimeTo(changesetDto2.getTimeStamp());
-		//activityFilter.setEndTimeTo(changesetDto2.getTimeStamp());
-		activityFilter.setUser("TFS\\xchlebana");
-		activityFilter.setPageSize(10000);
-		arrayOfString.getString().add("IdeCodeOperation");
+		activityFilter.setStartTimeFrom(calendar1);
+		//activityFilter.setEndTimeFrom(calendar1);
+		activityFilter.setStartTimeTo(calendar2);
+		//activityFilter.setEndTimeTo(calendar2);
+		activityFilter.setUser(user);
+		activityFilter.setPageSize(500);
 		activityFilter.setEventShortTypeNames(arrayOfString);
+
 
 		long start = System.currentTimeMillis();
 		GetActivitiesResponse getActivitiesResponse = new GetActivitiesResponse();
 		getActivitiesResponse.setGetActivitiesResult(iActivitySvc.getActivities(activityFilter));
+
 		activityDtoList = getActivitiesResponse.getGetActivitiesResult().getActivityDto();
 		long end = System.currentTimeMillis();
-		System.out.println("========================== Took : " + ((end - start) / 1000) + " sec.");
-
+		System.out.println("========= " + user + " - getActivities took : " + ((end - start) / 1000) + " sec.");
 
 		return activityDtoList;
 	}

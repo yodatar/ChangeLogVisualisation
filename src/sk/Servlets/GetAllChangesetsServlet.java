@@ -2,7 +2,7 @@ package sk.Servlets;
 
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
 import org.json.simple.JSONArray;
-import sk.BusinessLogic.DatabaseRequestHandlers;
+import sk.BusinessLogic.DatabaseHandlers;
 import sk.BusinessLogic.JsonConverter.TransformToJson;
 import sk.BusinessLogic.Resources;
 
@@ -24,11 +24,12 @@ import java.util.List;
 public class GetAllChangesetsServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		if (request.getParameter("data") != null && request.getParameter("data") != "")
+		if (request.getParameter("data") != null && !request.getParameter("data").equals(""))
 			Resources.getInstance().setProjectId(Integer.parseInt(request.getParameter("data")));
 
-		DatabaseRequestHandlers databaseRequestHandlers = new DatabaseRequestHandlers();
-		List<ChangesetDto> changesetDtoList = databaseRequestHandlers.getChangesetList(null, null);
+
+		DatabaseHandlers databaseHandlers = new DatabaseHandlers();
+		List<ChangesetDto> changesetDtoList = databaseHandlers.getChangesetList(null, null);
 
 		TransformToJson transformToJson = new TransformToJson();
 		JSONArray jsonArray = transformToJson.changesetListToJson(changesetDtoList);

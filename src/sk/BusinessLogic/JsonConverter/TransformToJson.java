@@ -9,8 +9,10 @@ import sk.BusinessLogic.entities.UsersEntity;
 
 import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
-import java.util.Random;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Created with IntelliJ IDEA.
@@ -56,30 +58,59 @@ public class TransformToJson {
 		return jsonArray;
 	}
 
-	public JSONObject UsersToJson(List<UsersEntity> userDtoList) {
+	public JSONObject UsersCodeActivityToJson(List<UsersEntity> listUsers, List<Integer[]> listUsersActivities, Date[] dateList) {
+
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArrayCommiters = new JSONArray();
 
-		for(UsersEntity usersEntity : userDtoList) {
+		Collections.sort(listUsers);
+
+		for (UsersEntity usersEntity : listUsers) {
 			JSONObject commiterObject = new JSONObject();
-			commiterObject.put("id",usersEntity.getId());
-			commiterObject.put("name",usersEntity.getName());
+			commiterObject.put("id", usersEntity.getId());
+			commiterObject.put("name", usersEntity.getName());
 			jsonArrayCommiters.add(commiterObject);
 		}
-		jsonObject.put("commiters",jsonArrayCommiters);
+		jsonObject.put("commiters", jsonArrayCommiters);
 
 		JSONArray jsonArrayIntervals = new JSONArray();
-		for(int i=0;i<10;i++) {
-			Random random = new Random();
-			JSONObject intervalObject = new JSONObject();
-			intervalObject.put("Date",i+1);
+		for (int i = 0; i < 10; i++) {
+			Map intervalObject = new TreeMap();
+			String date = new SimpleDateFormat("MMMMM d, yyyy HH:mm:ss").format(dateList[i]);
+			intervalObject.put(0, Character.toUpperCase(date.charAt(0)) + date.substring(1));
 
-			for(UsersEntity usersEntity : userDtoList) {
-				intervalObject.put(usersEntity.getId(),random.nextInt(11));
+			int index = 0;
+			for (UsersEntity usersEntity : listUsers) {
+				//System.out.println(usersEntity.getId());
+				if (index < listUsersActivities.size()) {
+					intervalObject.put(usersEntity.getId(), listUsersActivities.get(index)[i]);
+				} else {
+					intervalObject.put(usersEntity.getId(), 0);
+				}
+				index++;
 			}
+			//System.out.println(intervalObject);
 			jsonArrayIntervals.add(intervalObject);
 		}
-		jsonObject.put("intervals",jsonArrayIntervals);
+		jsonObject.put("intervals", jsonArrayIntervals);
+
+		return jsonObject;
+	}
+
+
+	public JSONObject usersToJson(List<UsersEntity> userDtoList) {
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArrayCommiters = new JSONArray();
+
+		Collections.sort(userDtoList);
+
+		for (UsersEntity usersEntity : userDtoList) {
+			JSONObject commiterObject = new JSONObject();
+			commiterObject.put("id", usersEntity.getId());
+			commiterObject.put("name", usersEntity.getName());
+			jsonArrayCommiters.add(commiterObject);
+		}
+		jsonObject.put("commiters", jsonArrayCommiters);
 
 		return jsonObject;
 	}

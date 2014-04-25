@@ -12,13 +12,21 @@ import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 
 
 public class DatabaseFactory {
+	private static DatabaseFactory instance = null;
 	private IAstRcsWcfSvc iAstRcsWcfSvc;
 	private IActivitySvc iActivitySvc;
 
-	public DatabaseFactory() {
+	private DatabaseFactory() {
 		BackEndClient backEndClient = new BackEndClient();
 		iAstRcsWcfSvc = backEndClient.connection();
 		iActivitySvc = backEndClient.connection2();
+	}
+
+	public static DatabaseFactory getInstance() {
+		if (instance == null) {
+			instance = new DatabaseFactory();
+		}
+		return instance;
 	}
 
 	public IAstRcsWcfSvc getIAstRcsWcfSvc() {

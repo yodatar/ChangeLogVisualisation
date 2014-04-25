@@ -1,4 +1,6 @@
-package sk.BusinessLogic;
+package sk.Servlets;
+
+import sk.BusinessLogic.Resources;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

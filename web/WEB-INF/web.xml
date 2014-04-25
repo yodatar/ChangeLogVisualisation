@@ -4,7 +4,7 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
 	<listener>
-		<listener-class>sk.BusinessLogic.AppServletContextListener</listener-class>
+		<listener-class>sk.Servlets.AppServletContextListener</listener-class>
 	</listener>
 
 	<welcome-file-list>
@@ -40,12 +40,12 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>getActivities</servlet-name>
-		<servlet-class>sk.Servlets.GetActivityServlet</servlet-class>
+		<servlet-name>ajaxUsersCodeActivities</servlet-name>
+		<servlet-class>sk.Servlets.UsersCodeActivitiesServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>getActivities</servlet-name>
-		<url-pattern>/getActivities</url-pattern>
+		<servlet-name>ajaxUsersCodeActivities</servlet-name>
+		<url-pattern>/ajaxUsersCodeActivities</url-pattern>
 	</servlet-mapping>
 
 	<servlet>

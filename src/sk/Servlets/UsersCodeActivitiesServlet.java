@@ -16,13 +16,17 @@ import java.io.PrintWriter;
  * Time: 20:16
  */
 
-public class GetDevelepersServlet extends HttpServlet {
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		JSONObject jsonObject = new Controller().getUsersPerProject();
+public class UsersCodeActivitiesServlet extends HttpServlet {
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		System.out.println(request.getParameter("user"));
+
+		Controller controller = new Controller();
+		JSONObject jsonObject = controller.getUsersCodeActivities(request.getParameter("user"));
 
 		response.setContentType("application/json");
-		PrintWriter out = response.getWriter();
-		out.print(jsonObject);
+		PrintWriter output = response.getWriter();
+		output.print(jsonObject);
 	}
 }

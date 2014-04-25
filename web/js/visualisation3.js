@@ -4,6 +4,10 @@
  * Time: 21:08
  */
 
+// TODO: klikanie aj na list stromu, a priblizenie k parentovi
+
+// TODO: precistit
+
 
 var w = 1000;
 var h = 480;
@@ -15,14 +19,15 @@ var b = {
 
 function visualisation() {
 	$("#breadcrubms")
-		.progressbar({ value: false});
-	//	.find(".ui-progressbar-value").css({"background": '#428bca'});
+		.progressbar({ value: false})
+		.find(".ui-progressbar-value").css({"background": '#428bca'});
 
 	var vis = d3.select("#canvas")
 		.append("div")
 		.attr("class", "chart")
 		.style("width", w + "px")
 		.style("height", h + "px")
+		.attr("class", "canvas")
 		.append("svg:svg")
 		.attr("width", w)
 		.attr("height", h)
@@ -88,7 +93,7 @@ function visualisation() {
 		d3.select("#container").on("mouseleave", mouseleave);
 		d3.select("#page-header").on("click", click(root));
 
-		$("#breadcrubms").progressbar( "destroy" );
+		$("#breadcrubms").progressbar("destroy");
 	});
 
 
@@ -153,17 +158,13 @@ function visualisation() {
 			})
 			.style("opacity", 1);
 
-		if(!d.children) updateDevelopers(d);
+		// TODO: osetrit ak "d" je z vizualizacie developers graph
+		if (!d.children) updateDevelopers(d);
 
 	}
 
 // Restore everything to full opacity when moving off the visualization.
 	function mouseleave(d) {
-
-		/* Hide the breadcrumb trail
-		 d3.select("#trail")
-		 .style("visibility", "hidden");
-		 */
 
 		// Deactivate all segments during transition.
 		d3.selectAll("g").on("mouseover", null);
@@ -207,6 +208,8 @@ function visualisation() {
 	function breadcrumbPoints(d, i) {
 		var points = [];
 		points.push("0,0");
+		// TODO: osetrit chybajuce "d"
+
 		points.push(d.name.length * 8 + ",0");
 		points.push(d.name.length * 8 + b.t + "," + (b.h / 2));
 		points.push(d.name.length * 8 + "," + b.h);
@@ -267,24 +270,25 @@ function visualisation() {
 
 	function updateDevelopers(data) {
 		d3.selectAll(".graph")
-			.style("fill", "#68a3d4")
+			.style("color", "#68a3d4")
 
-		if(data.commiters) {
+		if (data.commiters) {
 			var selection = [];
-			for(var i in data.commiters) {
-				selection.push(".graph"+data.commiters[i].id)
+			for (var i in data.commiters) {
+				selection.push(".graph" + data.commiters[i].id)
 			}
 			var ids = selection.join();
 			d3.selectAll(ids)
-				.style("fill", data.color)
+				.style("color", data.color)
 		}
 	}
 
+	//TODO: prehodnotit tuto funkciu
 	function selectDevelopers(data) {
-		if(data.commiters) {
+		if (data.commiters) {
 			var selection = [];
-			for(var i in data.commiters) {
-				selection.push(".graph"+data.commiters[i].id)
+			for (var i in data.commiters) {
+				selection.push(".graph" + data.commiters[i].id)
 			}
 			var ids = selection.join();
 			d3.selectAll(ids)
