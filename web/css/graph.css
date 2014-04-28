@@ -1,16 +1,18 @@
 #chart-container {
-    margin: 0 auto 50px auto;
+    margin: auto;
     background: rgba(255, 255, 255, 0.9);
-    position: fixed;
+    position: relative;
 }
 
-#chart-container h2 {
-    color: #444;
-    margin: 0 0 10px;
-    font-weight: 300;
-    padding: 10px;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-    font-size: 24px;
+#chart-container-wrapper {
+    position: fixed;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#developers-loading {
+    position: relative;
+    top: 310px;
 }
 
 g.context g.axis path {
@@ -47,6 +49,6 @@ path.graph {
 }
 
 .name-title {
-    text-shadow: 1px 1px #ffffff,-1px -1px #ffffff,-1px 1px #ffffff,1px -1px #ffffff;
+    text-shadow: 1px 1px #ffffff, -1px -1px #ffffff, -1px 1px #ffffff, 1px -1px #ffffff;
     font-weight: 700;
 }

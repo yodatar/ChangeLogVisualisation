@@ -15,7 +15,9 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/dashboard.css" rel="stylesheet">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="./css/graph.css">
+	<link rel="stylesheet" href="css/graph.css">
+	<link rel="stylesheet" type="text/css" href="css/jScrollbar.jquery.css" media="screen"/>
+
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -30,6 +32,9 @@
 	<script src="js/slider.js"></script>
 	<script src="js/visualisation3.js"></script>
 	<script src="js/graph.js"></script>
+	<%--	<script src="js/jquery-mousewheel.js"></script>
+		<script src="js/jScrollbar.jquery.min.js"></script>--%>
+
 
 </head>
 <body>
@@ -43,7 +48,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Bakalaris</a>
+			<a class="navbar-brand" href="#">Interactive visualisation of developing source code over time</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
@@ -80,7 +85,8 @@
 				<li style="margin:10px">
 					<form action="index" method="GET">
 						Project
-						<select class="form-control" name="projectSelect" id="projectSelect" onchange="clearPage()">
+						<select class="form-control" name="projectSelect" id="projectSelect"
+						        onchange="clearPageProjectSelected()">
 							<c:forEach var="projects" items="${allProjects}">
 								<option value="${projects.id}"
 								        <c:if test="${projectSelect == projects.id}">selected</c:if> >
@@ -106,21 +112,16 @@
 						<input type="submit" value="Display!" class="btn btn-primary btn-sm btn-block"/>
 					</form>
 
-					<%--	<li class="active">
-							<a href="#">Developers</a>
-						</li>--%>
-
-					<div id="chart-container"></div>
-					<!--
-					<div class="list-group" id="developersList">
-						<c:forEach var="users" items="${allUsers}">
-							<a href="#" id="${users.id}"
-							   class="list-group-item <c:if test="${commiterId == users.id}">active</c:if>">${users.name}</a>
-						</c:forEach>
+					<div id="chart-container-wrapper" class="jScrollbar">
+						<div id="chart-container" class="jScrollbar_mask"></div>
+						<div class="jScrollbar_draggable">    <!-- slider --> <a href="#" class="draggable"></a>
+						</div>
 					</div>
-					-->
-				</li>
+					<div class="clr"></div>
 
+					<div id="developers-loading"></div>
+
+				</li>
 			</ul>
 		</div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

@@ -25,6 +25,6 @@ public class AppServletContextListener implements ServletContextListener {
 		Resources resources = Resources.getInstance();
 		resources.setProjectId(3);
 		resources.setChangesetFromId(1045);
-		resources.setChangesetToId(1080);
+		resources.setChangesetToId(1585);
 	}
 }

@@ -1,23 +1,25 @@
 var commiterNum = 0;
 
 function developersStats() {
+	$("#developers-loading")
+		.progressbar({ value: false})
+		.find(".ui-progressbar-value").css({"background": '#428bca'});
 
 	d3.json("ajaxGetDevelepers", function (error, data) {
-
-		d3.json("ajaxUsersCodeActivities", createChart)
-			.header("Content-Type", "application/x-www-form-urlencoded")
-			.send("POST", "user=" + data.commiters[commiterNum].name);
+		createChart(data);
 	});
 }
 
 
 function createChart(data) {
-	commiterNum++;
 	if (commiterNum < data.commiters.length) {
 		d3.json("ajaxUsersCodeActivities", createChart)
 			.header("Content-Type", "application/x-www-form-urlencoded")
 			.send("POST", "user=" + data.commiters[commiterNum].name);
+	} else {
+		$("#developers-loading").progressbar("destroy");
 	}
+	commiterNum++;
 
 	var margin = {top: 10, right: 20, bottom: 30, left: 20},
 		width,
@@ -32,7 +34,7 @@ function createChart(data) {
 		ids.push(data.commiters[index].id)
 	}
 
-	width = 1200 - margin.left - margin.right,
+	width = 1300 - margin.left - margin.right,
 		height = name.length * 40;
 
 	d3.select(".svg").remove();
@@ -56,6 +58,7 @@ function createChart(data) {
 
 		d.date = new Date(d[0]);
 	});
+
 
 	for (var i = 0; i < name.length; i++) {
 		charts.push(new Chart({
@@ -103,7 +106,7 @@ function Chart(options) {
 	var yS = yScale;
 
 	var area = d3.svg.area()
-		.interpolate("basis")
+		.interpolate("monotone")
 		.x(function (d) {
 			return xS(d.date);
 		})
@@ -127,7 +130,7 @@ function Chart(options) {
 
 	chartContainer.append("path")
 		.data([chartData])
-		.attr('class', "graph graph" + ids)
+		.attr('class', "graph")
 		.attr("clip-path", "url(#clip-" + id + ")")
 		.attr("d", area);
 
@@ -161,32 +164,32 @@ function Chart(options) {
 	 */
 
 	chartContainer.append("text")
-		.attr("class", "name-title")
+		.attr("class", "name-title name-title" + ids)
 		.attr("transform", "translate(15,20)")
 		.text(name);
 
 	svg
 		.on("mouseover", function () {
 			svg.transition()
-				.attr("width", 1200)
+				.attr("width", 1300)
 				.duration(1000)
 				.ease("elastic");
 			d3.select("#chart-container").transition()
-				.attr("width", 1200)
+				.attr("width", 1300)
 				.duration(1000)
 				.ease("elastic");
 		})
 		.on("mouseleave", function () {
 			svg.transition()
-				.attr("width", 220)
+				.attr("width", 200)
 				.duration(500);
 			d3.select("#chart-container").transition()
-				.attr("width", 220)
+				.attr("width", 200)
 				.duration(500);
 		});
 
 	svg
-		.attr("width", 220);
+		.attr("width", 200);
 	d3.select("#chart-container")
-		.attr("width", 220);
+		.attr("width", 200);
 };

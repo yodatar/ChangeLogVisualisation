@@ -80,10 +80,7 @@ function visualisation() {
 			.style("opacity", function (d) {
 				return d.dx * ky / 2 > 12 ? 1 : 0;
 			})
-
-			.append("tspan")
-			.attr("x", "0")
-			.attr("y", "0")
+			.attr("alignment-baseline", "auto")
 			.text(function (d) {
 				return d.name;
 			});
@@ -99,8 +96,7 @@ function visualisation() {
 
 	function click(d) {
 		if (!d.children) {
-			selectDevelopers(d);
-			return;
+			d = d.parent;
 		}
 
 		var kx = (d.y ? w - 40 : w) / (1 - d.y);
@@ -130,15 +126,11 @@ function visualisation() {
 			.style("opacity", function (d) {
 				return d.dx * ky > 12 ? 1 : 0;
 			});
-
-		//d3.event.stopPropagation();
 	}
 
 	function transform(d) {
 		return "translate(8," + d.dx * ky / 2 + ")";
 	}
-
-////////////////////////////////////// breadcrumbs
 
 	function mouseover(d) {
 
@@ -158,8 +150,7 @@ function visualisation() {
 			})
 			.style("opacity", 1);
 
-		// TODO: osetrit ak "d" je z vizualizacie developers graph
-		if (!d.children) updateDevelopers(d);
+		updateDevelopers(d);
 
 	}
 
@@ -167,16 +158,17 @@ function visualisation() {
 	function mouseleave(d) {
 
 		// Deactivate all segments during transition.
-		d3.selectAll("g").on("mouseover", null);
+		//d3.selectAll("g").on("mouseover", null);
 
 		// Transition each segment to full opacity and then reactivate it.
 		d3.selectAll("g")
 			.transition()
 			.duration(250)
 			.style("opacity", 1)
-			.each("end", function () {
-				d3.select(this).on("mouseover", mouseover);
-			});
+			/*			.each("end", function () {
+			 d3.select(this).on("mouseover", mouseover);
+			 })*/
+		;
 	}
 
 // Given a node in a partition layout, return an array of all of its ancestor
@@ -193,7 +185,8 @@ function visualisation() {
 
 	function initializeBreadcrumbTrail() {
 		// Add the svg area.
-		var trail = d3.select("#breadcrubms").append("svg:svg")
+		var trail = d3.select("#breadcrubms")
+			.append("svg:svg")
 			.attr("width", w)
 			.attr("height", 50)
 			.attr("id", "trail");
@@ -269,17 +262,17 @@ function visualisation() {
 	}
 
 	function updateDevelopers(data) {
-		d3.selectAll(".graph")
-			.style("color", "#68a3d4")
+		d3.selectAll(".name-title")
+			.style("fill", "#000000")
 
-		if (data.commiters) {
+		if (!(typeof data.commiters === "undefined")) {
 			var selection = [];
 			for (var i in data.commiters) {
-				selection.push(".graph" + data.commiters[i].id)
+				selection.push(".name-title" + data.commiters[i].id)
 			}
 			var ids = selection.join();
 			d3.selectAll(ids)
-				.style("color", data.color)
+				.style("fill", data.color);
 		}
 	}
 

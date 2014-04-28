@@ -25,20 +25,20 @@ public class Controller {
 	DatabaseHandlers databaseHandlers = new DatabaseHandlers();
 
 	public JSONObject getUsersCodeActivities(String user) {
+		final int pieces = 100;
 		ArrayOfString arrayOfString = new ArrayOfString();
 		arrayOfString.getString().add("IdeCodeOperation");
 
 		XMLGregorianCalendar calendarFrom = Resources.getInstance().getChangesetFrom().getTimeStamp();
 		XMLGregorianCalendar calendarTo = Resources.getInstance().getChangesetTo().getTimeStamp();
 
-
 		//List<UsersEntity> userDtoList = databaseHandlers.getUsersPerProject();
 		long timeFrom = calendarFrom.toGregorianCalendar().getTime().getTime();
 		long timeTo = calendarTo.toGregorianCalendar().getTime().getTime();
-		long interval = (timeTo - timeFrom) / 10;
-		Integer[] intervals = new Integer[10];
-		Date[] dateList = new Date[10];
-		for (int i = 0; i < 10; i++) {
+		final long interval = (timeTo - timeFrom) / (pieces - 1);
+		Integer[] intervals = new Integer[pieces];
+		Date[] dateList = new Date[pieces];
+		for (int i = 0; i < pieces; i++) {
 			dateList[i] = new Date(timeFrom + i * interval);
 			intervals[i] = 0;
 		}
@@ -68,8 +68,8 @@ public class Controller {
 		Resources.getInstance().getListUsersActivities().add(intervals);
 
 		TransformToJson transformToJson = new TransformToJson();
-		JSONObject jsonObject = transformToJson.UsersCodeActivityToJson(
-				Resources.getInstance().getListUsers(), Resources.getInstance().getListUsersActivities(), dateList);
+		JSONObject jsonObject = transformToJson.usersCodeActivityToJson(
+				Resources.getInstance().getListUsers(), Resources.getInstance().getListUsersActivities(), dateList, pieces);
 
 		return jsonObject;
 	}

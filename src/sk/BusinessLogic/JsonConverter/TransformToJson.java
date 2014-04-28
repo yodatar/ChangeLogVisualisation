@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -34,10 +35,6 @@ public class TransformToJson {
 			pathTreeCreator.addPath(fileVersionDto.getUrl().getValue());
 		}
 
-		for (FileVersionExtendedDto fileVersionDto : changedFilesList) { // changed files names
-			pathTreeCreator.addChangedFilesName(fileVersionDto.getFileVersionDto().getUrl().getValue());
-		}
-
 		pathTreeCreator.addChangedFiles(changedFilesList); // changed files
 
 		pathTreeCreator.buildJsonTree();
@@ -58,7 +55,7 @@ public class TransformToJson {
 		return jsonArray;
 	}
 
-	public JSONObject UsersCodeActivityToJson(List<UsersEntity> listUsers, List<Integer[]> listUsersActivities, Date[] dateList) {
+	public JSONObject usersCodeActivityToJson(List<UsersEntity> listUsers, List<Integer[]> listUsersActivities, Date[] dateList, int pieces) {
 
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArrayCommiters = new JSONArray();
@@ -74,9 +71,9 @@ public class TransformToJson {
 		jsonObject.put("commiters", jsonArrayCommiters);
 
 		JSONArray jsonArrayIntervals = new JSONArray();
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < pieces; i++) {
 			Map intervalObject = new TreeMap();
-			String date = new SimpleDateFormat("MMMMM d, yyyy HH:mm:ss").format(dateList[i]);
+			String date = new SimpleDateFormat("MMMMM d, yyyy HH:mm:ss", Locale.US).format(dateList[i]);
 			intervalObject.put(0, Character.toUpperCase(date.charAt(0)) + date.substring(1));
 
 			int index = 0;
@@ -111,6 +108,19 @@ public class TransformToJson {
 			jsonArrayCommiters.add(commiterObject);
 		}
 		jsonObject.put("commiters", jsonArrayCommiters);
+
+		JSONArray jsonArrayIntervals = new JSONArray();
+		Map intervalObject = new TreeMap();
+		String date = "2014";
+		intervalObject.put(0, date);
+
+		for (UsersEntity usersEntity : userDtoList) {
+			intervalObject.put(usersEntity.getId(), 0);
+		}
+
+		jsonArrayIntervals.add(intervalObject);
+
+		jsonObject.put("intervals", jsonArrayIntervals);
 
 		return jsonObject;
 	}

@@ -45,6 +45,9 @@ function slider() {
 
 						$("#changesetFromId").val(idArray[ui.values[0]]);
 						$("#changesetToId").val(idArray[ui.values[1]]);
+					},
+					start: function (event, ui) {
+						clearPageSliderMoved();
 					}
 				});
 

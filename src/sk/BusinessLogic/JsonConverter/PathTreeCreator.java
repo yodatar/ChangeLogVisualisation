@@ -10,7 +10,6 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -33,7 +32,8 @@ public class PathTreeCreator {
 	private List<String> changedFilesName = new LinkedList<>();
 	private List<FileVersionExtendedDto> changedFiles = new LinkedList<>();
 
-	public PathTreeCreator() {	}
+	public PathTreeCreator() {
+	}
 
 	private static final Pattern PATH_SEPARATOR = Pattern.compile("/");
 
@@ -64,13 +64,22 @@ public class PathTreeCreator {
 			node = node.getChild(name);
 	}
 
-	public void addChangedFilesName(String path) {
-		String[] names = PATH_SEPARATOR.split(path);
-		changedFilesName.add(names[names.length - 1]);
-	}
+	public void addChangedFiles(List<FileVersionExtendedDto> fileVersionExtendedList) {
 
-	public void addChangedFiles(List<FileVersionExtendedDto> fileVersionDtoList) {
-		this.changedFiles = fileVersionDtoList;
+		for (FileVersionExtendedDto fileVersionExtendedDto : fileVersionExtendedList) {
+			String[] names = PATH_SEPARATOR.split(fileVersionExtendedDto.getFileVersionDto().getUrl().getValue());
+			List<String> pathList = new LinkedList<>();
+
+			for (int i = 0; i < names.length; i++) {
+				changedFilesName.add(names[i]);
+
+				pathList.add(names[i]);
+			}
+
+			fileVersionExtendedDto.setPathNames(pathList);
+		}
+
+		this.changedFiles = fileVersionExtendedList;
 	}
 
 
@@ -82,23 +91,24 @@ public class PathTreeCreator {
 			map.put("name", child.getKey());
 			map.put("size", 1);
 			if (changedFilesName.contains(child.getKey())) {
-				int index = changedFilesName.indexOf(child.getKey());
+				Set<Integer> commitersSet = new HashSet<Integer>();
+				Integer index = null;
 
-				Set<Integer> commitersSet = new HashSet();
-				ListIterator it = changedFilesName.listIterator();
-				while(it.hasNext()){
-					if(it.next().equals(child.getKey())){
-						commitersSet.add(changedFiles.get(it.previousIndex()).getCommiter().getId());
+				for (FileVersionExtendedDto fileVersionExtendedDto : changedFiles) {
+					if (fileVersionExtendedDto.getPathNames().contains(child.getKey())) {
+						if (index == null) index = changedFiles.indexOf(fileVersionExtendedDto);
+
+						commitersSet.add(fileVersionExtendedDto.getCommiter().getId());
 					}
 				}
 
 				JSONArray jsonArrayCommiters = new JSONArray();
-				for(Integer commiterId : commitersSet) {
+				for (Integer commiterId : commitersSet) {
 					Map commitersMap = new HashMap();
-					commitersMap.put("id",commiterId);
+					commitersMap.put("id", commiterId);
 					jsonArrayCommiters.add(commitersMap);
 				}
-				map.put("commiters",jsonArrayCommiters);
+				map.put("commiters", jsonArrayCommiters);
 
 
 				if (changedFiles.get(index).getFileVersionDto().getAncestor1ChangeType().getValue().value().equals("Add")) {

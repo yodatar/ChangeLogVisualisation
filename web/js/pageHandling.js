@@ -14,9 +14,15 @@ $(document).ready(function () {
 	slider();
 	visualisation();
 	developersStats();
+
+	$('.jScrollbar').jScrollbar({
+		scrollStep: 25,
+		position: 'left',
+		showOnHover: true
+	});
 });
 
-function clearPage() {
+function clearPageProjectSelected() {
 	sliderDestroy();
 
 	$("#slider")
@@ -27,4 +33,11 @@ function clearPage() {
 
 	d3.select(".svg").remove();
 	d3.select(".canvas").remove();
+	d3.select("#trail").remove();
 }
+
+function clearPageSliderMoved() {
+	d3.select(".svg").remove();
+	d3.select(".canvas").remove();
+	d3.select("#trail").remove();
+};

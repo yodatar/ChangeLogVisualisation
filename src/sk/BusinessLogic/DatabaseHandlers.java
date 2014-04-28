@@ -193,7 +193,7 @@ public class DatabaseHandlers {
 		activityFilter.setStartTimeTo(calendar2);
 		//activityFilter.setEndTimeTo(calendar2);
 		activityFilter.setUser(user);
-		activityFilter.setPageSize(500);
+		activityFilter.setPageSize(300);
 		activityFilter.setEventShortTypeNames(arrayOfString);
 
 
@@ -203,7 +203,7 @@ public class DatabaseHandlers {
 
 		activityDtoList = getActivitiesResponse.getGetActivitiesResult().getActivityDto();
 		long end = System.currentTimeMillis();
-		System.out.println("========= " + user + " - getActivities took : " + ((end - start) / 1000) + " sec.");
+		//System.out.println("========= " + user + " - getActivities took : " + ((end - start) / 1000) + " sec.");
 
 		return activityDtoList;
 	}
