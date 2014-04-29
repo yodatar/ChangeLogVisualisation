@@ -6,6 +6,7 @@ import com.gratex.perconik.astrcs.iactivitysvc.EventDto;
 import com.gratex.perconik.astrcs.iactivitysvc.IdeCodeOperationDto;
 import org.json.simple.JSONObject;
 import sk.BusinessLogic.JsonConverter.TransformToJson;
+import sk.BusinessLogic.entities.UserActivities;
 import sk.BusinessLogic.entities.UsersEntity;
 
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -52,9 +53,18 @@ public class Controller {
 					IdeCodeOperationDto dto = (IdeCodeOperationDto) eventDto;
 					try {
 						if (!dto.getCode().equals("null")) {
-							if (dto.getDocument().getPath().contains(Resources.getInstance().getProjectDto().getName())) {
+							if (dto.getDocument().getPathType().equals("SHORT_NAME") ||
+									dto.getDocument().getPathType().equals("RELATIVE_LOCAL") ||
+									dto.getDocument().getPath().contains(Resources.getInstance().getProjectDto().getName())) {
+								if (user.equals("TFS\\xjanik"))
+									System.out.println(dto.getDocument().getPathType() + " " + dto.getDocument().getPath());
+
 								long delay = dto.getTime().toGregorianCalendar().getTime().getTime() - timeFrom;
-								intervals[(int) (delay / interval)] += dto.getCode().length();
+								try {
+									intervals[(int) (delay / interval)] += dto.getCode().length();
+								} catch (ArrayIndexOutOfBoundsException exception) {
+									intervals[0] += 0;
+								}
 							}
 
 						}
@@ -65,7 +75,11 @@ public class Controller {
 			}
 		}
 
-		Resources.getInstance().getListUsersActivities().add(intervals);
+		for (UserActivities userActivities : Resources.getInstance().getListUsersActivities()) {
+			if (userActivities.getName().equals(user)) {
+				userActivities.setActivities(intervals);
+			}
+		}
 
 		TransformToJson transformToJson = new TransformToJson();
 		JSONObject jsonObject = transformToJson.usersCodeActivityToJson(
@@ -79,7 +93,12 @@ public class Controller {
 		List<UsersEntity> userDtoList = databaseHandlers.getUsersPerProject();
 		Collections.sort(userDtoList);
 		Resources.getInstance().setListUsers(userDtoList);
-		Resources.getInstance().setListUsersActivities(new LinkedList<Integer[]>());
+
+		List<UserActivities> userActivitiesList = new LinkedList<>();
+		for (UsersEntity usersEntity : userDtoList) {
+			userActivitiesList.add(new UserActivities(usersEntity.getId(), usersEntity.getName()));
+		}
+		Resources.getInstance().setListUsersActivities(userActivitiesList);
 
 		TransformToJson transformToJson = new TransformToJson();
 		JSONObject jsonObject = transformToJson.usersToJson(Resources.getInstance().getListUsers());

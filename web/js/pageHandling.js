@@ -5,7 +5,6 @@
  * Time: 23:59
  */
 
-// TODO: sem vsetky funkcie pre riadenie dokumentu
 
 $(document).ready(function () {
 	$("#slider")
@@ -15,11 +14,11 @@ $(document).ready(function () {
 	visualisation();
 	developersStats();
 
-	$('.jScrollbar').jScrollbar({
-		scrollStep: 25,
-		position: 'left',
-		showOnHover: true
-	});
+	/*	$('.jScrollbar').jScrollbar({
+	 scrollStep: 25,
+	 position: 'left',
+	 showOnHover: true
+	 });*/
 });
 
 function clearPageProjectSelected() {

@@ -1,13 +1,14 @@
 #chart-container {
     margin: auto;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     position: relative;
 }
 
 #chart-container-wrapper {
     position: fixed;
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #developers-loading {
@@ -38,7 +39,7 @@ g.context rect.background {
     visibility: visible !important;
 }
 
-path.graph {
+.bars rect {
     fill: #68a3d4;
 }
 
@@ -48,7 +49,12 @@ path.graph {
     shape-rendering: crispEdges;
 }
 
+g.tick {
+    font-size: 11px;
+}
+
 .name-title {
     text-shadow: 1px 1px #ffffff, -1px -1px #ffffff, -1px 1px #ffffff, 1px -1px #ffffff;
     font-weight: 700;
+    font-size: 14px;
 }

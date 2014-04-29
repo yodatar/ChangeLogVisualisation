@@ -1,6 +1,5 @@
 package sk.Servlets;
 
-import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
 import sk.BusinessLogic.DatabaseHandlers;
 import sk.BusinessLogic.Resources;
 import sk.BusinessLogic.entities.ProjectsEntity;
@@ -11,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,6 +21,7 @@ import java.util.List;
 
 
 public class IndexServlet extends HttpServlet {
+	private static final Pattern PATH_SEPARATOR = Pattern.compile("/");
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,13 +35,17 @@ public class IndexServlet extends HttpServlet {
 
 		DatabaseHandlers databaseHandlers = new DatabaseHandlers();
 		List<ProjectsEntity> rcsProjectDtoList = databaseHandlers.getProjects();
-		ChangesetDto changesetDto = databaseHandlers.getChangeset(Resources.getInstance().getChangesetToId());
+
+		//
+		for (ProjectsEntity projectsEntity : rcsProjectDtoList) {
+			String[] pieces = PATH_SEPARATOR.split(projectsEntity.getName());
+			projectsEntity.setName(pieces[pieces.length - 1]);
+		}
 
 		Resources.getInstance().setChangesetFrom(databaseHandlers.getChangeset(Resources.getInstance().getChangesetFromId()));
 		Resources.getInstance().setChangesetTo(databaseHandlers.getChangeset(Resources.getInstance().getChangesetToId()));
 		Resources.getInstance().setProjectDto(rcsProjectDtoList.get(Resources.getInstance().getProjectId() - 1));
 
-		req.setAttribute("commiterId", changesetDto.getCommitter().getValue().getId());
 		req.setAttribute("changesetFromId", Resources.getInstance().getChangesetFromId());
 		req.setAttribute("changesetToId", Resources.getInstance().getChangesetToId());
 		req.setAttribute("projectSelect", Resources.getInstance().getProjectId());

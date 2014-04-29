@@ -114,10 +114,13 @@
 
 					<div id="chart-container-wrapper" class="jScrollbar">
 						<div id="chart-container" class="jScrollbar_mask"></div>
-						<div class="jScrollbar_draggable">    <!-- slider --> <a href="#" class="draggable"></a>
-						</div>
+						<%--
+												<div class="jScrollbar_draggable">    <!-- slider --> <a href="#" class="draggable"></a></div>
+						--%>
 					</div>
-					<div class="clr"></div>
+					<%--
+										<div class="clr"></div>
+					--%>
 
 					<div id="developers-loading"></div>
 

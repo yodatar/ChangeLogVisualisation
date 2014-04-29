@@ -5,6 +5,7 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersion
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import sk.BusinessLogic.entities.FileVersionExtendedDto;
+import sk.BusinessLogic.entities.UserActivities;
 import sk.BusinessLogic.entities.UsersEntity;
 
 import java.text.SimpleDateFormat;
@@ -55,7 +56,7 @@ public class TransformToJson {
 		return jsonArray;
 	}
 
-	public JSONObject usersCodeActivityToJson(List<UsersEntity> listUsers, List<Integer[]> listUsersActivities, Date[] dateList, int pieces) {
+	public JSONObject usersCodeActivityToJson(List<UsersEntity> listUsers, List<UserActivities> listUsersActivities, Date[] dateList, int pieces) {
 
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArrayCommiters = new JSONArray();
@@ -76,15 +77,12 @@ public class TransformToJson {
 			String date = new SimpleDateFormat("MMMMM d, yyyy HH:mm:ss", Locale.US).format(dateList[i]);
 			intervalObject.put(0, Character.toUpperCase(date.charAt(0)) + date.substring(1));
 
-			int index = 0;
-			for (UsersEntity usersEntity : listUsers) {
-				//System.out.println(usersEntity.getId());
-				if (index < listUsersActivities.size()) {
-					intervalObject.put(usersEntity.getId(), listUsersActivities.get(index)[i]);
+			for (UserActivities userActivities : listUsersActivities) {
+				if (userActivities.getActivities() != null) {
+					intervalObject.put(userActivities.getId(), userActivities.getActivities()[i]);
 				} else {
-					intervalObject.put(usersEntity.getId(), 0);
+					intervalObject.put(userActivities.getId(), 0);
 				}
-				index++;
 			}
 			//System.out.println(intervalObject);
 			jsonArrayIntervals.add(intervalObject);

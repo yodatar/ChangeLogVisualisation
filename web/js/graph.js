@@ -7,21 +7,22 @@ function developersStats() {
 
 	d3.json("ajaxGetDevelepers", function (error, data) {
 		createChart(data);
+		for (var i = 0; i < data.commiters.length; i++) {
+			d3.json("ajaxUsersCodeActivities", createChart)
+				.header("Content-Type", "application/x-www-form-urlencoded")
+				.send("POST", "user=" + data.commiters[i].name);
+		}
 	});
 }
 
-
 function createChart(data) {
-	if (commiterNum < data.commiters.length) {
-		d3.json("ajaxUsersCodeActivities", createChart)
-			.header("Content-Type", "application/x-www-form-urlencoded")
-			.send("POST", "user=" + data.commiters[commiterNum].name);
-	} else {
-		$("#developers-loading").progressbar("destroy");
-	}
 	commiterNum++;
 
-	var margin = {top: 10, right: 20, bottom: 30, left: 20},
+	if (data.commiters.length == commiterNum) {
+		$("#developers-loading").progressbar("destroy");
+	}
+
+	var margin = {top: 10, right: 20, bottom: 30, left: 200},
 		width,
 		height;
 
@@ -79,7 +80,7 @@ function createChart(data) {
 
 function Chart(options) {
 	var chartData = options.data;
-	width = options.width;
+	var width = options.width;
 	var height = options.height;
 	var maxDataPoint = options.maxDataPoint;
 	//var maxDataPoint = 10;
@@ -104,49 +105,69 @@ function Chart(options) {
 
 	var xS = xScale;
 	var yS = yScale;
+	/*
+	 var area = d3.svg.area()
+	 .interpolate("monotone")
+	 .x(function (d) {
+	 return xS(d.date);
+	 })
+	 .y0(height)
+	 .y1(function (d) {
+	 return yS(d[ids]);
+	 });
 
-	var area = d3.svg.area()
-		.interpolate("monotone")
-		.x(function (d) {
-			return xS(d.date);
-		})
-		.y0(height)
-		.y1(function (d) {
-			return yS(d[ids]);
-		});
-
-	svg.append("defs").append("clipPath")
-		.attr("id", "clip-" + id)
-		.append("rect")
-		.attr("width", width)
-		.attr("height", height)
-		.attr("class", "area")
-	;
+	 svg.append("defs")
+	 .append("clipPath")
+	 .attr("id", "clip-" + id)
+	 .append("rect")
+	 .attr("width", width)
+	 .attr("height", height)
+	 .attr("class", "area");
+	 */
 
 	var chartContainer = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + (margin.top + (height * id) + (3 * id)) + ")");
 
 	/* We've created everything, let's actually add it to the page */
+	/*
 
-	chartContainer.append("path")
-		.data([chartData])
-		.attr('class', "graph")
-		.attr("clip-path", "url(#clip-" + id + ")")
-		.attr("d", area);
+	 chartContainer.append("path")
+	 .data([chartData])
+	 .attr('class', "graph")
+	 .attr("clip-path", "url(#clip-" + id + ")")
+	 .attr("d", area);
+
+
+	 */
+	var bars = chartContainer.append('g')
+		.attr('class', 'bars');
+
+
+	bars.selectAll('rect')
+		.data(chartData)
+		.enter()
+		.append('rect')
+		.attr('x', function (d, i) {
+			return xS(d.date) - .5;
+		})
+		.attr('y', function (d) {
+			return yS(d[ids]);
+		})
+		.attr('width', width / (chartData.length + 1))
+		.attr('height', function (d) {
+			return height - yS(d[ids]);
+		})
+		.append('g');
 
 	var xAxisTop = d3.svg.axis().scale(xScale).orient("bottom");
 	var xAxisBottom = d3.svg.axis().scale(xScale).orient("top");
 
-	/* We only want a top axis if it's the first country
-
-	 if (id == 0) {
-	 chartContainer.append("g")
-	 .attr("class", "x axis top")
-	 .attr("transform", "translate(0,0)")
-	 .call(xAxisTop);
-	 }
-	 */
-	/* Only want a bottom axis on the last country */
+	if (id == 0) {
+		chartContainer.append("g")
+			.attr("class", "x axis top")
+			.attr("transform", "translate(0,0)")
+			.call(xAxisTop);
+	}
 
 	if (showBottomAxis) {
 		chartContainer.append("g")
@@ -163,9 +184,16 @@ function Chart(options) {
 	 .call(yAxis);
 	 */
 
+	chartContainer.append("line")
+		.attr("x1", -50)
+		.attr("x2", width)
+		.attr("y1", height - .5)
+		.attr("y2", height - .5)
+		.style("stroke", "#ddd");
+
 	chartContainer.append("text")
 		.attr("class", "name-title name-title" + ids)
-		.attr("transform", "translate(15,20)")
+		.attr("transform", "translate(-170,25)")
 		.text(name);
 
 	svg

@@ -4,9 +4,12 @@
  * Time: 21:08
  */
 
-// TODO: klikanie aj na list stromu, a priblizenie k parentovi
 
 // TODO: precistit
+
+// TODO: legenda
+
+// TODO: oznacit jedneho developera za naj, pri mouseover
 
 
 var w = 1000;
@@ -69,7 +72,11 @@ function visualisation() {
 				return d.children ? "parent" : "child";
 			})
 			.style("fill", function (d) {
-				return d.color;
+				if (!d.children) {
+					return d.color;
+				} else {
+					return "#68a3d4";
+				}
 			})
 			.style("stroke", "white")
 			.style("stroke-width", "0");
@@ -183,8 +190,22 @@ function visualisation() {
 		return path;
 	}
 
+	var childrenList = [];
+
+	function getChildren(node) {
+		if (node.children) {
+			for (var i = 0; i < node.children.length; i++) {
+				if (!(typeof node.children[i].commiters === "undefined")) {
+					node.children[i].commiters.forEach(function (entry) {
+						childrenList.push(".name-title" + entry.id)
+					});
+				}
+				getChildren(node.children[i]);
+			}
+		}
+	}
+
 	function initializeBreadcrumbTrail() {
-		// Add the svg area.
 		var trail = d3.select("#breadcrubms")
 			.append("svg:svg")
 			.attr("width", w)
@@ -273,6 +294,12 @@ function visualisation() {
 			var ids = selection.join();
 			d3.selectAll(ids)
 				.style("fill", data.color);
+
+
+			childrenList = [];
+			getChildren(data);
+			d3.select(modus(childrenList))
+				.style("fill", "#ff0000");
 		}
 	}
 
@@ -287,5 +314,24 @@ function visualisation() {
 			d3.selectAll(ids)
 				.style("fill", data.color)
 		}
+	}
+
+	function modus(array) {
+		if (array.length == 0)
+			return null;
+		var modeMap = {};
+		var maxEl = array[0], maxCount = 1;
+		for (var i = 0; i < array.length; i++) {
+			var el = array[i];
+			if (modeMap[el] == null)
+				modeMap[el] = 1;
+			else
+				modeMap[el]++;
+			if (modeMap[el] > maxCount) {
+				maxEl = el;
+				maxCount = modeMap[el];
+			}
+		}
+		return maxEl;
 	}
 };
