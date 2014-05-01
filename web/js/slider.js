@@ -3,7 +3,6 @@
  * User: pipo
  * Date: 11.3.2014
  * Time: 14:30
- * To change this template use File | Settings | File Templates.
  */
 
 function slider() {
@@ -18,7 +17,11 @@ function slider() {
 		data: projectId
 	})
 		.done(function (data) {
-			$("#slider").progressbar("destroy");
+			try {
+				$("#slider").progressbar("destroy");
+			} catch (err) {
+				document.getElementById("slider").innerHTML = "";
+			}
 
 			var i = 0;
 			idArray = new Array();
@@ -40,8 +43,8 @@ function slider() {
 					min: 0,
 					max: idArray.length - 1,
 					slide: function (event, ui) {
-						document.getElementById("changesetFromDate").innerHTML = dateArray[ui.values[0]];
-						document.getElementById("changesetToDate").innerHTML = dateArray[ui.values[1]];
+						document.getElementById("changesetFromDate").innerHTML = "From: " + dateArray[ui.values[0]];
+						document.getElementById("changesetToDate").innerHTML = "To: &nbsp;&nbsp;&nbsp;&nbsp;" + dateArray[ui.values[1]];
 
 						$("#changesetFromId").val(idArray[ui.values[0]]);
 						$("#changesetToId").val(idArray[ui.values[1]]);
@@ -51,8 +54,8 @@ function slider() {
 					}
 				});
 
-			document.getElementById("changesetFromDate").innerHTML = dateArray[idArray.indexOf(Number(changesetFromId))];
-			document.getElementById("changesetToDate").innerHTML = dateArray[idArray.indexOf(Number(changesetToId))];
+			document.getElementById("changesetFromDate").innerHTML = "From: " + dateArray[idArray.indexOf(Number(changesetFromId))];
+			document.getElementById("changesetToDate").innerHTML = "To: &nbsp;&nbsp;&nbsp;&nbsp;" + dateArray[idArray.indexOf(Number(changesetToId))];
 		});
 
 }

@@ -1,7 +1,7 @@
 package sk.Servlets;
 
 import org.json.simple.JSONObject;
-import sk.BusinessLogic.DatabaseHandlers;
+import sk.BusinessLogic.Controller;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,8 +21,8 @@ public class GetProjectTreeServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-		DatabaseHandlers databaseHandlers = new DatabaseHandlers();
-		JSONObject jsonObject = databaseHandlers.getProjectTree();
+		Controller controller = new Controller();
+		JSONObject jsonObject = controller.getProjectTree();
 
 		response.setContentType("application/json");
 		PrintWriter out = response.getWriter();

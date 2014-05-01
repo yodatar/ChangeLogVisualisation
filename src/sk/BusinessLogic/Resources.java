@@ -22,6 +22,7 @@ public class Resources {
 	private Integer projectId;
 	private Integer changesetFromId;
 	private Integer changesetToId;
+	public long totalTime = 0;
 
 	private ProjectsEntity projectDto;
 	private ChangesetDto changesetFrom;

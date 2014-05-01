@@ -84,7 +84,6 @@ public class TransformToJson {
 					intervalObject.put(userActivities.getId(), 0);
 				}
 			}
-			//System.out.println(intervalObject);
 			jsonArrayIntervals.add(intervalObject);
 		}
 		jsonObject.put("intervals", jsonArrayIntervals);

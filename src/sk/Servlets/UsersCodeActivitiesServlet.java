@@ -20,7 +20,6 @@ import java.io.PrintWriter;
 public class UsersCodeActivitiesServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		//System.out.println(request.getParameter("user"));
 
 		Controller controller = new Controller();
 		JSONObject jsonObject = controller.getUsersCodeActivities(request.getParameter("user"));

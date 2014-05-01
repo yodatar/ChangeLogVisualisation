@@ -1,13 +1,11 @@
 /**
  * User: pipo
- * Date: 5.3.2014
+ * Date: 5.11.2013
  * Time: 21:08
  */
 
 
 // TODO: precistit
-
-// TODO: legenda
 
 // TODO: oznacit jedneho developera za naj, pri mouseover
 
@@ -47,8 +45,6 @@ function visualisation() {
 
 	d3.json("ajaxGetProjectTree", function (error, root) {
 
-		initializeBreadcrumbTrail();
-
 		g = vis.selectAll("g")
 			.data(partition.nodes(root))
 			.enter()
@@ -72,11 +68,7 @@ function visualisation() {
 				return d.children ? "parent" : "child";
 			})
 			.style("fill", function (d) {
-				if (!d.children) {
-					return d.color;
-				} else {
-					return "#68a3d4";
-				}
+				return d.color;
 			})
 			.style("stroke", "white")
 			.style("stroke-width", "0");
@@ -97,7 +89,14 @@ function visualisation() {
 		d3.select("#container").on("mouseleave", mouseleave);
 		d3.select("#page-header").on("click", click(root));
 
-		$("#breadcrubms").progressbar("destroy");
+		try {
+			$("#breadcrubms").progressbar("destroy");
+		} catch (err) {
+			document.getElementById("breadcrubms").innerHTML = "";
+		}
+
+		initializeBreadcrumbTrail();
+		legend();
 	});
 
 
@@ -113,7 +112,6 @@ function visualisation() {
 		y.domain([ d.x, d.x + d.dx ]);
 
 		var t = g.transition()
-			//.duration(d3.event.altKey ? 7500 : 750)
 			.duration(750)
 			.attr("transform", function (d) {
 				return "translate(" + x(d.y) + "," + y(d.x) + ")";
@@ -123,13 +121,15 @@ function visualisation() {
 			.attr("width", d.dy * kx)
 			.attr("height", function (d) {
 				return d.dx * ky;
-			})
-			.style("display", function (d) {
-				if (d.depth > 2) return "";
 			});
 
 		t.select("text")
 			.attr("transform", transform)
+			.attr("alignment-baseline", function (d) {
+				if (d.depth > 3)
+					return "mathematical";
+				return "auto";
+			})
 			.style("opacity", function (d) {
 				return d.dx * ky > 12 ? 1 : 0;
 			});
@@ -140,46 +140,37 @@ function visualisation() {
 	}
 
 	function mouseover(d) {
-
 		d3.select("#explanation")
 			.style("visibility", "");
 
 		var sequenceArray = getAncestors(d);
 		updateBreadcrumbs(sequenceArray);
-		// Fade all the segments.
-		d3.selectAll("g")
+		d3.selectAll(".child, .parent")
 			.style("opacity", 0.9);
 
-		// Then highlight only those that are an ancestor of the current segment.
-		vis.selectAll("g")
+		vis.selectAll(".child, .parent")
 			.filter(function (node) {
 				return (sequenceArray.indexOf(node) >= 0);
 			})
 			.style("opacity", 1);
 
 		updateDevelopers(d);
-
 	}
 
-// Restore everything to full opacity when moving off the visualization.
 	function mouseleave(d) {
 
-		// Deactivate all segments during transition.
-		//d3.selectAll("g").on("mouseover", null);
+		d3.selectAll(".child, .parent").on("mouseover", null);
 
-		// Transition each segment to full opacity and then reactivate it.
-		d3.selectAll("g")
+		d3.selectAll(".child, .parent")
 			.transition()
 			.duration(250)
 			.style("opacity", 1)
-			/*			.each("end", function () {
-			 d3.select(this).on("mouseover", mouseover);
-			 })*/
-		;
+			.each("end", function () {
+				d3.select(this)
+					.on("mouseover", mouseover);
+			});
 	}
 
-// Given a node in a partition layout, return an array of all of its ancestor
-// nodes, highest first, but excluding the root.
 	function getAncestors(node) {
 		var path = [];
 		var current = node;
@@ -191,15 +182,19 @@ function visualisation() {
 	}
 
 	var childrenList = [];
+	var lastColor;
 
 	function getChildren(node) {
+
+		if (!(typeof node.commiters === "undefined")) {
+			lastColor = node.color;
+			node.commiters.forEach(function (entry) {
+				childrenList.push(".name-title" + entry.id)
+			});
+		}
+
 		if (node.children) {
 			for (var i = 0; i < node.children.length; i++) {
-				if (!(typeof node.children[i].commiters === "undefined")) {
-					node.children[i].commiters.forEach(function (entry) {
-						childrenList.push(".name-title" + entry.id)
-					});
-				}
 				getChildren(node.children[i]);
 			}
 		}
@@ -212,33 +207,27 @@ function visualisation() {
 			.attr("height", 50)
 			.attr("id", "trail");
 
-		// Add the label at the end, for the percentage.
 		trail.append("svg:text")
 			.attr("id", "endlabel")
 			.style("fill", "#000");
 	}
 
-// Generate a string that describes the points of a breadcrumb polygon.
 	function breadcrumbPoints(d, i) {
 		var points = [];
 		points.push("0,0");
-		// TODO: osetrit chybajuce "d"
-
 		points.push(d.name.length * 8 + ",0");
 		points.push(d.name.length * 8 + b.t + "," + (b.h / 2));
 		points.push(d.name.length * 8 + "," + b.h);
 		points.push("0," + b.h);
-		if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
+
+		if (i > 0) {
 			points.push(b.t + "," + (b.h / 2));
 		}
 		return points.join(" ");
 	}
 
-// Update the breadcrumb trail to show the current sequence and percentage.
 	function updateBreadcrumbs(nodeArray) {
-
-		// Data join; key function combines name and depth (= position in sequence).
-		var g = d3.select("#trail")
+		var group = d3.select("#trail")
 			.selectAll("g")
 			.data(nodeArray, function (d) {
 				return d.name + d.depth;
@@ -246,8 +235,7 @@ function visualisation() {
 			.on("click", click)
 			.on("mouseover", mouseover);
 
-		// Add breadcrumb and label for entering nodes.
-		var entering = g.enter().append("svg:g");
+		var entering = group.enter().append("svg:g");
 
 		entering.append("svg:polygon")
 			.attr("points", breadcrumbPoints)
@@ -264,8 +252,7 @@ function visualisation() {
 				return d.name;
 			});
 
-		// Set position for entering and updating nodes.
-		g.attr("transform", function (d) {
+		group.attr("transform", function (d) {
 			var sum = 0;
 			var sequenceArray = getAncestors(d.parent);
 			sequenceArray.forEach(function (entry) {
@@ -274,64 +261,73 @@ function visualisation() {
 			return "translate(" + sum + ", 0)";
 		});
 
-		// Remove exiting nodes.
-		g.exit().remove();
+		group.exit().remove();
 
-		// Make the breadcrumb trail visible, if it's hidden.
 		d3.select("#trail")
 			.style("visibility", "");
 	}
 
 	function updateDevelopers(data) {
 		d3.selectAll(".name-title")
+			.transition()
 			.style("fill", "#000000")
+			.duration(100);
 
-		if (!(typeof data.commiters === "undefined")) {
-			var selection = [];
-			for (var i in data.commiters) {
-				selection.push(".name-title" + data.commiters[i].id)
-			}
-			var ids = selection.join();
-			d3.selectAll(ids)
-				.style("fill", data.color);
+		Array.prototype.uniqueCommiter = function () {
+			var o = {}, i,
+				l = this.length,
+				r = [];
+			for (i = 0; i < l; i += 1)
+				o[this[i]] = this[i];
+			for (i in o)
+				r.push(o[i]);
+			return r;
+		};
 
+		childrenList = [];
+		lastColor = data.color;
+		getChildren(data);
+		var bestCommiter = modus(childrenList);
+		var selections = childrenList.uniqueCommiter().join();
 
-			childrenList = [];
-			getChildren(data);
-			d3.select(modus(childrenList))
-				.style("fill", "#ff0000");
+		if (selections != "") {
+			d3.selectAll(selections)
+				.transition()
+				.style("fill", function () {
+					if (data.color != "#1dd300" && data.color != "#ffa500")
+						return lastColor;
+					return data.color;
+				})
+				.duration(100);
+
 		}
-	}
-
-	//TODO: prehodnotit tuto funkciu
-	function selectDevelopers(data) {
-		if (data.commiters) {
-			var selection = [];
-			for (var i in data.commiters) {
-				selection.push(".graph" + data.commiters[i].id)
-			}
-			var ids = selection.join();
-			d3.selectAll(ids)
-				.style("fill", data.color)
+		if (typeof data.commiters === "undefined") {
+			d3.select(bestCommiter)
+				.transition()
+				.style("fill", "#ff0000")
+				.duration(100);
 		}
 	}
 
 	function modus(array) {
 		if (array.length == 0)
 			return null;
-		var modeMap = {};
-		var maxEl = array[0], maxCount = 1;
+
+		var modeMap = {},
+			max = array[0],
+			maxCount = 1;
+
 		for (var i = 0; i < array.length; i++) {
-			var el = array[i];
-			if (modeMap[el] == null)
-				modeMap[el] = 1;
+			var value = array[i];
+			if (modeMap[value] == null)
+				modeMap[value] = 1;
 			else
-				modeMap[el]++;
-			if (modeMap[el] > maxCount) {
-				maxEl = el;
-				maxCount = modeMap[el];
+				modeMap[value]++;
+			if (modeMap[value] > maxCount) {
+				max = value;
+				maxCount = modeMap[value];
 			}
 		}
-		return maxEl;
+		return max;
 	}
 };

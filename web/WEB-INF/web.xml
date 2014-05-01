@@ -12,6 +12,18 @@
 	</welcome-file-list>
 
 	<servlet>
+		<servlet-name>index</servlet-name>
+		<servlet-class>sk.Servlets.IndexServlet</servlet-class>
+		<!--
+				<load-on-startup>1</load-on-startup>
+		-->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>ajaxGetProjectTree</servlet-name>
 		<servlet-class>sk.Servlets.GetProjectTreeServlet</servlet-class>
 	</servlet>
@@ -30,13 +42,12 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>index</servlet-name>
-		<servlet-class>sk.Servlets.IndexServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
+		<servlet-name>vis</servlet-name>
+		<servlet-class>sk.Servlets.VisualisationServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>index</servlet-name>
-		<url-pattern>/index</url-pattern>
+		<servlet-name>vis</servlet-name>
+		<url-pattern>/vis</url-pattern>
 	</servlet-mapping>
 
 	<servlet>

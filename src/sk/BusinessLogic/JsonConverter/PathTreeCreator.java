@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -71,12 +72,11 @@ public class PathTreeCreator {
 			List<String> pathList = new LinkedList<>();
 
 			for (int i = 0; i < names.length; i++) {
-				changedFilesName.add(names[i]);
-
 				pathList.add(names[i]);
 			}
 
 			fileVersionExtendedDto.setPathNames(pathList);
+			changedFilesName.add(names[names.length - 1]);
 		}
 
 		this.changedFiles = fileVersionExtendedList;
@@ -91,14 +91,13 @@ public class PathTreeCreator {
 			map.put("name", child.getKey());
 			map.put("size", 1);
 			if (changedFilesName.contains(child.getKey())) {
-				Set<Integer> commitersSet = new HashSet<Integer>();
-				Integer index = null;
+				int index = changedFilesName.indexOf(child.getKey());
 
-				for (FileVersionExtendedDto fileVersionExtendedDto : changedFiles) {
-					if (fileVersionExtendedDto.getPathNames().contains(child.getKey())) {
-						if (index == null) index = changedFiles.indexOf(fileVersionExtendedDto);
-
-						commitersSet.add(fileVersionExtendedDto.getCommiter().getId());
+				Set<Integer> commitersSet = new HashSet();
+				ListIterator it = changedFilesName.listIterator();
+				while (it.hasNext()) {
+					if (it.next().equals(child.getKey())) {
+						commitersSet.add(changedFiles.get(it.previousIndex()).getCommiter().getId());
 					}
 				}
 
@@ -127,6 +126,7 @@ public class PathTreeCreator {
 			JSONArray nextJsonArray = new JSONArray();
 
 			if (!child.getValue().getChildren().isEmpty()) {
+				if (r + 19 > 254) r = 230;
 				buildJsonTree(child.getValue(), nextJsonArray, r + 19, g + 12, b + 5);
 				map.put("children", nextJsonArray);
 			}

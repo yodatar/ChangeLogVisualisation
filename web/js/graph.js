@@ -1,14 +1,22 @@
 var commiterNum = 0;
+var commitersList;
+var abortAjax = false;
 
 function developersStats() {
 	$("#developers-loading")
 		.progressbar({ value: false})
-		.find(".ui-progressbar-value").css({"background": '#428bca'});
+		.find(".ui-progressbar-value")
+		.css({"background": '#428bca', "width": "90%"});
 
 	d3.json("ajaxGetDevelepers", function (error, data) {
+		commitersList = data.commiters;
+
 		createChart(data);
 		for (var i = 0; i < data.commiters.length; i++) {
 			d3.json("ajaxUsersCodeActivities", createChart)
+				.on("beforesend", function (request) {
+					$.xhrPool.push(request);
+				})
 				.header("Content-Type", "application/x-www-form-urlencoded")
 				.send("POST", "user=" + data.commiters[i].name);
 		}
@@ -16,11 +24,18 @@ function developersStats() {
 }
 
 function createChart(data) {
+
+	if (commitersList.length == commiterNum) {
+		try {
+			$("#developers-loading").progressbar("destroy");
+			$(".close").remove();
+		} catch (err) {
+			document.getElementById("developers-loading").innerHTML = "";
+		}
+	}
 	commiterNum++;
 
-	if (data.commiters.length == commiterNum) {
-		$("#developers-loading").progressbar("destroy");
-	}
+	if (data == null || abortAjax) return;
 
 	var margin = {top: 10, right: 20, bottom: 30, left: 200},
 		width,
@@ -61,9 +76,9 @@ function createChart(data) {
 	});
 
 
-	for (var i = 0; i < name.length; i++) {
+	for (var i = 0; i < commitersList.length; i++) {
 		charts.push(new Chart({
-			data: data.intervals.slice(), // copy the array
+			data: data.intervals.slice(),
 			id: i,
 			name: name[i],
 			ids: ids[i],
@@ -83,7 +98,6 @@ function Chart(options) {
 	var width = options.width;
 	var height = options.height;
 	var maxDataPoint = options.maxDataPoint;
-	//var maxDataPoint = 10;
 	var svg = options.svg;
 	var id = options.id;
 	var name = options.name;
@@ -91,57 +105,26 @@ function Chart(options) {
 	var margin = options.margin;
 	var showBottomAxis = options.showBottomAxis;
 
-	/* XScale is time based */
+	if (chartData == null) return;
+
 	var xScale = d3.time.scale()
 		.range([0, width])
 		.domain(d3.extent(chartData.map(function (d) {
 			return d.date;
 		})));
 
-	/* YScale is linear based on the maxData Point we found earlier*/
 	var yScale = d3.scale.linear()
 		.range([height, 0])
 		.domain([0, maxDataPoint]);
 
 	var xS = xScale;
 	var yS = yScale;
-	/*
-	 var area = d3.svg.area()
-	 .interpolate("monotone")
-	 .x(function (d) {
-	 return xS(d.date);
-	 })
-	 .y0(height)
-	 .y1(function (d) {
-	 return yS(d[ids]);
-	 });
-
-	 svg.append("defs")
-	 .append("clipPath")
-	 .attr("id", "clip-" + id)
-	 .append("rect")
-	 .attr("width", width)
-	 .attr("height", height)
-	 .attr("class", "area");
-	 */
 
 	var chartContainer = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + (margin.top + (height * id) + (3 * id)) + ")");
 
-	/* We've created everything, let's actually add it to the page */
-	/*
-
-	 chartContainer.append("path")
-	 .data([chartData])
-	 .attr('class', "graph")
-	 .attr("clip-path", "url(#clip-" + id + ")")
-	 .attr("d", area);
-
-
-	 */
 	var bars = chartContainer.append('g')
 		.attr('class', 'bars');
-
 
 	bars.selectAll('rect')
 		.data(chartData)
@@ -176,13 +159,13 @@ function Chart(options) {
 			.call(xAxisBottom);
 	}
 
-	/*yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(5);
+	var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(2);
 
-	 chartContainer.append("g")
-	 .attr("class", "y axis")
-	 .attr("transform", "translate(-15,0)")
-	 .call(yAxis);
-	 */
+	chartContainer.append("g")
+		.attr("class", "y axis")
+		.attr("transform", "translate(" + width + ",0)")
+		.call(yAxis);
+
 
 	chartContainer.append("line")
 		.attr("x1", -50)
@@ -194,7 +177,8 @@ function Chart(options) {
 	chartContainer.append("text")
 		.attr("class", "name-title name-title" + ids)
 		.attr("transform", "translate(-170,25)")
-		.text(name);
+		.text(name)
+		.on("click", userSelection);
 
 	svg
 		.on("mouseover", function () {
@@ -209,15 +193,79 @@ function Chart(options) {
 		})
 		.on("mouseleave", function () {
 			svg.transition()
-				.attr("width", 200)
+				.attr("width", 220)
 				.duration(500);
 			d3.select("#chart-container").transition()
-				.attr("width", 200)
+				.attr("width", 220)
 				.duration(500);
 		});
 
-	svg
-		.attr("width", 200);
+
+	svg.attr("width", 220);
+
 	d3.select("#chart-container")
-		.attr("width", 200);
-};
+		.attr("width", 220);
+
+}
+
+function userSelection(d) {
+	var currentUser = this;
+	var opacity = parseFloat(d3.select(this).style('opacity'));
+
+	if (opacity.toPrecision(2) == 0.99) {
+		d3.selectAll('.name-title')
+			.transition()
+			.style('opacity', 1);
+
+
+		d3.selectAll(".child")
+			.transition()
+			.style("fill", function (d) {
+				return d.color;
+			});
+	} else {
+		d3.selectAll('.name-title')
+			.transition()
+			.style('opacity', function () {
+				return (this === currentUser) ? 0.99 : 0.3;
+			});
+
+		var index = 0, userIndex;
+		for (var i = 0; i < currentUser.parentNode.parentNode.childNodes.length; i++) {
+			if (currentUser.parentNode.parentNode.childNodes[i].lastChild === currentUser) {
+				userIndex = index;
+				break;
+			}
+			index++;
+		}
+		var selectedUserId = commitersList[userIndex].id;
+
+		var files = d3.selectAll(".child")[0];
+
+		for (var i = 0; i < files.length; i++) {
+			var isCommiter = false;
+
+			if (!(typeof files[i].__data__.commiters === "undefined")) {
+				files[i].__data__.commiters.forEach(function (commiter) {
+					if (commiter.id == selectedUserId) {
+						isCommiter = true;
+					}
+				});
+			}
+
+			if (isCommiter) {
+				d3.select(files[i])
+					.transition()
+					.style("fill", function (d) {
+						return d.color;
+					});
+			} else {
+				d3.select(files[i])
+					.transition()
+					.style("fill", function (d) {
+						return d.parent.color;
+					});
+			}
+		}
+	}
+}

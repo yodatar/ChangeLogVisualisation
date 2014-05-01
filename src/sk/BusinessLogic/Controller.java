@@ -1,11 +1,15 @@
 package sk.BusinessLogic;
 
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityDto;
-import com.gratex.perconik.astrcs.iactivitysvc.ArrayOfString;
 import com.gratex.perconik.astrcs.iactivitysvc.EventDto;
 import com.gratex.perconik.astrcs.iactivitysvc.IdeCodeOperationDto;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
+import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import sk.BusinessLogic.JsonConverter.TransformToJson;
+import sk.BusinessLogic.entities.FileVersionExtendedDto;
+import sk.BusinessLogic.entities.ProjectsEntity;
 import sk.BusinessLogic.entities.UserActivities;
 import sk.BusinessLogic.entities.UsersEntity;
 
@@ -23,17 +27,17 @@ import java.util.List;
 
 
 public class Controller {
-	DatabaseHandlers databaseHandlers = new DatabaseHandlers();
+	DatabaseHandlers databaseHandlers = new PerConIKDatabaseHandler();
+	TransformToJson transformToJson = new TransformToJson();
 
 	public JSONObject getUsersCodeActivities(String user) {
+
 		final int pieces = 100;
-		ArrayOfString arrayOfString = new ArrayOfString();
-		arrayOfString.getString().add("IdeCodeOperation");
+		String eventName = "IdeCodeOperation";
 
 		XMLGregorianCalendar calendarFrom = Resources.getInstance().getChangesetFrom().getTimeStamp();
 		XMLGregorianCalendar calendarTo = Resources.getInstance().getChangesetTo().getTimeStamp();
 
-		//List<UsersEntity> userDtoList = databaseHandlers.getUsersPerProject();
 		long timeFrom = calendarFrom.toGregorianCalendar().getTime().getTime();
 		long timeTo = calendarTo.toGregorianCalendar().getTime().getTime();
 		final long interval = (timeTo - timeFrom) / (pieces - 1);
@@ -44,7 +48,7 @@ public class Controller {
 			intervals[i] = 0;
 		}
 
-		List<ActivityDto> activityDtoList = databaseHandlers.getActivities(user, calendarFrom, calendarTo, arrayOfString);
+		List<ActivityDto> activityDtoList = databaseHandlers.getActivities(user, calendarFrom, calendarTo, eventName);
 
 		for (ActivityDto activityDto : activityDtoList) {
 			for (EventDto eventDto : activityDto.getEvents().getOneNoteNavigateDtoOrOneNoteViewChangeDtoOrLyncStatusChangeDto()) {
@@ -53,12 +57,10 @@ public class Controller {
 					IdeCodeOperationDto dto = (IdeCodeOperationDto) eventDto;
 					try {
 						if (!dto.getCode().equals("null")) {
-							if (dto.getDocument().getPathType().equals("SHORT_NAME") ||
-									dto.getDocument().getPathType().equals("RELATIVE_LOCAL") ||
-									dto.getDocument().getPath().contains(Resources.getInstance().getProjectDto().getName())) {
-								if (user.equals("TFS\\xjanik"))
-									System.out.println(dto.getDocument().getPathType() + " " + dto.getDocument().getPath());
 
+							if (dto.getDocument().getPathType().value().equals("SHORT_NAME") ||
+									dto.getDocument().getPathType().value().equals("RELATIVE_LOCAL") ||
+									dto.getDocument().getPath().contains(Resources.getInstance().getProjectDto().getName())) {
 								long delay = dto.getTime().toGregorianCalendar().getTime().getTime() - timeFrom;
 								try {
 									intervals[(int) (delay / interval)] += dto.getCode().length();
@@ -81,7 +83,6 @@ public class Controller {
 			}
 		}
 
-		TransformToJson transformToJson = new TransformToJson();
 		JSONObject jsonObject = transformToJson.usersCodeActivityToJson(
 				Resources.getInstance().getListUsers(), Resources.getInstance().getListUsersActivities(), dateList, pieces);
 
@@ -100,9 +101,39 @@ public class Controller {
 		}
 		Resources.getInstance().setListUsersActivities(userActivitiesList);
 
-		TransformToJson transformToJson = new TransformToJson();
 		JSONObject jsonObject = transformToJson.usersToJson(Resources.getInstance().getListUsers());
 
 		return jsonObject;
+	}
+
+	public JSONObject getProjectTree() {
+
+		List<FileVersionDto> listFileVersionDto = databaseHandlers.searchFiles();
+		List<FileVersionExtendedDto> changedFilesList = databaseHandlers.getChangedFiles();
+
+		JSONObject jsonObject = transformToJson.projectTreeToJson(listFileVersionDto, changedFilesList);
+
+		return jsonObject;
+	}
+
+
+	public JSONArray getChangesetList() {
+		List<ChangesetDto> changesetDtoList = databaseHandlers.searchChangesets(null, null);
+
+		TransformToJson transformToJson = new TransformToJson();
+		JSONArray jsonArray = transformToJson.changesetListToJson(changesetDtoList);
+
+		return jsonArray;
+	}
+
+	public List<ProjectsEntity> getProjects() {
+		List<ProjectsEntity> projectsEntityList = databaseHandlers.getProjects();
+
+		return projectsEntityList;
+	}
+
+	public ChangesetDto getChangeset(Integer changesetId) {
+		ChangesetDto changesetDto = databaseHandlers.getChangeset(changesetId);
+		return changesetDto;
 	}
 }

@@ -1,11 +1,12 @@
 #chart-container {
     margin: auto;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.90);
     position: relative;
 }
 
 #chart-container-wrapper {
     position: fixed;
+    margin-top: 25px;
     height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -13,7 +14,7 @@
 
 #developers-loading {
     position: relative;
-    top: 310px;
+    height: 17px;
 }
 
 g.context g.axis path {
@@ -57,4 +58,8 @@ g.tick {
     text-shadow: 1px 1px #ffffff, -1px -1px #ffffff, -1px 1px #ffffff, 1px -1px #ffffff;
     font-weight: 700;
     font-size: 14px;
+}
+
+.name-title:hover {
+    cursor: hand;
 }

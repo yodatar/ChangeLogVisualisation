@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="visualisation">
+  <artifact type="exploded-war" build-on-make="true" name="visualisation">
     <output-path>$PROJECT_DIR$/out/artifacts/visualisation</output-path>
-    <root id="archive" name="visualisation.war">
+    <root id="root">
       <element id="javaee-facet-resources" facet="ChangeLogVisualisation/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
