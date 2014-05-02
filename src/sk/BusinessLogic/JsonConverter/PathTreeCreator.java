@@ -134,7 +134,7 @@ public class PathTreeCreator {
 	}
 
 	public void buildJsonTree() {
-		int r = 66, g = 139, b = 202;
+		int r = 47, g = 127, b = 197;
 		JSONArray jsonArray = new JSONArray();
 		jsonObject.put("name", "Project");
 		jsonObject.put("color", "#" + Integer.toHexString(r) + Integer.toHexString(g) + Integer.toHexString(b));

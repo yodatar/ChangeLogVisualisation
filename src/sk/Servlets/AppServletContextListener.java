@@ -24,7 +24,9 @@ public class AppServletContextListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent arg0) {
 		Resources resources = Resources.getInstance();
 		resources.setProjectId(3);
-		resources.setChangesetFromId(1045);
-		resources.setChangesetToId(1585);
+		resources.setChangesetFromId(1386);
+		resources.setChangesetToId(1490);
 	}
+
+	//projectSelect=5 changesetFrom=1042 changesetTo=1058
 }

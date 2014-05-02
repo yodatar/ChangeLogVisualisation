@@ -193,18 +193,18 @@ function Chart(options) {
 		})
 		.on("mouseleave", function () {
 			svg.transition()
-				.attr("width", 220)
+				.attr("width", 230)
 				.duration(500);
 			d3.select("#chart-container").transition()
-				.attr("width", 220)
+				.attr("width", 230)
 				.duration(500);
 		});
 
 
-	svg.attr("width", 220);
+	svg.attr("width", 230);
 
 	d3.select("#chart-container")
-		.attr("width", 220);
+		.attr("width", 230);
 
 }
 

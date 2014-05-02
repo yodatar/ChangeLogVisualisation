@@ -5,11 +5,6 @@
  */
 
 
-// TODO: precistit
-
-// TODO: oznacit jedneho developera za naj, pri mouseover
-
-
 var w = 1000;
 var h = 480;
 var x = d3.scale.linear().range([ 0, w ]);
@@ -75,7 +70,6 @@ function visualisation() {
 
 		g.append("svg:text")
 			.attr("transform", transform)
-			.attr("dy", ".50em")
 			.style("opacity", function (d) {
 				return d.dx * ky / 2 > 12 ? 1 : 0;
 			})
@@ -126,10 +120,13 @@ function visualisation() {
 		t.select("text")
 			.attr("transform", transform)
 			.attr("alignment-baseline", function (d) {
-				if (d.depth > 3)
-					return "mathematical";
+				if (d.depth > 2)
+					return "central";
 				return "auto";
 			})
+			/*.style("font-size",function (d) {
+			 return (13 - d.depth)+"px";
+			 })*/
 			.style("opacity", function (d) {
 				return d.dx * ky > 12 ? 1 : 0;
 			});

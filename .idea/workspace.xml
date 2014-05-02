@@ -10,52 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="074b9915-dbaa-4d9a-9abf-c6845a54b763" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sk/Servlets/VisualisationServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/legend.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/sidebar.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/template.jsp" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\jScrollbar.jquery.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\data.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\flare.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\bg_draggable5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\bg_slider4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js\bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js\d3.v3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js\jScrollbar.jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js\jquery-mousewheel.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js\visualisation2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\nocotodalo.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\pokus.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\graph.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\ajax-loader (1).gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\ajax-loader (2).gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\ajax-loader (3).gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\loading.jpg" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\sidebar.jsp" afterPath="$PROJECT_DIR$/web/visualisation.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/Thumbs.db" afterPath="$PROJECT_DIR$/web/img/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/TransformToJson.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/TransformToJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/dashboard.css" afterPath="$PROJECT_DIR$/web/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/graph.css" afterPath="$PROJECT_DIR$/web/css/graph.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/graph.js" afterPath="$PROJECT_DIR$/web/js/graph.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/pageHandling.js" afterPath="$PROJECT_DIR$/web/js/pageHandling.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/slider.js" afterPath="$PROJECT_DIR$/web/js/slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/visualisation.js" afterPath="$PROJECT_DIR$/web/js/visualisation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/template.jsp" afterPath="$PROJECT_DIR$/web/template.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/visualisation3.js" afterPath="$PROJECT_DIR$/web/js/visualisation3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ChangeLogVisualisation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398965021363" ignored="false" />
+    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398978404565" ignored="false" />
     <file path="/GetAllUsersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395866980680" ignored="false" />
     <file path="/visualisation.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393180082495" ignored="false" />
-    <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398907612750" ignored="false" />
+    <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398981695759" ignored="false" />
     <file path="/fragment.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398974648872" ignored="false" />
     <file path="/MyObjectFactory.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393972779628" ignored="false" />
     <file path="/TransformToJson.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398716919872" ignored="false" />
@@ -65,19 +45,19 @@
     <file path="/GetAllUsers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394047671654" ignored="false" />
     <file path="/GetServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396037397259" ignored="false" />
     <file path="/BusinessLogic.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394485587165" ignored="false" />
-    <file path="/visualisation3.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398912469661" ignored="false" />
+    <file path="/visualisation3.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399054488586" ignored="false" />
     <file path="/FileVersionDto.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394233232410" ignored="false" />
     <file path="/PathTreeCreator.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398913115394" ignored="false" />
     <file path="/nocotodalo.json" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394288904409" ignored="false" />
     <file path="/web.xml" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398906029007" ignored="false" />
-    <file path="/dashboard.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398894684622" ignored="false" />
+    <file path="/dashboard.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399060894227" ignored="false" />
     <file path="/GetProjectsServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395865288092" ignored="false" />
     <file path="/ProjectsEntity.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394477811302" ignored="false" />
     <file path="/AppServletContextListener.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397574190449" ignored="false" />
     <file path="/Resources.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398888253890" ignored="false" />
     <file path="/DatabaseRequestHandlers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398262015910" ignored="false" />
     <file path="/GetAllChangesetsServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398965727478" ignored="false" />
-    <file path="/slider.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398432284857" ignored="false" />
+    <file path="/slider.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399068938245" ignored="false" />
     <file path="/SetProjectServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394753026890" ignored="false" />
     <file path="/setResources.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394766349661" ignored="false" />
     <file path="$PROJECT_DIR$/../UI2/src/gui/form.form" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395077809960" ignored="false" />
@@ -142,7 +122,7 @@
     <file path="$PROJECT_DIR$/../UI2/src/MainFrame.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396636955391" ignored="false" />
     <file path="$PROJECT_DIR$/../UI2/src/Animator.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396636955391" ignored="false" />
     <file path="$PROJECT_DIR$/../UI2/src/MainPanel.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396636955847" ignored="false" />
-    <file path="/graph.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398911393736" ignored="false" />
+    <file path="/graph.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399059107534" ignored="false" />
     <file path="/graph.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398957895753" ignored="false" />
     <file path="/GetDevelepers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397334743778" ignored="false" />
     <file path="/GetDevelepersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398273949895" ignored="false" />
@@ -170,11 +150,12 @@
     <file path="/UserActivities.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398715001763" ignored="false" />
     <file path="/legend.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398952967716" ignored="false" />
     <file path="/ActivitiesServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398888088933" ignored="false" />
-    <file path="/template.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398908659297" ignored="false" />
+    <file path="/template.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399060862984" ignored="false" />
     <file path="/sidebar.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398957419057" ignored="false" />
     <file path="/ActivitySvc.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398961383949" ignored="false" />
     <file path="/VisualisationServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398968425614" ignored="false" />
     <file path="/PerConIKDatabaseHandler.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398974509823" ignored="false" />
+    <file path="/visualisation.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399045281156" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +170,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -226,6 +206,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -244,140 +225,88 @@
       <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="48" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
+            <state line="47" column="29" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highLevel.uml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/highLevel.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>sk</OriginalElement>
-              <nodes>
-                <node x="411.0" y="-61.0">sk.BackEnd.DatabaseFactory</node>
-                <node x="229.25" y="83.0">sk.BusinessLogic.DatabaseHandlers</node>
-                <node x="537.5" y="136.0">sk.BusinessLogic.JsonConverter</node>
-                <node x="481.0" y="314.0">sk.Servlets.GetProjectTreeServlet</node>
-                <node x="330.0" y="313.0">sk.Servlets.VisualisationServlet</node>
-                <node x="427.5" y="186.0">sk.BusinessLogic.Controller</node>
-                <node x="236.0" y="279.0">sk.Servlets.UsersCodeActivitiesServlet</node>
-                <node x="389.5" y="83.0">sk.BusinessLogic.PerConIKDatabaseHandler</node>
-                <node x="391.0" y="348.0">sk.Servlets.GetAllChangesetsServlet</node>
-                <node x="423.0" y="-153.0">sk.BackEnd.BackEndClient</node>
-                <node x="548.0" y="281.0">sk.Servlets.GetDevelepersServlet</node>
-                <node x="572.5" y="-152.0">sk.BackEnd.BackEndClient.MyNtlmAuth</node>
-                <node x="559.0" y="-65.0">com.gratex.perconik.astrcs.iastrcswcfsvc</node>
-                <node x="270.0" y="349.0">sk.Servlets.IndexServlet</node>
-                <node x="251.0" y="-65.0">com.gratex.perconik.astrcs.iactivitysvc</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="sk.BusinessLogic.JsonConverter" target="sk.BusinessLogic.JsonConverter">
-                  <point x="0.0" y="0.0" />
-                  <point x="611.5" y="112.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BackEnd.DatabaseFactory" target="com.gratex.perconik.astrcs.iactivitysvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.Servlets.VisualisationServlet" target="sk.BusinessLogic.Controller">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="sk.BusinessLogic.DatabaseHandlers">
-                  <point x="0.0" y="-14.0" />
-                  <point x="434.5" y="98.0" />
-                  <point x="325.75" y="92.0" />
-                  <point x="-30.5" y="14.0" />
-                </edge>
-                <edge source="sk.BackEnd.DatabaseFactory" target="sk.BackEnd.BackEndClient">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.Servlets.GetDevelepersServlet" target="sk.BusinessLogic.Controller">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.PerConIKDatabaseHandler">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.Servlets.GetAllChangesetsServlet" target="sk.BusinessLogic.Controller">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="com.gratex.perconik.astrcs.iactivitysvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.JsonConverter">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.DatabaseHandlers">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.Servlets.GetProjectTreeServlet" target="sk.BusinessLogic.Controller">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BackEnd.BackEndClient" target="sk.BackEnd.BackEndClient.MyNtlmAuth">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BackEnd.BackEndClient" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BackEnd.DatabaseFactory" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.gratex.perconik.astrcs.iactivitysvc" target="com.gratex.perconik.astrcs.iactivitysvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="316.0" y="-89.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.Servlets.UsersCodeActivitiesServlet" target="sk.BusinessLogic.Controller">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="sk.BackEnd.BackEndClient" target="com.gratex.perconik.astrcs.iactivitysvc">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="467.5" y="46.5" />
-              <SelectedNodes />
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackEndClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java">
+      <file leaf-file-name="template.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/template.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="5" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="1371" selection-end="1371" vertical-scroll-proportion="-8.285714">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseHandlers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java">
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0">
+            <state line="27" column="6" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-17.653847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageHandling.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/pageHandling.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="37" selection-start="323" selection-end="323" vertical-scroll-proportion="-0.058486238">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/slider.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="30" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation3.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/visualisation3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="123" column="37" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="65" selection-start="1237" selection-end="1248" vertical-scroll-proportion="-17.653847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/graph.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="28" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.css" pinned="true" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/dashboard.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="22" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppServletContextListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="1" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -409,22 +338,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/js/slider.js" />
-        <option value="$PROJECT_DIR$/web/js/visualisation3.js" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
-        <option value="$PROJECT_DIR$/web/js/legend.js" />
-        <option value="$PROJECT_DIR$/web/sidebar.jsp" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java" />
-        <option value="$PROJECT_DIR$/web/js/graph.js" />
-        <option value="$PROJECT_DIR$/web/js/pageHandling.js" />
-        <option value="$PROJECT_DIR$/src/com/gratex/perconik/astrcs/iactivitysvc/ActivitySvc.java" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java" />
         <option value="$PROJECT_DIR$/src/sk/Servlets/VisualisationServlet.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" />
         <option value="$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java" />
         <option value="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" />
+        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
+        <option value="$PROJECT_DIR$/web/visualisation.jsp" />
+        <option value="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" />
+        <option value="$PROJECT_DIR$/web/css/graph.css" />
+        <option value="$PROJECT_DIR$/web/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/web/js/graph.js" />
+        <option value="$PROJECT_DIR$/web/js/visualisation3.js" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/template.jsp" />
+        <option value="$PROJECT_DIR$/web/js/slider.js" />
       </list>
     </option>
   </component>
@@ -507,6 +436,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -536,6 +467,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -580,6 +565,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BusinessLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChangeLogVisualisation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BusinessLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JsonConverter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,14 +672,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="275" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="292" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="276" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="293" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -678,9 +687,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="296" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="299" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="301" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="971" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="978" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="974" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="292" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="285" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -696,7 +705,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="appearance" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/.." />
@@ -1039,7 +1048,11 @@
       <created>1398802331892</created>
       <updated>1398802331892</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="after massive refractor">
+      <created>1398976079511</created>
+      <updated>1398976079511</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1066,31 +1079,30 @@
     <frame x="1358" y="-320" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42316258" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1325167" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48106903" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2037862" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10356347" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21664888" sideWeight="0.518931" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1670224" sideWeight="0.518931" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27282852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.42316258" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21269488" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2037862" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.33964366" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23051225" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10356347" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.7271715" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.7271715" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" x="1458" y="-220" width="1736" height="856" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.87193763" order="2" side_tool="false" content_ui="combo" />
@@ -1099,6 +1111,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23051225" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="soapUI Navigator" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.518931" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1150,7 +1163,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="before cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="after massive refractor" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1163,7 +1176,7 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.8810409" />
     <MESSAGE value="git workaround" />
     <MESSAGE value="some changes" />
     <MESSAGE value="review 2014" />
@@ -1178,6 +1191,7 @@
     <MESSAGE value="ajax on developers stats, everything clean" />
     <MESSAGE value="messing around activities, good condition" />
     <MESSAGE value="before cleaning" />
+    <MESSAGE value="after massive refractor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1189,296 +1203,25 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/GetDevelepersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="53" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.util.List">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.util.List</OriginalElement>
-          <nodes>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl.XSObjectListIterator</node>
-            <node x="" y="">com.sun.corba.se.impl.ior.IORTemplateImpl</node>
-            <node x="" y="">sun.security.x509.AttributeNameEnumeration</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.dv.xs.HexBinaryDV.XHex</node>
-            <node x="" y="">javafx.beans.property.ListPropertyBase</node>
-            <node x="" y="">javafx.beans.value.ObservableListValue</node>
-            <node x="" y="">sun.awt.util.IdentityArrayList</node>
-            <node x="" y="">javafx.beans.binding.ListBinding.SizeProperty</node>
-            <node x="" y="">sun.awt.util.IdentityLinkedList.Entry</node>
-            <node x="" y="">javafx.beans.binding.ListExpression</node>
-            <node x="" y="">javafx.collections.FXCollections.UnmodifiableObservableListImpl</node>
-            <node x="" y="">com.sun.xml.internal.org.jvnet.mimepull.FinalArrayList</node>
-            <node x="" y="">java.util.Collections.SynchronizedRandomAccessList</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.FilterableList.FilterMode</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.IORTemplate</node>
-            <node x="" y="">org.apache.taglibs.standard.tag.common.xml.JSTLNodeList</node>
-            <node x="" y="">com.sun.xml.internal.ws.transport.http.server.ServerAdapterList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.StringList</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.TransformationList</node>
-            <node x="" y="">java.util.LinkedList</node>
-            <node x="" y="">java.util.LinkedList.DescendingIterator</node>
-            <node x="" y="">java.util.Vector.Itr</node>
-            <node x="" y="">com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack</node>
-            <node x="" y="">javafx.collections.ObservableList</node>
-            <node x="" y="">java.util.List</node>
-            <node x="" y="">javax.management.relation.RoleUnresolvedList</node>
-            <node x="" y="">javafx.collections.FXCollections.SynchronizedObservableList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.dv.xs.Base64BinaryDV.XBase64</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.dv.util.ByteListImpl</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.XSModelImpl.XSNamespaceItemListIterator</node>
-            <node x="" y="">javafx.beans.property.ListProperty</node>
-            <node x="" y="">java.util.AbstractList.Itr</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.util.StringListImpl</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.ShortList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.XSNamespaceItemList</node>
-            <node x="" y="">sun.security.krb5.internal.rcache.ReplayCache</node>
-            <node x="" y="">java.util.Collections.EmptyList</node>
-            <node x="" y="">javax.management.relation.RoleList</node>
-            <node x="" y="">javafx.beans.binding.ListBinding.EmptyProperty</node>
-            <node x="" y="">java.util.Collections.UnmodifiableList</node>
-            <node x="" y="">com.sun.jmx.snmp.SnmpVarBindList</node>
-            <node x="" y="">com.sun.corba.se.impl.ior.IORImpl</node>
-            <node x="" y="">com.sun.javafx.collections.ImmutableObservableList</node>
-            <node x="" y="">javafx.beans.property.ReadOnlyListPropertyBase</node>
-            <node x="" y="">java.util.SubList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.datatypes.ByteList</node>
-            <node x="" y="">java.util.Vector.ListItr</node>
-            <node x="" y="">javafx.beans.property.ListPropertyBase.EmptyProperty</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.SortedList.Element</node>
-            <node x="" y="">sun.awt.util.IdentityLinkedList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.util.LSInputListImpl</node>
-            <node x="" y="">java.util.Collections.CopiesList</node>
-            <node x="" y="">javafx.scene.control.TextArea.ParagraphList</node>
-            <node x="" y="">java.util.concurrent.CopyOnWriteArrayList.COWIterator</node>
-            <node x="" y="">com.sun.javafx.collections.ObservableListWrapper</node>
-            <node x="" y="">java.util.ArrayList</node>
-            <node x="" y="">java.util.Collections.CheckedList</node>
-            <node x="" y="">java.util.Arrays.ArrayList</node>
-            <node x="" y="">com.sun.javafx.collections.ObservableListWrapper.ElementsMapElement</node>
-            <node x="" y="">com.sun.javafx.scene.control.ReadOnlyUnbackedObservableList.SelectionListIterator</node>
-            <node x="" y="">java.util.ArrayList.ListItr</node>
-            <node x="" y="">java.util.ArrayList.SubList</node>
-            <node x="" y="">javafx.scene.media.AudioEqualizer.Bands</node>
-            <node x="" y="">java.util.concurrent.CopyOnWriteArrayList.COWSubList</node>
-            <node x="" y="">com.sun.java.util.jar.pack.FixedList</node>
-            <node x="" y="">com.sun.jmx.snmp.agent.SnmpMibOid.NonSyncVector</node>
-            <node x="" y="">java.util.AbstractList.ListItr</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.IOR</node>
-            <node x="" y="">javafx.collections.FXCollections.CheckedObservableList</node>
-            <node x="" y="">java.util.concurrent.CopyOnWriteArrayList.COWSubListIterator</node>
-            <node x="" y="">java.util.Collections.SingletonList</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.IORTemplateList</node>
-            <node x="" y="">javafx.beans.binding.ListBinding</node>
-            <node x="" y="">java.util.AbstractSequentialList</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate</node>
-            <node x="" y="">com.sun.java.util.jar.pack.ConstantPool.Index</node>
-            <node x="" y="">com.sun.javafx.collections.ObservableListWrapper.ObservableListIterator</node>
-            <node x="" y="">javax.management.AttributeList</node>
-            <node x="" y="">com.sun.javafx.collections.TrackableObservableList</node>
-            <node x="" y="">com.sun.xml.internal.ws.transport.http.HttpAdapterList.PortInfo</node>
-            <node x="" y="">com.sun.corba.se.impl.ior.IORTemplateListImpl</node>
-            <node x="" y="">sun.security.jca.ProviderList.ServiceList</node>
-            <node x="" y="">sun.awt.util.IdentityLinkedList.ListItr</node>
-            <node x="" y="">com.sun.javafx.collections.ObservableListWrapper.ObservableSubList</node>
-            <node x="" y="">com.sun.corba.se.impl.ior.FreezableList</node>
-            <node x="" y="">com.sun.jmx.snmp.daemon.SnmpSubRequestHandler.NonSyncVector</node>
-            <node x="" y="">java.util.Stack</node>
-            <node x="" y="">java.util.Vector</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.TaggedProfileTemplateBase</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.SortedList.ElementComparator</node>
-            <node x="" y="">javax.xml.rpc.handler.HandlerChain</node>
-            <node x="" y="">com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Pack</node>
-            <node x="" y="">javafx.beans.property.SimpleListProperty</node>
-            <node x="" y="">javafx.beans.property.ReadOnlyListProperty</node>
-            <node x="" y="">com.sun.xml.internal.messaging.saaj.util.FinalArrayList</node>
-            <node x="" y="">com.sun.jmx.snmp.daemon.WaitQ</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.FilterableList</node>
-            <node x="" y="">sun.net.www.http.KeepAliveStreamCleaner</node>
-            <node x="" y="">com.sun.istack.internal.FinalArrayList</node>
-            <node x="" y="">java.util.LinkedList.Node</node>
-            <node x="" y="">javafx.collections.FXCollections.EmptyObservableList</node>
-            <node x="" y="">com.sun.javafx.collections.SortableList</node>
-            <node x="" y="">javafx.collections.FXCollections.SynchronizedList</node>
-            <node x="" y="">com.sun.corba.se.impl.ior.iiop.IIOPProfileTemplateImpl</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.SortableList</node>
-            <node x="" y="">java.util.RandomAccessSubList</node>
-            <node x="" y="">java.util.LinkedList.ListItr</node>
-            <node x="" y="">javafx.beans.property.ReadOnlyListWrapper.ReadOnlyPropertyImpl</node>
-            <node x="" y="">java.util.concurrent.CopyOnWriteArrayList</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.SortableList.SortMode</node>
-            <node x="" y="">java.lang.Iterable</node>
-            <node x="" y="">sun.net.www.http.ClientVector</node>
-            <node x="" y="">sun.swing.BakedArrayList</node>
-            <node x="" y="">java.util.AbstractList</node>
-            <node x="" y="">javax.swing.JEditorPane.JEditorPaneAccessibleHypertextSupport.LinkVector</node>
-            <node x="" y="">com.sun.jmx.remote.internal.ArrayQueue</node>
-            <node x="" y="">sun.org.mozilla.javascript.internal.NativeArray</node>
-            <node x="" y="">javafx.beans.property.ReadOnlyListWrapper</node>
-            <node x="" y="">com.sun.javafx.collections.VetoableObservableList</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.SortedList</node>
-            <node x="" y="">javax.resource.cci.IndexedRecord</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.dv.xs.ListDV.ListData</node>
-            <node x="" y="">javafx.beans.property.ListPropertyBase.Listener</node>
-            <node x="" y="">org.json.simple.JSONArray</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList</node>
-            <node x="" y="">java.util.Collections.SynchronizedList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.util.ObjectListImpl</node>
-            <node x="" y="">com.sun.corba.se.impl.interceptors.PIHandlerImpl.RequestInfoStack</node>
-            <node x="" y="">com.sun.xml.internal.ws.api.message.HeaderList</node>
-            <node x="" y="">javafx.beans.value.WritableListValue</node>
-            <node x="" y="">com.sun.javafx.collections.VetoableObservableList.VetoableObservableListIterator</node>
-            <node x="" y="">java.util.Collection</node>
-            <node x="" y="">java.util.Collections.UnmodifiableRandomAccessList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl</node>
-            <node x="" y="">com.sun.jmx.snmp.daemon.SendQ</node>
-            <node x="" y="">com.sun.xml.internal.ws.transport.http.HttpAdapterList</node>
-            <node x="" y="">com.sun.javafx.scene.control.ReadOnlyUnbackedObservableList</node>
-            <node x="" y="">com.sun.corba.se.impl.util.RepositoryIdPool</node>
-            <node x="" y="">javafx.beans.property.ListPropertyBase.SizeProperty</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.XSObjectList</node>
-            <node x="" y="">java.util.Collections.CheckedRandomAccessList</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl.AbstractObjectList</node>
-            <node x="" y="">com.sun.xml.internal.bind.v2.util.CollisionCheckStack</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.util.ShortListImpl</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.xs.LSInputList</node>
-            <node x="" y="">com.sun.javafx.collections.transformation.FilteredList</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.IdentifiableContainerBase</node>
-            <node x="" y="">com.sun.corba.se.spi.ior.TaggedProfileTemplate</node>
-            <node x="" y="">javafx.collections.FXCollections.SingletonObservableList</node>
-            <node x="" y="">java.util.ArrayList.Itr</node>
-            <node x="" y="">com.sun.org.apache.xerces.internal.impl.xs.XSModelImpl</node>
-            <node x="" y="">com.sun.xml.internal.ws.transport.http.HttpAdapter.DummyList</node>
-            <node x="" y="">sun.awt.util.IdentityLinkedList.DescendingIterator</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.9297169811320756" x="4198.156773211567" y="543.439370877727" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Inner Classes</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/VisualisationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="10" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gratex/perconik/astrcs/iactivitysvc/ArrayOfString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+        <state line="31" column="5" selection-start="927" selection-end="927" vertical-scroll-proportion="0.31766054">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/sk">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>sk</OriginalElement>
-          <nodes>
-            <node x="" y="">sk.BackEnd.DatabaseFactory</node>
-            <node x="" y="">sk.BusinessLogic.DatabaseHandlers</node>
-            <node x="" y="">sk.BusinessLogic.JsonConverter</node>
-            <node x="" y="">sk.Servlets.GetProjectTreeServlet</node>
-            <node x="" y="">sk.Servlets.VisualisationServlet</node>
-            <node x="" y="">sk.BusinessLogic.Controller</node>
-            <node x="" y="">sk.Servlets.UsersCodeActivitiesServlet</node>
-            <node x="" y="">sk.BusinessLogic.PerConIKDatabaseHandler</node>
-            <node x="" y="">sk.Servlets.GetAllChangesetsServlet</node>
-            <node x="" y="">sk.BackEnd.BackEndClient</node>
-            <node x="" y="">sk.Servlets.GetDevelepersServlet</node>
-            <node x="" y="">com.gratex.perconik.astrcs.iastrcswcfsvc</node>
-            <node x="" y="">sk.Servlets.IndexServlet</node>
-            <node x="" y="">com.gratex.perconik.astrcs.iactivitysvc</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="466.5" y="145.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java">
+    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="1" selection-start="669" selection-end="669" vertical-scroll-proportion="0.50688076">
+        <state line="121" column="13" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.43463302">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="965" selection-end="965" vertical-scroll-proportion="0.4678899">
+        <state line="18" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="2729" selection-end="2729" vertical-scroll-proportion="0.05005821">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="48" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diagram.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/highLevel.uml">
@@ -1487,27 +1230,27 @@
           <ID>JAVA</ID>
           <OriginalElement>sk</OriginalElement>
           <nodes>
-            <node x="411.0" y="-61.0">sk.BackEnd.DatabaseFactory</node>
-            <node x="229.25" y="83.0">sk.BusinessLogic.DatabaseHandlers</node>
-            <node x="537.5" y="136.0">sk.BusinessLogic.JsonConverter</node>
-            <node x="481.0" y="314.0">sk.Servlets.GetProjectTreeServlet</node>
-            <node x="330.0" y="313.0">sk.Servlets.VisualisationServlet</node>
-            <node x="427.5" y="186.0">sk.BusinessLogic.Controller</node>
-            <node x="236.0" y="279.0">sk.Servlets.UsersCodeActivitiesServlet</node>
-            <node x="389.5" y="83.0">sk.BusinessLogic.PerConIKDatabaseHandler</node>
-            <node x="391.0" y="348.0">sk.Servlets.GetAllChangesetsServlet</node>
-            <node x="423.0" y="-153.0">sk.BackEnd.BackEndClient</node>
-            <node x="548.0" y="281.0">sk.Servlets.GetDevelepersServlet</node>
-            <node x="572.5" y="-152.0">sk.BackEnd.BackEndClient.MyNtlmAuth</node>
-            <node x="559.0" y="-65.0">com.gratex.perconik.astrcs.iastrcswcfsvc</node>
-            <node x="270.0" y="349.0">sk.Servlets.IndexServlet</node>
-            <node x="251.0" y="-65.0">com.gratex.perconik.astrcs.iactivitysvc</node>
+            <node x="393.0" y="67.0">sk.BackEnd.DatabaseFactory</node>
+            <node x="227.25" y="-9.0">sk.BusinessLogic.DatabaseHandlers</node>
+            <node x="493.0" y="-283.0">sk.Servlets.GetProjectTreeServlet</node>
+            <node x="486.5" y="-81.0">sk.BusinessLogic.JsonConverter</node>
+            <node x="343.0" y="-285.0">sk.Servlets.VisualisationServlet</node>
+            <node x="418.5" y="-133.0">sk.BusinessLogic.Controller</node>
+            <node x="235.0" y="-317.0">sk.Servlets.UsersCodeActivitiesServlet</node>
+            <node x="377.5" y="-11.0">sk.BusinessLogic.PerConIKDatabaseHandler</node>
+            <node x="405.0" y="-317.0">sk.Servlets.GetAllChangesetsServlet</node>
+            <node x="563.0" y="-316.0">sk.Servlets.GetDevelepersServlet</node>
+            <node x="400.0" y="172.0">sk.BackEnd.BackEndClient</node>
+            <node x="554.5" y="172.0">sk.BackEnd.BackEndClient.MyNtlmAuth</node>
+            <node x="541.0" y="63.0">com.gratex.perconik.astrcs.iastrcswcfsvc</node>
+            <node x="236.0" y="-284.0">sk.Servlets.IndexServlet</node>
+            <node x="233.0" y="63.0">com.gratex.perconik.astrcs.iactivitysvc</node>
           </nodes>
           <notes />
           <edges>
             <edge source="sk.BusinessLogic.JsonConverter" target="sk.BusinessLogic.JsonConverter">
               <point x="0.0" y="0.0" />
-              <point x="611.5" y="112.0" />
+              <point x="560.5" y="-105.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="sk.BackEnd.DatabaseFactory" target="com.gratex.perconik.astrcs.iactivitysvc">
@@ -1518,15 +1261,15 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="sk.BusinessLogic.DatabaseHandlers">
-              <point x="0.0" y="-14.0" />
-              <point x="434.5" y="98.0" />
-              <point x="325.75" y="92.0" />
-              <point x="-30.5" y="14.0" />
-            </edge>
             <edge source="sk.BackEnd.DatabaseFactory" target="sk.BackEnd.BackEndClient">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="sk.BusinessLogic.DatabaseHandlers">
+              <point x="0.0" y="-14.0" />
+              <point x="419.5" y="8.0" />
+              <point x="307.75" y="-1.0" />
+              <point x="-30.5" y="14.0" />
             </edge>
             <edge source="sk.Servlets.GetDevelepersServlet" target="sk.BusinessLogic.Controller">
               <point x="0.0" y="0.0" />
@@ -1540,11 +1283,11 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="com.gratex.perconik.astrcs.iactivitysvc">
+            <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.JsonConverter">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.JsonConverter">
+            <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="com.gratex.perconik.astrcs.iactivitysvc">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1556,7 +1299,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="sk.Servlets.GetProjectTreeServlet" target="sk.BusinessLogic.Controller">
+            <edge source="sk.BackEnd.BackEndClient" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1564,7 +1307,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="sk.BackEnd.BackEndClient" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
+            <edge source="sk.Servlets.GetProjectTreeServlet" target="sk.BusinessLogic.Controller">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1574,7 +1317,7 @@
             </edge>
             <edge source="com.gratex.perconik.astrcs.iactivitysvc" target="com.gratex.perconik.astrcs.iactivitysvc">
               <point x="0.0" y="0.0" />
-              <point x="316.0" y="-89.0" />
+              <point x="298.0" y="39.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="sk.Servlets.UsersCodeActivitiesServlet" target="sk.BusinessLogic.Controller">
@@ -1586,11 +1329,83 @@
               <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="467.5" y="46.5" />
-          <SelectedNodes />
+          <settings layout="Hierarchic Group" zoom="1.0" x="230.0" y="-292.0" />
+          <SelectedNodes>
+            <node>sk.BackEnd.DatabaseFactory</node>
+          </SelectedNodes>
           <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="1" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="28" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="22" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="29" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/visualisation3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="37" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="65" selection-start="1237" selection-end="1248" vertical-scroll-proportion="-17.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="6" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-17.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1371" selection-end="1371" vertical-scroll-proportion="-8.285714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="30" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/pageHandling.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="37" selection-start="323" selection-end="323" vertical-scroll-proportion="-0.058486238">
+          <folding />
         </state>
       </provider>
     </entry>
