@@ -10,14 +10,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 7.12.2013
- * Time: 20:16
+ *
+ * Servlet pre Ajaxove volanie "ajaxGetDevelepers"
  */
-
 public class GetDevelepersServlet extends HttpServlet {
-
+	/**
+	 * @see sk.BusinessLogic.Controller#getUsersPerProject()
+	 * @param request bez vstupnych parametrov
+	 * @param response JSONObject
+	 * @throws IOException
+	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		JSONObject jsonObject = new Controller().getUsersPerProject();
 

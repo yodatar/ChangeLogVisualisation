@@ -32,23 +32,32 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
- * Date: 5.3.2014
- * Time: 19:33
+ * Date: 5.2.2014
+ *
+ * Trieda implementujuca rozhranie DatabaseHandlers.
+ * Vyuziva pripojenie na webove sluzby projetu PerConIK
+ * z triedy DatabaseFactory.
+ *
+ * Metody funkcionalitou odpovedaju popisu v triede Controller.
+ *
+ * @see DatabaseFactory
+ * @see DatabaseHandlers
  */
-
-
 public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	IAstRcsWcfSvc iAstRcsWcfSvc = DatabaseFactory.getInstance().getIAstRcsWcfSvc();
 	IActivitySvc iActivitySvc = DatabaseFactory.getInstance().getIActivitySvc();
 
+	/**
+	 * @see sk.BusinessLogic.Controller#getUsersPerProject()
+	 * @param projectId projectId
+	 * @return List<UsersEntity>
+	 */
 	@Override
-	public List<UsersEntity> getUsersPerProject() {
+	public List<UsersEntity> getUsersPerProject(Integer projectId) {
 		List<UsersEntity> list = new ArrayList<>();
 		Set<UsersEntity> set = new HashSet<>();
 
-		List<ChangesetDto> changesetDtoList = this.searchChangesets(null, null);
+		List<ChangesetDto> changesetDtoList = this.searchChangesets(null, null,projectId);
 		for (ChangesetDto changesetDto : changesetDtoList) {
 			UsersEntity usersEntity = new UsersEntity(changesetDto.getCommitter().getValue().getId(), changesetDto.getCommitter().getValue().getLogin().getValue());
 			set.add(usersEntity);
@@ -58,16 +67,22 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 		list.addAll(set);
 
 		return list;
-
 	}
 
+	/**
+	 * @see sk.BusinessLogic.Controller#getChangesetList()
+	 * @param from changesetIdFrom
+	 * @param to changesetIdTo
+	 * @param projectId projectID
+	 * @return List<ChangesetDto>
+	 */
 	@Override
-	public List<ChangesetDto> searchChangesets(Integer from, Integer to) {
+	public List<ChangesetDto> searchChangesets(Integer from, Integer to,Integer projectId) {
 		List<ChangesetDto> changesetDtoList = new LinkedList<>();
 
 		// Search Changesets
 		SearchChangesetsRequest changesetsRequest = new SearchChangesetsRequest();
-		changesetsRequest.setRcsProjectId(Resources.getInstance().getProjectId());
+		changesetsRequest.setRcsProjectId(projectId);
 		changesetsRequest.setPageSize(100);
 		SearchChangesetsResponse searchChangesetsResponse = iAstRcsWcfSvc.searchChangesets(changesetsRequest);
 		int pageCount = searchChangesetsResponse.getPageCount();
@@ -104,6 +119,11 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 		return changesetDtoListResult;
 	}
 
+	/**
+	 * @see Controller#getChangeset(Integer)
+	 * @param changesetId changesetId
+	 * @return ChangesetDto
+	 */
 	@Override
 	public ChangesetDto getChangeset(Integer changesetId) {
 		GetChangesetRequest changesetRequest = new GetChangesetRequest();
@@ -113,13 +133,19 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 		return changesetResponse.getChangeset().getValue();
 	}
 
+	/**
+	 * @see sk.BusinessLogic.Controller#getProjectTree()
+	 * @param changesetIdFrom changesetIdFrom
+	 * @param changesetIdTo changesetIdTo
+	 * @param projectId projectId
+	 * @return List<FileVersionExtendedDto>
+	 */
 	@Override
-	public List<FileVersionExtendedDto> getChangedFiles() {
+	public List<FileVersionExtendedDto> getChangedFiles(Integer changesetIdFrom, Integer changesetIdTo,Integer projectId) {
 		List<FileVersionExtendedDto> fileVersionExtendedList = new LinkedList<>();
 		Set<FileVersionExtendedDto> fileVersionExtendedSet = new HashSet<>();
 
-		List<ChangesetDto> changesetDtoList = this.searchChangesets(
-				Resources.getInstance().getChangesetFromId(), Resources.getInstance().getChangesetToId());
+		List<ChangesetDto> changesetDtoList = this.searchChangesets(changesetIdFrom, changesetIdTo, projectId);
 
 		for (ChangesetDto changesetDto : changesetDtoList) {
 			GetChangedFilesRequest changedFilesRequest = new GetChangedFilesRequest();
@@ -138,13 +164,18 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 		return fileVersionExtendedList;
 	}
 
+	/**
+	 * @see sk.BusinessLogic.Controller#getProjectTree()
+	 * @param changesetIdTo changesetIdTo
+	 * @return List<FileVersionDto>
+	 */
 	@Override
-	public List<FileVersionDto> searchFiles() {
+	public List<FileVersionDto> searchFiles(Integer changesetIdTo) {
 		List<FileVersionDto> listFileVersionDto = new LinkedList<>();
 
 		// SearchFiles
 		SearchFilesRequest searchFilesRequest = new SearchFilesRequest();
-		searchFilesRequest.setChangesetId(Resources.getInstance().getChangesetToId());
+		searchFilesRequest.setChangesetId(changesetIdTo);
 		searchFilesRequest.setPageSize(100);
 
 		SearchFilesResponse searchFilesResponse = iAstRcsWcfSvc.searchFiles(searchFilesRequest);
@@ -165,7 +196,10 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 		return listFileVersionDto;
 	}
 
-
+	/**
+	 * @see sk.BusinessLogic.Controller#getProjects() 
+	 * @return List<ProjectsEntity>
+	 */
 	@Override
 	public List<ProjectsEntity> getProjects() {
 		List<RcsProjectDto> rcsProjectDtos;
@@ -184,11 +218,19 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 		return projectsEntityList;
 	}
 
+	/**
+	 * @see Controller#getUsersCodeActivities(String)
+	 * @param user meno vyvojara
+	 * @param calendar1 dateFrom
+	 * @param calendar2 dateTo
+	 * @param shortEventTypeName shortEventTypeName
+	 * @return List<ActivityDto>
+	 */
 	@Override
-	public List<ActivityDto> getActivities(String user, XMLGregorianCalendar calendar1, XMLGregorianCalendar calendar2, String string) {
+	public List<ActivityDto> getActivities(String user, XMLGregorianCalendar calendar1, XMLGregorianCalendar calendar2, String shortEventTypeName) {
 		List<ActivityDto> activityDtoList;
 		ArrayOfString arrayOfString = new ArrayOfString();
-		arrayOfString.getString().add(string);
+		arrayOfString.getString().add(shortEventTypeName);
 
 		ActivityFilter activityFilter = new ActivityFilter();
 

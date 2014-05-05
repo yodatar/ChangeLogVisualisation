@@ -10,17 +10,18 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 7.12.2013
- * Time: 20:16
+ *
+ * Servlet pre Ajaxove volanie "ajaxUsersCodeActivities"
  */
-
-
 public class UsersCodeActivitiesServlet extends HttpServlet {
-
+	/**
+	 * @see Controller#getUsersCodeActivities(String)
+	 * @param request user = username
+	 * @param response JSONObject
+	 * @throws IOException
+	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
 		Controller controller = new Controller();
 		JSONObject jsonObject = controller.getUsersCodeActivities(request.getParameter("user"));
 

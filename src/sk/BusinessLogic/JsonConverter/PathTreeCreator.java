@@ -17,13 +17,16 @@ import java.util.TreeMap;
 import java.util.regex.Pattern;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 7.3.2014
- * Time: 17:07
  */
 
-
+/**
+ * Trieda PathTreeCreator konvertuje Java objekty do JSONObject,
+ * z ktoreho sa priamo tvori stromova mapa na strane klienta pomocou
+ * vizualizacnej JavaScript kniznice D3.js
+ *
+ * @see TransformToJson
+ */
 public class PathTreeCreator {
 	public JSONObject getJsonObject() {
 		return jsonObject;
@@ -33,11 +36,13 @@ public class PathTreeCreator {
 	private List<String> changedFilesName = new LinkedList<>();
 	private List<FileVersionExtendedDto> changedFiles = new LinkedList<>();
 
-	public PathTreeCreator() {
-	}
+	public PathTreeCreator() {	}
 
 	private static final Pattern PATH_SEPARATOR = Pattern.compile("/");
 
+	/**
+	 * Vnorena trieda Node reprezentuje uzol rekurzivne tvoriaceho sa stromu.
+	 */
 	public static class Node {
 		private final Map<String, Node> children = new TreeMap<>();
 
@@ -57,7 +62,10 @@ public class PathTreeCreator {
 
 	private final Node root = new Node();
 
-
+	/**
+	 * Pridavanie ciest k suborom do stromovej struktury.
+	 * @param path cesta k suboru.
+	 */
 	public void addPath(String path) {
 		String[] names = PATH_SEPARATOR.split(path);
 		Node node = root;
@@ -82,7 +90,17 @@ public class PathTreeCreator {
 		this.changedFiles = fileVersionExtendedList;
 	}
 
-
+	/**
+	 * Rekurzivna konverzia vsetkych ciest k suborom
+	 * (ziskanych pomocou metody addPath()
+	 * a addChangedFiles()) do JSONObject.
+	 *
+	 * @param node rozvijany list stromu
+	 * @param jsonArray pridavanie vysledku rekurzivnou metodou
+	 * @param r red = farba listu
+	 * @param g green = farba listu
+	 * @param b blue = farba listu
+	 */
 	private void buildJsonTree(Node node, JSONArray jsonArray, Integer r, Integer g, Integer b) {
 		Map<String, Node> children = node.getChildren();
 
@@ -127,12 +145,19 @@ public class PathTreeCreator {
 
 			if (!child.getValue().getChildren().isEmpty()) {
 				if (r + 19 > 254) r = 230;
+				if (g + 12 > 254) g = 230;
+				if (b + 5 > 254) b = 240;
+
 				buildJsonTree(child.getValue(), nextJsonArray, r + 19, g + 12, b + 5);
 				map.put("children", nextJsonArray);
 			}
 		}
 	}
 
+	/**
+	 * Zaciatok rekurzivnej metody public buildJsonTree().
+	 * Rekurzia pokracuje private buildJsonTree().
+	 */
 	public void buildJsonTree() {
 		int r = 47, g = 127, b = 197;
 		JSONArray jsonArray = new JSONArray();

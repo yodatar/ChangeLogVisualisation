@@ -10,15 +10,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 5.3.2014
- * Time: 16:48
+ *
+ * Servlet pre Ajaxove volanie "ajaxGetProjectTree"
  */
-
-
 public class GetProjectTreeServlet extends HttpServlet {
-
+	/**
+	 * @see sk.BusinessLogic.Controller#getProjectTree()
+	 * @param request bez parametrov
+	 * @param response JSONObject
+	 * @throws IOException
+	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		Controller controller = new Controller();

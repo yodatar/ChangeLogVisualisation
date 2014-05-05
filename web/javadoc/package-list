@@ -1,0 +1,11 @@
+com.gratex.perconik.astrcs.iactivitysvc
+com.gratex.perconik.astrcs.iastrcswcfsvc
+com.gratex.perconik.astrcs.ientityservice
+com.microsoft.schemas._2003._10.serialization
+com.microsoft.schemas._2003._10.serialization.arrays
+org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc
+sk.BackEnd
+sk.BusinessLogic
+sk.BusinessLogic.JsonConverter
+sk.BusinessLogic.entities
+sk.Servlets

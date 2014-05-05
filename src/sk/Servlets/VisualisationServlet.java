@@ -14,16 +14,27 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 10.3.2014
- * Time: 18:54
+ *
+ * Servlet volany pri znovunacitani vizualizacie.
+ * Preposiela atributy do template.jsp
  */
-
-
 public class VisualisationServlet extends HttpServlet {
 	private static final Pattern PATH_SEPARATOR = Pattern.compile("/");
 
+	/**
+	 * @see sk.BusinessLogic.Controller#getProjects()
+	 * @see Controller#getChangeset(Integer)
+	 *
+	 * @param req dopyt obsahuje parametre:
+	 *            - projectSelect = projectId
+	 *            - changesetFrom = changesetFromId
+	 *            - changesetTo = changesetToId
+	 *
+	 * @param resp forward
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 

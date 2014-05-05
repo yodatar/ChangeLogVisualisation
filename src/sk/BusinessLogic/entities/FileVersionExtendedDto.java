@@ -12,7 +12,13 @@ import java.util.List;
  * Time: 22:05
  */
 
-
+/**
+ * FileVersionExtendedDto zabaluje triedu FileVersionDto,
+ * aby sucasne poskytla triedu UserDto zodpovedneho vyvojara.
+ * Obsahuje aj rozbitu cestu k suboru v strome projektu do List<String>.
+ * @see FileVersionDto
+ * @see UserDto
+ */
 public class FileVersionExtendedDto {
 	private UserDto commiter;
 	private FileVersionDto fileVersionDto;
@@ -27,21 +33,8 @@ public class FileVersionExtendedDto {
 		return commiter;
 	}
 
-	public void setCommiter(UserDto commiter) {
-		this.commiter = commiter;
-	}
-
 	public FileVersionDto getFileVersionDto() {
 		return fileVersionDto;
-	}
-
-	public void setFileVersionDto(FileVersionDto fileVersionDto) {
-		this.fileVersionDto = fileVersionDto;
-	}
-
-
-	public List<String> getPathNames() {
-		return pathNames;
 	}
 
 	public void setPathNames(List<String> pathNames) {

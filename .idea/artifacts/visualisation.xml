@@ -2,10 +2,10 @@
   <artifact type="war" build-on-make="true" name="visualisation">
     <output-path>$PROJECT_DIR$/out/artifacts/visualisation</output-path>
     <root id="archive" name="visualisation.war">
-      <element id="javaee-facet-resources" facet="ChangeLogVisualisation/web/Web" />
+      <element id="javaee-facet-resources" facet="CodeMaster/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ChangeLogVisualisation" />
+          <element id="module-output" name="CodeMaster" />
         </element>
         <element id="directory" name="lib">
           <element id="file-copy" path="$PROJECT_DIR$/../json-simple-1.1.jar" />

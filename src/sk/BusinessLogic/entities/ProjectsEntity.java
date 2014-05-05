@@ -1,13 +1,14 @@
 package sk.BusinessLogic.entities;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 10.3.2014
- * Time: 19:54
  */
 
-
+/**
+ * Trieda ProjectsEntity extrahuje jedine potrebne atributy
+ * "id" a "name" z triedy RcsProjectDto, pre potreby zoradovania.
+ * @see org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.RcsProjectDto
+ */
 public class ProjectsEntity {
 
 	private Integer id;

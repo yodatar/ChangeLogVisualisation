@@ -6,13 +6,11 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
+ * Application scope predefined values.
+ *
  * Date: 10.3.2014
- * Time: 21:21
+ * @author Pavol Michalek
  */
-
-
 public class AppServletContextListener implements ServletContextListener {
 
 	@Override
@@ -26,7 +24,8 @@ public class AppServletContextListener implements ServletContextListener {
 		resources.setProjectId(3);
 		resources.setChangesetFromId(1386);
 		resources.setChangesetToId(1490);
+
+		//projectSelect=5 changesetFrom=1042 changesetTo=1058
 	}
 
-	//projectSelect=5 changesetFrom=1042 changesetTo=1058
 }

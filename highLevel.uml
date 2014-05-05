@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>sk</OriginalElement>
+  <nodes>
+    <node x="393.0" y="67.0">sk.BackEnd.DatabaseFactory</node>
+    <node x="227.25" y="-9.0">sk.BusinessLogic.DatabaseHandlers</node>
+    <node x="493.0" y="-283.0">sk.Servlets.GetProjectTreeServlet</node>
+    <node x="486.5" y="-81.0">sk.BusinessLogic.JsonConverter</node>
+    <node x="343.0" y="-285.0">sk.Servlets.VisualisationServlet</node>
+    <node x="418.5" y="-133.0">sk.BusinessLogic.Controller</node>
+    <node x="235.0" y="-317.0">sk.Servlets.UsersCodeActivitiesServlet</node>
+    <node x="377.5" y="-11.0">sk.BusinessLogic.PerConIKDatabaseHandler</node>
+    <node x="405.0" y="-317.0">sk.Servlets.GetAllChangesetsServlet</node>
+    <node x="563.0" y="-316.0">sk.Servlets.GetDevelepersServlet</node>
+    <node x="400.0" y="172.0">sk.BackEnd.BackEndClient</node>
+    <node x="554.5" y="172.0">sk.BackEnd.BackEndClient.MyNtlmAuth</node>
+    <node x="541.0" y="63.0">com.gratex.perconik.astrcs.iastrcswcfsvc</node>
+    <node x="236.0" y="-284.0">sk.Servlets.IndexServlet</node>
+    <node x="233.0" y="63.0">com.gratex.perconik.astrcs.iactivitysvc</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sk.BusinessLogic.JsonConverter" target="sk.BusinessLogic.JsonConverter">
+      <point x="0.0" y="0.0" />
+      <point x="560.5" y="-105.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BackEnd.DatabaseFactory" target="com.gratex.perconik.astrcs.iactivitysvc">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.Servlets.VisualisationServlet" target="sk.BusinessLogic.Controller">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BackEnd.DatabaseFactory" target="sk.BackEnd.BackEndClient">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="sk.BusinessLogic.DatabaseHandlers">
+      <point x="0.0" y="-14.0" />
+      <point x="419.5" y="8.0" />
+      <point x="307.75" y="-1.0" />
+      <point x="-30.5" y="14.0" />
+    </edge>
+    <edge source="sk.Servlets.GetDevelepersServlet" target="sk.BusinessLogic.Controller">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.PerConIKDatabaseHandler">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.Servlets.GetAllChangesetsServlet" target="sk.BusinessLogic.Controller">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="com.gratex.perconik.astrcs.iactivitysvc">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.JsonConverter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BusinessLogic.PerConIKDatabaseHandler" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BusinessLogic.Controller" target="sk.BusinessLogic.DatabaseHandlers">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.Servlets.GetProjectTreeServlet" target="sk.BusinessLogic.Controller">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BackEnd.BackEndClient" target="sk.BackEnd.BackEndClient.MyNtlmAuth">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BackEnd.BackEndClient" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BackEnd.DatabaseFactory" target="com.gratex.perconik.astrcs.iastrcswcfsvc">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.gratex.perconik.astrcs.iactivitysvc" target="com.gratex.perconik.astrcs.iactivitysvc">
+      <point x="0.0" y="0.0" />
+      <point x="301.0" y="79.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.Servlets.UsersCodeActivitiesServlet" target="sk.BusinessLogic.Controller">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="sk.BackEnd.BackEndClient" target="com.gratex.perconik.astrcs.iactivitysvc">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="784.5" y="-109.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -10,7 +10,7 @@
 	<meta name="author" content="Pavol Michalek">
 	<link rel="shortcut icon" href="img/blue_dot.png">
 
-	<title>Interactive visualisation</title>
+	<title>CodeMaster</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -44,8 +44,10 @@
 				<span class="sr-only"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/visualisation/index">Interactive visualisation of developing source code over
-				time</a>
+			<a class="navbar-brand" href="/visualisation/index">
+				CodeMaster
+				<small style="padding-left: 20px;">Interactive visualisation of developing source code over time</small>
+			</a>
 		</div>
 	</div>
 </div>

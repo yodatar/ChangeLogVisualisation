@@ -7,13 +7,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 10.3.2014
- * Time: 18:54
+ *
+ * Servlet domovskej stranky preposiela obsah do template.jsp
  */
-
-
 public class IndexServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

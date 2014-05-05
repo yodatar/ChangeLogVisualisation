@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 import sk.BusinessLogic.JsonConverter.TransformToJson;
 import sk.BusinessLogic.entities.FileVersionExtendedDto;
 import sk.BusinessLogic.entities.ProjectsEntity;
-import sk.BusinessLogic.entities.UserActivities;
+import sk.BusinessLogic.entities.UserActivitiesEntity;
 import sk.BusinessLogic.entities.UsersEntity;
 
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -20,16 +20,37 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * User: pipo
  * Date: 23.4.2014
- * Time: 15:42
  */
 
-
+/**
+ * Trieda s primarnou logikou aplikacie.
+ * Tvori spojenie medzi prezentacnou vrstvou Servletov,
+ * a databazovou vrstvou - rozhranie DatabaseHandlers.
+ * Ziskane data z webovej sluzby posiela na transformaciu
+ * do JSONObject a vrati ich spat prislusnemu Servletu na odpoved.
+ *
+ * @see DatabaseHandlers
+ * @see TransformToJson
+ */
 public class Controller {
 	DatabaseHandlers databaseHandlers = new PerConIKDatabaseHandler();
 	TransformToJson transformToJson = new TransformToJson();
 
+	/**
+	 * Metoda dotahuje aktivity konkretneho pouzivatela
+	 * z webovej sluzby UserActivity, kompletizuje ich,
+	 * a zatrieduje do "pieces = 100" intervalov.
+	 * Dodatocne informacie o aktualnom zobrazeni vizualizacie
+	 * (casovy rozsah, zoznam vyvojarov, meno projektu) dotahuje
+	 * z triedy Resources.
+	 *
+	 * @see Resources
+	 * @see com.gratex.perconik.astrcs.iactivitysvc.IActivitySvc
+	 *
+	 * @param user meno (login) vyvojara
+	 * @return JSONObject zlozeny zo vsetkych aktivit vyvojarov
+	 */
 	public JSONObject getUsersCodeActivities(String user) {
 
 		final int pieces = 100;
@@ -77,9 +98,9 @@ public class Controller {
 			}
 		}
 
-		for (UserActivities userActivities : Resources.getInstance().getListUsersActivities()) {
-			if (userActivities.getName().equals(user)) {
-				userActivities.setActivities(intervals);
+		for (UserActivitiesEntity userActivitiesEntity : Resources.getInstance().getListUsersActivities()) {
+			if (userActivitiesEntity.getName().equals(user)) {
+				userActivitiesEntity.setActivities(intervals);
 			}
 		}
 
@@ -89,36 +110,59 @@ public class Controller {
 		return jsonObject;
 	}
 
+	/**
+	 * Metoda dotahuje z databazy AstRcs mena vyvojarov
+	 * s parametrom aktualneho projektu.
+	 *
+	 * @see Resources
+	 * @return JSONObject zoznamu vyvojarov pre aktualny projektov
+	 */
 	public JSONObject getUsersPerProject() {
-
-		List<UsersEntity> userDtoList = databaseHandlers.getUsersPerProject();
+		List<UsersEntity> userDtoList = databaseHandlers.getUsersPerProject(Resources.getInstance().getProjectId());
 		Collections.sort(userDtoList);
 		Resources.getInstance().setListUsers(userDtoList);
 
-		List<UserActivities> userActivitiesList = new LinkedList<>();
+		List<UserActivitiesEntity> userActivitiesEntityList = new LinkedList<>();
 		for (UsersEntity usersEntity : userDtoList) {
-			userActivitiesList.add(new UserActivities(usersEntity.getId(), usersEntity.getName()));
+			userActivitiesEntityList.add(new UserActivitiesEntity(usersEntity.getId(), usersEntity.getName()));
 		}
-		Resources.getInstance().setListUsersActivities(userActivitiesList);
+		Resources.getInstance().setListUsersActivities(userActivitiesEntityList);
 
 		JSONObject jsonObject = transformToJson.usersToJson(Resources.getInstance().getListUsers());
 
 		return jsonObject;
 	}
 
+	/**
+	 * Metoda dotahuje z databazovej vrstvy potrebne informacie
+	 * o vsetkych suboroch pre aktualnu verziu projektu,
+	 * a o zmenach suborov v danom rozsahu.
+	 *
+	 * @see TransformToJson
+	 * @see DatabaseHandlers
+	 * @return JSONObject rekurzivne vystavaneho stromu projektu
+	 */
 	public JSONObject getProjectTree() {
-
-		List<FileVersionDto> listFileVersionDto = databaseHandlers.searchFiles();
-		List<FileVersionExtendedDto> changedFilesList = databaseHandlers.getChangedFiles();
+		List<FileVersionDto> listFileVersionDto = databaseHandlers.searchFiles(Resources.getInstance().getChangesetToId());
+		List<FileVersionExtendedDto> changedFilesList = databaseHandlers
+				.getChangedFiles(Resources.getInstance().getChangesetFromId(),Resources.getInstance().getChangesetToId(),
+						Resources.getInstance().getProjectId());
 
 		JSONObject jsonObject = transformToJson.projectTreeToJson(listFileVersionDto, changedFilesList);
 
 		return jsonObject;
 	}
 
-
+	/**
+	 * Metoda si z databazovej vrstvy vyziada pre aktualne nastaveny projekt
+	 * list vsetkych ChangesetDto. Ten sa ponuka v pouzivatelskom rozhrani ako
+	 * rozsah sledovania projektu.
+	 *
+	 * @return JSONArray vsetkych changesetov pre projekt
+	 */
 	public JSONArray getChangesetList() {
-		List<ChangesetDto> changesetDtoList = databaseHandlers.searchChangesets(null, null);
+		List<ChangesetDto> changesetDtoList = databaseHandlers
+				.searchChangesets(null, null, Resources.getInstance().getProjectId());
 
 		TransformToJson transformToJson = new TransformToJson();
 		JSONArray jsonArray = transformToJson.changesetListToJson(changesetDtoList);
@@ -126,12 +170,23 @@ public class Controller {
 		return jsonArray;
 	}
 
+	/**
+	 * Metoda dotahuje z databazy AstRcs list vsetkych zaznamenanych projektov.
+	 * @return List<ProjectsEntity>
+	 */
 	public List<ProjectsEntity> getProjects() {
 		List<ProjectsEntity> projectsEntityList = databaseHandlers.getProjects();
 
 		return projectsEntityList;
 	}
 
+	/**
+	 * Metoda pre potreby informacie o konkretnom changesete.
+	 * @see sk.Servlets.IndexServlet
+	 *
+	 * @param changesetId konkretne id changesetu
+	 * @return ChangesetDto
+	 */
 	public ChangesetDto getChangeset(Integer changesetId) {
 		ChangesetDto changesetDto = databaseHandlers.getChangeset(changesetId);
 		return changesetDto;

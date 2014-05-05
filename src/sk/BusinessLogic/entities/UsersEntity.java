@@ -1,16 +1,18 @@
 package sk.BusinessLogic.entities;
 
-import java.io.Serializable;
-
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 10.3.2014
- * Time: 19:54
  */
 
-
-public class UsersEntity implements Comparable<UsersEntity>, Serializable {
+/**
+ * Trieda UsersEntity extrahuje jedine potrebne atributy
+ * "id" a "name" z triedy UserDto, pre potreby zoradovania.
+ * Implementuje metodu compareTo(UsersEntity d),
+ * prekonava metody equals() a hashCode() z java.lang.Object.
+ *
+ * @see org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.UserDto
+ */
+public class UsersEntity implements Comparable<UsersEntity> {
 
 	private Integer id;
 	private String name;
@@ -60,6 +62,5 @@ public class UsersEntity implements Comparable<UsersEntity>, Serializable {
 	public int compareTo(UsersEntity d) {
 		return (this.id).compareTo(d.id);
 	}
-
 
 }

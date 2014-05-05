@@ -4,13 +4,14 @@ import com.gratex.perconik.astrcs.iactivitysvc.IActivitySvc;
 import com.gratex.perconik.astrcs.iastrcswcfsvc.IAstRcsWcfSvc;
 
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 7.12.2013
- * Time: 20:13
  */
 
-
+/**
+ * Trieda DatabaseFactory vyuziva navrhovy vzor Singleton,
+ * a poskytuje instanciu rozhrania na koncove body IAstRcsWcfSvc a IActivitySvc.
+ * @see BackEndClient
+ */
 public class DatabaseFactory {
 	private static DatabaseFactory instance = null;
 	private IAstRcsWcfSvc iAstRcsWcfSvc;
@@ -29,10 +30,18 @@ public class DatabaseFactory {
 		return instance;
 	}
 
+	/**
+	 * Metoda poskytujuca instanciu rozhrania IAstRcsWcfSvc
+	 * @return IAstRcsWcfSvc
+	 */
 	public IAstRcsWcfSvc getIAstRcsWcfSvc() {
 		return iAstRcsWcfSvc;
 	}
 
+	/**
+	 * Metoda poskytujuca instanciu rozhrania IActivitySvc
+	 * @return IActivitySvc
+	 */
 	public IActivitySvc getIActivitySvc() {
 		return iActivitySvc;
 	}

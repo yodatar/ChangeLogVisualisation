@@ -11,24 +11,28 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.List;
 
 /**
- * User: pipo
- * Date: 1.5.2014
- * Time: 21:38
+ * Date: 1.4.2014
  */
 
-
+/**
+ * Rozhranie DatabaseHandlers poskytuje definiciu potrebnych
+ * metod vyzadovanych vizualizaciou.
+ *
+ * @author Pavol Michalek
+ * @see PerConIKDatabaseHandler
+ */
 public interface DatabaseHandlers {
-	List<UsersEntity> getUsersPerProject();
+	List<UsersEntity> getUsersPerProject(Integer projectId);
 
-	List<ChangesetDto> searchChangesets(Integer from, Integer to);
+	List<ChangesetDto> searchChangesets(Integer from, Integer to, Integer projectId);
 
 	ChangesetDto getChangeset(Integer changesetId);
-
-	List<FileVersionExtendedDto> getChangedFiles();
-
-	List<FileVersionDto> searchFiles();
 
 	List<ProjectsEntity> getProjects();
 
 	List<ActivityDto> getActivities(String user, XMLGregorianCalendar calendar1, XMLGregorianCalendar calendar2, String string);
+
+	List<FileVersionExtendedDto> getChangedFiles(Integer changesetIdFrom, Integer changesetIdTo, Integer projectId);
+
+	List<FileVersionDto> searchFiles(Integer changesetIdTo);
 }

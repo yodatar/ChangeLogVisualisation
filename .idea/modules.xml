@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ChangeLogVisualisation.iml" filepath="$PROJECT_DIR$/ChangeLogVisualisation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodeMaster.iml" filepath="$PROJECT_DIR$/CodeMaster.iml" />
     </modules>
   </component>
 </project>

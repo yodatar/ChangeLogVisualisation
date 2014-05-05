@@ -2,7 +2,7 @@ package sk.BusinessLogic;
 
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
 import sk.BusinessLogic.entities.ProjectsEntity;
-import sk.BusinessLogic.entities.UserActivities;
+import sk.BusinessLogic.entities.UserActivitiesEntity;
 import sk.BusinessLogic.entities.UsersEntity;
 
 import java.util.LinkedList;
@@ -28,7 +28,7 @@ public class Resources {
 	private ChangesetDto changesetFrom;
 	private ChangesetDto changesetTo;
 
-	private List<UserActivities> listUsersActivities = new LinkedList<UserActivities>();
+	private List<UserActivitiesEntity> listUsersActivities = new LinkedList<UserActivitiesEntity>();
 	private List listUsers = new LinkedList<UsersEntity>();
 
 	public ProjectsEntity getProjectDto() {
@@ -88,7 +88,7 @@ public class Resources {
 		this.changesetToId = changesetToId;
 	}
 
-	public List<UserActivities> getListUsersActivities() {
+	public List<UserActivitiesEntity> getListUsersActivities() {
 		return listUsersActivities;
 	}
 
