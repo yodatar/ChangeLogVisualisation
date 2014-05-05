@@ -10,29 +10,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="074b9915-dbaa-4d9a-9abf-c6845a54b763" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\css\graph.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\ajax-loader (1).gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\ajax-loader (2).gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\ajax-loader (3).gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\img\loading.jpg" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\sidebar.jsp" afterPath="$PROJECT_DIR$/web/visualisation.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/Thumbs.db" afterPath="$PROJECT_DIR$/web/img/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ActivityDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ActivityFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ActivitySvc.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ApplicationFocusLostDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ApplicationRunDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ApplicationStateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfActivityDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfApplicationStateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfIdeFindFileResultDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfIdeFindResultRowDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfKeyboardGraphDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfMouseClickDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfMouseDragDropDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfMouseMoveDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfMouseScrollDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ArrayOfString.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\CommitActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\CommitActivityResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\EventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\GetActivities.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\GetActivitiesResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\GetActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\GetActivityResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\HwUsageDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IActivitySvc.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeCheckinDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeCodeElementEventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeCodeElementEventTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeCodeOperationDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeCodeOperationTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeDocumentDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeDocumentOperationDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeDocumentOperationTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeEventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeFindFileResultDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeFindOperationDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeFindResultRowDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdePathTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeProjectOperationDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeProjectOperationTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeSlnPrjEventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\IdeStateChangeDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\KeyboardGraphDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\KeyboardStateBlobDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\KeyboardStateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\LyncStatusChangeDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\LyncStatusTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseButtonTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseClickDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseClickTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseDragDropDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseMoveDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MousePosDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseScrollDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseStateBlobDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\MouseStateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\ObjectFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteEventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteNavigateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteNotebookDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNotePageDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteSectionDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteSectionGroupDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteViewChangeDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\OneNoteViewTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\RcsServerDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\RunningApplicationsListDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\StateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebBookmarkDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebEventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebNavigateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebNavigationTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebSaveDocumentDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebTabOperationDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WebTabOperationTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\WindowStateTypeEnum.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\XmlSerializableInterfaceCollectionGratexPerConIKUserActivitySvcInterfacesEventDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\XmlSerializableInterfaceCollectionGratexPerConIKUserActivitySvcInterfacesStateDto.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\gratex\perconik\iactivitysvc\package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\com\req" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\perconik.fiit.stuba.sk UserActivity ActivitySvc.svc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\ws.wsdl" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\wsdl\wsxauthfile" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java" afterPath="$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/dashboard.css" afterPath="$PROJECT_DIR$/web/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/graph.js" afterPath="$PROJECT_DIR$/web/js/graph.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/template.jsp" afterPath="$PROJECT_DIR$/web/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/visualisation3.js" afterPath="$PROJECT_DIR$/web/js/visualisation3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/visualisation.jsp" afterPath="$PROJECT_DIR$/web/visualisation.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ChangeLogVisualisation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398978404565" ignored="false" />
+    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399069944076" ignored="false" />
     <file path="/GetAllUsersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395866980680" ignored="false" />
     <file path="/visualisation.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393180082495" ignored="false" />
     <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398981695759" ignored="false" />
@@ -50,7 +119,7 @@
     <file path="/PathTreeCreator.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398913115394" ignored="false" />
     <file path="/nocotodalo.json" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394288904409" ignored="false" />
     <file path="/web.xml" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398906029007" ignored="false" />
-    <file path="/dashboard.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399060894227" ignored="false" />
+    <file path="/dashboard.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399072502554" ignored="false" />
     <file path="/GetProjectsServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395865288092" ignored="false" />
     <file path="/ProjectsEntity.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394477811302" ignored="false" />
     <file path="/AppServletContextListener.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397574190449" ignored="false" />
@@ -93,7 +162,7 @@
     <file path="/GetActivityServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397589110146" ignored="false" />
     <file path="/a.dummy" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398961088234" ignored="false" />
     <file path="/IndexServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398904733565" ignored="false" />
-    <file path="/BackEndClient.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398975432566" ignored="false" />
+    <file path="/BackEndClient.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399322787318" ignored="false" />
     <file path="/AstRcsWcfSvc.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395905152550" ignored="false" />
     <file path="/SetResourcesServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396037271591" ignored="false" />
     <file path="/a.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396348750142" ignored="false" />
@@ -137,8 +206,8 @@
     <file path="$PROJECT_DIR$/../UI3/src/Population.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397676799299" ignored="false" />
     <file path="/Population.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397676433686" ignored="false" />
     <file path="/Gene.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397676599038" ignored="false" />
-    <file path="$PROJECT_DIR$/../UI3/src/Evolution.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397929589704" ignored="false" />
-    <file path="/Evolution.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397929485769" ignored="false" />
+    <file path="$PROJECT_DIR$/../UI3/src/Evolution.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399082881907" ignored="false" />
+    <file path="/Evolution.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399082838709" ignored="false" />
     <file path="$PROJECT_DIR$/../UI3/src/Position.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397923754072" ignored="false" />
     <file path="/Position.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397921237168" ignored="false" />
     <file path="/DatabaseFactory.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398260937210" ignored="false" />
@@ -240,19 +309,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="BackEndClient.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="6" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-17.653847">
+            <state line="77" column="5" selection-start="2358" selection-end="2358" vertical-scroll-proportion="1.3061926">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageHandling.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="6" selection-start="1249" selection-end="1249" vertical-scroll-proportion="2.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageHandling.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/pageHandling.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="37" selection-start="323" selection-end="323" vertical-scroll-proportion="-0.058486238">
+            <state line="68" column="0" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -279,7 +357,7 @@
       <file leaf-file-name="visualisation.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="65" selection-start="1237" selection-end="1248" vertical-scroll-proportion="-17.653847">
+            <state line="42" column="9" selection-start="1705" selection-end="1705" vertical-scroll-proportion="-21.423077">
               <folding />
             </state>
           </provider>
@@ -288,25 +366,7 @@
       <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="28" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.css" pinned="true" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/dashboard.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="22" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppServletContextListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="1" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+            <state line="65" column="29" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -342,18 +402,18 @@
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java" />
         <option value="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" />
         <option value="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
-        <option value="$PROJECT_DIR$/web/visualisation.jsp" />
         <option value="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" />
         <option value="$PROJECT_DIR$/web/css/graph.css" />
-        <option value="$PROJECT_DIR$/web/css/dashboard.css" />
         <option value="$PROJECT_DIR$/web/js/graph.js" />
         <option value="$PROJECT_DIR$/web/js/visualisation3.js" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/template.jsp" />
         <option value="$PROJECT_DIR$/web/js/slider.js" />
+        <option value="$PROJECT_DIR$/web/visualisation.jsp" />
+        <option value="$PROJECT_DIR$/web/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java" />
       </list>
     </option>
   </component>
@@ -480,117 +540,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessLogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JsonConverter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,46 +581,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChangeLogVisualisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="astrcs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1052,7 +966,11 @@
       <created>1398976079511</created>
       <updated>1398976079511</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="final state">
+      <created>1399070200969</created>
+      <updated>1399070200969</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1101,8 +1019,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10356347" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.7271715" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.7271715" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.6703786" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" x="1458" y="-220" width="1736" height="856" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.87193763" order="2" side_tool="false" content_ui="combo" />
@@ -1163,7 +1081,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="after massive refractor" />
+    <option name="LAST_COMMIT_MESSAGE" value="final state" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1192,6 +1110,7 @@
     <MESSAGE value="messing around activities, good condition" />
     <MESSAGE value="before cleaning" />
     <MESSAGE value="after massive refractor" />
+    <MESSAGE value="final state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1203,13 +1122,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="927" selection-end="927" vertical-scroll-proportion="0.31766054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="13" selection-start="3513" selection-end="3513" vertical-scroll-proportion="0.43463302">
@@ -1346,20 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="28" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="22" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="29" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
@@ -1367,23 +1265,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/visualisation3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="37" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="65" selection-start="1237" selection-end="1248" vertical-scroll-proportion="-17.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="6" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-17.653847">
+        <state line="34" column="6" selection-start="1249" selection-end="1249" vertical-scroll-proportion="2.3076923">
           <folding />
         </state>
       </provider>
@@ -1404,7 +1288,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/pageHandling.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="37" selection-start="323" selection-end="323" vertical-scroll-proportion="-0.058486238">
+        <state line="68" column="0" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/visualisation3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="37" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="14" selection-start="262" selection-end="262" vertical-scroll-proportion="0.14220184">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="29" selection-start="1608" selection-end="1608" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="9" selection-start="1705" selection-end="1705" vertical-scroll-proportion="-21.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_13/src.zip!/java/net/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="12" selection-start="229" selection-end="229" vertical-scroll-proportion="0.060714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/BackEndClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="5" selection-start="2358" selection-end="2358" vertical-scroll-proportion="1.3061926">
           <folding />
         </state>
       </provider>

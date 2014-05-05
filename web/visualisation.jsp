@@ -17,9 +17,9 @@
 					</c:forEach>
 				</select>
 
-				<div class="well well-sm" style="margin-top:5px;margin-bottom: 2px;color:#555;"
+				<div class="well well-sm" style="margin-top:5px;margin-bottom: 2px;"
 				     id="changesetFromDate"></div>
-				<div class="well well-sm" style="margin-bottom: 10px;color:#555;" id="changesetToDate"></div>
+				<div class="well well-sm" style="margin-bottom: 10px;" id="changesetToDate"></div>
 
 				<div id="slider" style="margin-bottom:10px;height: 17px;">
 					<div id="slider-range"></div>

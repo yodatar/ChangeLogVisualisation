@@ -96,6 +96,7 @@ body {
     background: rgba(255, 255, 255, 1);
     position: relative;
     background: url("../img/background6.jpg") repeat;
+    border-radius: 5px;
 }
 
 #chart-container-wrapper {
@@ -105,7 +106,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: 0px 0px 10px rgb(81, 81, 81);
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 #developers-loading {
@@ -153,7 +154,6 @@ g.tick {
 }
 
 .name-title {
-    /*text-shadow: 1px 1px #ffffff, -1px -1px #ffffff, -1px 1px #ffffff, 1px -1px #ffffff;*/
     font-weight: 700;
     font-size: 14px;
 }
@@ -172,4 +172,21 @@ g.tick {
 
 .ui-widget-header {
     background: #55aeff;
+}
+
+.well-sm {
+    color: rgb(215, 215, 215);
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px rgb(10, 10, 10);
+    box-shadow: inset 0 0 10px rgb(10, 10, 10);
+    background: url("../img/background4.jpg");
+    border: 1px solid rgb(37, 37, 37);
+    border-radius: 6px;
+    opacity: 0.8;
+}
+
+#projectSelect {
+    color: rgb(215, 215, 215);
+    background-color: rgb(31, 31, 31);
+    border: 1px solid rgb(27, 27, 27);
 }
