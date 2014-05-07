@@ -1,6 +1,4 @@
 /**
- * Created with IntelliJ IDEA.
- * User: pipo
  * Date: 13.3.2014
  * Time: 23:59
  */
@@ -13,6 +11,8 @@ $(document).ready(function () {
 	slider();
 	visualisation();
 	developersStats();
+
+	$("#chart-container-wrapper").css("max-height", ($(window).height() - 340) + 'px');
 });
 
 function clearPageProjectSelected() {
@@ -33,9 +33,13 @@ function clearPageProjectSelected() {
 	d3.select(".canvas").remove();
 	d3.select("#trail").remove();
 	d3.select("#legend").remove();
+
+	$(".btn-primary").addClass("disabled").prop('disabled', true);
 }
 
 function clearPageSliderMoved() {
+	$(".btn-primary").removeClass("disabled").prop('disabled', false);
+
 	d3.select(".svg").remove();
 	d3.select(".canvas").remove();
 	d3.select("#trail").remove();

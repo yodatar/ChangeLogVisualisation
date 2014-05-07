@@ -1,9 +1,10 @@
 <div class="col-sm-3 col-md-2 sidebar" style="width:250px;">
 	<ul class="nav nav-sidebar">
 		<li class="active"><a href="#">Home</a></li>
-		<br>
 		<li><a href="/visualisation/vis">Visualisation</a></li>
-		<li><a href="/javadoc/index.html">Project JavaDoc</a></li>
+		<li><a href="/visualisation/javadoc/index.html">Project JavaDoc</a></li>
+		<li><a href="https://github.com/yodatar/CodeMaster" target="_blank">Project GitHub</a></li>
+
 	</ul>
 </div>
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

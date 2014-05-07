@@ -1,4 +1,4 @@
-package sk.BusinessLogic;
+package sk.BackEnd;
 
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityDto;
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityFilter;
@@ -19,7 +19,7 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchFiles
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchFilesResponse;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchRcsProjectsRequest;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.SearchRcsProjectsResponse;
-import sk.BackEnd.DatabaseFactory;
+import sk.BusinessLogic.Resources;
 import sk.BusinessLogic.entities.FileVersionExtendedDto;
 import sk.BusinessLogic.entities.ProjectsEntity;
 import sk.BusinessLogic.entities.UsersEntity;
@@ -33,31 +33,31 @@ import java.util.Set;
 
 /**
  * Date: 5.2.2014
- *
+ * <p/>
  * Trieda implementujuca rozhranie DatabaseHandlers.
  * Vyuziva pripojenie na webove sluzby projetu PerConIK
  * z triedy DatabaseFactory.
- *
+ * <p/>
  * Metody funkcionalitou odpovedaju popisu v triede Controller.
  *
  * @see DatabaseFactory
- * @see DatabaseHandlers
+ * @see sk.BackEnd.DatabaseHandlers
  */
 public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	IAstRcsWcfSvc iAstRcsWcfSvc = DatabaseFactory.getInstance().getIAstRcsWcfSvc();
 	IActivitySvc iActivitySvc = DatabaseFactory.getInstance().getIActivitySvc();
 
 	/**
-	 * @see sk.BusinessLogic.Controller#getUsersPerProject()
 	 * @param projectId projectId
 	 * @return List<UsersEntity>
+	 * @see sk.BusinessLogic.Controller#getUsersPerProject()
 	 */
 	@Override
 	public List<UsersEntity> getUsersPerProject(Integer projectId) {
 		List<UsersEntity> list = new ArrayList<>();
 		Set<UsersEntity> set = new HashSet<>();
 
-		List<ChangesetDto> changesetDtoList = this.searchChangesets(null, null,projectId);
+		List<ChangesetDto> changesetDtoList = this.searchChangesets(null, null, projectId);
 		for (ChangesetDto changesetDto : changesetDtoList) {
 			UsersEntity usersEntity = new UsersEntity(changesetDto.getCommitter().getValue().getId(), changesetDto.getCommitter().getValue().getLogin().getValue());
 			set.add(usersEntity);
@@ -70,14 +70,14 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	}
 
 	/**
-	 * @see sk.BusinessLogic.Controller#getChangesetList()
-	 * @param from changesetIdFrom
-	 * @param to changesetIdTo
+	 * @param from      changesetIdFrom
+	 * @param to        changesetIdTo
 	 * @param projectId projectID
 	 * @return List<ChangesetDto>
+	 * @see sk.BusinessLogic.Controller#getChangesetList()
 	 */
 	@Override
-	public List<ChangesetDto> searchChangesets(Integer from, Integer to,Integer projectId) {
+	public List<ChangesetDto> searchChangesets(Integer from, Integer to, Integer projectId) {
 		List<ChangesetDto> changesetDtoList = new LinkedList<>();
 
 		// Search Changesets
@@ -120,9 +120,9 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	}
 
 	/**
-	 * @see Controller#getChangeset(Integer)
 	 * @param changesetId changesetId
 	 * @return ChangesetDto
+	 * @see sk.BusinessLogic.Controller#getChangeset(Integer)
 	 */
 	@Override
 	public ChangesetDto getChangeset(Integer changesetId) {
@@ -134,14 +134,14 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	}
 
 	/**
-	 * @see sk.BusinessLogic.Controller#getProjectTree()
 	 * @param changesetIdFrom changesetIdFrom
-	 * @param changesetIdTo changesetIdTo
-	 * @param projectId projectId
+	 * @param changesetIdTo   changesetIdTo
+	 * @param projectId       projectId
 	 * @return List<FileVersionExtendedDto>
+	 * @see sk.BusinessLogic.Controller#getProjectTree()
 	 */
 	@Override
-	public List<FileVersionExtendedDto> getChangedFiles(Integer changesetIdFrom, Integer changesetIdTo,Integer projectId) {
+	public List<FileVersionExtendedDto> getChangedFiles(Integer changesetIdFrom, Integer changesetIdTo, Integer projectId) {
 		List<FileVersionExtendedDto> fileVersionExtendedList = new LinkedList<>();
 		Set<FileVersionExtendedDto> fileVersionExtendedSet = new HashSet<>();
 
@@ -165,9 +165,9 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	}
 
 	/**
-	 * @see sk.BusinessLogic.Controller#getProjectTree()
 	 * @param changesetIdTo changesetIdTo
 	 * @return List<FileVersionDto>
+	 * @see sk.BusinessLogic.Controller#getProjectTree()
 	 */
 	@Override
 	public List<FileVersionDto> searchFiles(Integer changesetIdTo) {
@@ -197,8 +197,8 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	}
 
 	/**
-	 * @see sk.BusinessLogic.Controller#getProjects() 
 	 * @return List<ProjectsEntity>
+	 * @see sk.BusinessLogic.Controller#getProjects()
 	 */
 	@Override
 	public List<ProjectsEntity> getProjects() {
@@ -219,12 +219,12 @@ public class PerConIKDatabaseHandler implements DatabaseHandlers {
 	}
 
 	/**
-	 * @see Controller#getUsersCodeActivities(String)
-	 * @param user meno vyvojara
-	 * @param calendar1 dateFrom
-	 * @param calendar2 dateTo
+	 * @param user               meno vyvojara
+	 * @param calendar1          dateFrom
+	 * @param calendar2          dateTo
 	 * @param shortEventTypeName shortEventTypeName
 	 * @return List<ActivityDto>
+	 * @see sk.BusinessLogic.Controller#getUsersCodeActivities(String)
 	 */
 	@Override
 	public List<ActivityDto> getActivities(String user, XMLGregorianCalendar calendar1, XMLGregorianCalendar calendar2, String shortEventTypeName) {

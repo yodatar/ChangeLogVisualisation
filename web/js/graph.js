@@ -1,6 +1,7 @@
 var commiterNum = 0;
 var commitersList;
 var abortAjax = false;
+var windowWidth = $(window).width() - 70;
 
 function developersStats() {
 	$("#developers-loading")
@@ -50,8 +51,8 @@ function createChart(data) {
 		ids.push(data.commiters[index].id)
 	}
 
-	width = 1300 - margin.left - margin.right,
-		height = name.length * 40;
+	width = windowWidth - margin.left - margin.right;
+	height = name.length * 40;
 
 	d3.select(".svg").remove();
 
@@ -134,10 +135,14 @@ function Chart(options) {
 			return xS(d.date) - .5;
 		})
 		.attr('y', function (d) {
+			if (yS(d[ids]) < height && yS(d[ids]) > (height - 2))
+				return height - 2;
 			return yS(d[ids]);
 		})
 		.attr('width', width / (chartData.length + 1))
 		.attr('height', function (d) {
+			if ((height - yS(d[ids])) != 0 && (height - yS(d[ids])) < 2)
+				return 2;
 			return height - yS(d[ids]);
 		})
 		.append('g');
@@ -180,16 +185,39 @@ function Chart(options) {
 		.text(name)
 		.on("click", userSelection);
 
-	svg
+	d3.select("#chart-container-mouseover")
 		.on("mouseover", function () {
-			svg.transition()
-				.attr("width", 1300)
-				.duration(1000)
-				.ease("elastic");
-			d3.select("#chart-container").transition()
-				.attr("width", 1300)
-				.duration(1000)
-				.ease("elastic");
+			if (svg.attr("width") > 250) {
+				svg.transition()
+					.attr("width", windowWidth)
+					.duration(1000)
+					.ease("elastic");
+				d3.select("#chart-container").transition()
+					.attr("width", windowWidth)
+					.duration(1000)
+					.ease("elastic");
+			}
+		})
+		.on("mouseleave", function () {
+			d3.select("#chart-container-mouseover").transition()
+				.style("opacity", 0)
+				.duration(200);
+		});
+
+
+	d3.select("#chart-container")
+		.on("mouseover", function () {
+			if (svg.attr("width") == 230) {
+				svg.transition()
+					.attr("width", 260)
+					.duration(300);
+				d3.select("#chart-container").transition()
+					.attr("width", 260)
+					.duration(300);
+				d3.select("#chart-container-mouseover").transition()
+					.style("opacity", 0.2)
+					.duration(300);
+			}
 		})
 		.on("mouseleave", function () {
 			svg.transition()
@@ -198,14 +226,14 @@ function Chart(options) {
 			d3.select("#chart-container").transition()
 				.attr("width", 230)
 				.duration(500);
+			d3.select("#chart-container-mouseover").transition()
+				.style("opacity", 0)
+				.duration(500);
 		});
 
 
-	svg.attr("width", 230);
-
-	d3.select("#chart-container")
-		.attr("width", 230);
-
+	svg.transition().attr("width", 230).duration(1000);
+	d3.select("#chart-container").transition().attr("width", 230).duration(1000);
 }
 
 function userSelection(d) {

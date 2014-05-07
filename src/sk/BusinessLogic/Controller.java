@@ -7,6 +7,8 @@ import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDt
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import sk.BackEnd.DatabaseHandlers;
+import sk.BackEnd.PerConIKDatabaseHandler;
 import sk.BusinessLogic.JsonConverter.TransformToJson;
 import sk.BusinessLogic.entities.FileVersionExtendedDto;
 import sk.BusinessLogic.entities.ProjectsEntity;
@@ -30,7 +32,7 @@ import java.util.List;
  * Ziskane data z webovej sluzby posiela na transformaciu
  * do JSONObject a vrati ich spat prislusnemu Servletu na odpoved.
  *
- * @see DatabaseHandlers
+ * @see sk.BackEnd.DatabaseHandlers
  * @see TransformToJson
  */
 public class Controller {
@@ -45,11 +47,10 @@ public class Controller {
 	 * (casovy rozsah, zoznam vyvojarov, meno projektu) dotahuje
 	 * z triedy Resources.
 	 *
-	 * @see Resources
-	 * @see com.gratex.perconik.astrcs.iactivitysvc.IActivitySvc
-	 *
 	 * @param user meno (login) vyvojara
 	 * @return JSONObject zlozeny zo vsetkych aktivit vyvojarov
+	 * @see Resources
+	 * @see com.gratex.perconik.astrcs.iactivitysvc.IActivitySvc
 	 */
 	public JSONObject getUsersCodeActivities(String user) {
 
@@ -114,8 +115,8 @@ public class Controller {
 	 * Metoda dotahuje z databazy AstRcs mena vyvojarov
 	 * s parametrom aktualneho projektu.
 	 *
-	 * @see Resources
 	 * @return JSONObject zoznamu vyvojarov pre aktualny projektov
+	 * @see Resources
 	 */
 	public JSONObject getUsersPerProject() {
 		List<UsersEntity> userDtoList = databaseHandlers.getUsersPerProject(Resources.getInstance().getProjectId());
@@ -138,14 +139,14 @@ public class Controller {
 	 * o vsetkych suboroch pre aktualnu verziu projektu,
 	 * a o zmenach suborov v danom rozsahu.
 	 *
+	 * @return JSONObject rekurzivne vystavaneho stromu projektu
 	 * @see TransformToJson
 	 * @see DatabaseHandlers
-	 * @return JSONObject rekurzivne vystavaneho stromu projektu
 	 */
 	public JSONObject getProjectTree() {
 		List<FileVersionDto> listFileVersionDto = databaseHandlers.searchFiles(Resources.getInstance().getChangesetToId());
 		List<FileVersionExtendedDto> changedFilesList = databaseHandlers
-				.getChangedFiles(Resources.getInstance().getChangesetFromId(),Resources.getInstance().getChangesetToId(),
+				.getChangedFiles(Resources.getInstance().getChangesetFromId(), Resources.getInstance().getChangesetToId(),
 						Resources.getInstance().getProjectId());
 
 		JSONObject jsonObject = transformToJson.projectTreeToJson(listFileVersionDto, changedFilesList);
@@ -172,6 +173,7 @@ public class Controller {
 
 	/**
 	 * Metoda dotahuje z databazy AstRcs list vsetkych zaznamenanych projektov.
+	 *
 	 * @return List<ProjectsEntity>
 	 */
 	public List<ProjectsEntity> getProjects() {
@@ -182,10 +184,10 @@ public class Controller {
 
 	/**
 	 * Metoda pre potreby informacie o konkretnom changesete.
-	 * @see sk.Servlets.IndexServlet
 	 *
 	 * @param changesetId konkretne id changesetu
 	 * @return ChangesetDto
+	 * @see sk.Servlets.IndexServlet
 	 */
 	public ChangesetDto getChangeset(Integer changesetId) {
 		ChangesetDto changesetDto = databaseHandlers.getChangeset(changesetId);

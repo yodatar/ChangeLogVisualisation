@@ -36,6 +36,7 @@
 				<button type="button" class="close" aria-hidden="true" onclick="abortDevelopers()">&times;</button>
 			</div>
 			<div id="chart-container-wrapper">
+				<div id="chart-container-mouseover"></div>
 				<div id="chart-container"></div>
 			</div>
 		</li>

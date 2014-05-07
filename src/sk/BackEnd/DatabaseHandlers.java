@@ -1,4 +1,4 @@
-package sk.BusinessLogic;
+package sk.BackEnd;
 
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityDto;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
@@ -30,7 +30,7 @@ public interface DatabaseHandlers {
 
 	List<ProjectsEntity> getProjects();
 
-	List<ActivityDto> getActivities(String user, XMLGregorianCalendar calendar1, XMLGregorianCalendar calendar2, String string);
+	List<ActivityDto> getActivities(String user, XMLGregorianCalendar from, XMLGregorianCalendar to, String string);
 
 	List<FileVersionExtendedDto> getChangedFiles(Integer changesetIdFrom, Integer changesetIdTo, Integer projectId);
 

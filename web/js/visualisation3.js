@@ -5,8 +5,8 @@
  */
 
 
-var w = 1000;
-var h = 480;
+var w = $(window).width() - 300;
+var h = $(window).height() - 180;
 var x = d3.scale.linear().range([ 0, w ]);
 var y = d3.scale.linear().range([ 0, h ]);
 var b = {
@@ -121,7 +121,7 @@ function visualisation() {
 			.attr("transform", transform)
 			.attr("alignment-baseline", function (d) {
 				if (d.depth > 2)
-					return "central";
+					return "baseline";
 				return "auto";
 			})
 			/*.style("font-size",function (d) {

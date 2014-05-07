@@ -109,6 +109,19 @@ body {
     border-radius: 5px;
 }
 
+#chart-container-mouseover {
+    background-image: url("../img/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    margin-left: 200px;
+    width: 50px;
+    height: 100%;
+    z-index: 2000;
+    position: absolute;
+    opacity: 0;
+}
+
 #developers-loading {
     position: relative;
     height: 17px;
@@ -189,4 +202,8 @@ g.tick {
     color: rgb(215, 215, 215);
     background-color: rgb(31, 31, 31);
     border: 1px solid rgb(27, 27, 27);
+}
+
+.col-md-offset-2 {
+    margin-left: 225px;
 }

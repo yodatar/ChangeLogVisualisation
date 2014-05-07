@@ -12,40 +12,28 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074b9915-dbaa-4d9a-9abf-c6845a54b763" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\CodeMaster\ChangeLogVisualisation.iml" afterPath="$PROJECT_DIR$/CodeMaster.iml" />
-      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\CodeMaster\src\sk\BusinessLogic\entities\UserActivities.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/UserActivitiesEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" />
+    <list default="true" id="074b9915-dbaa-4d9a-9abf-c6845a54b763" name="Default" comment="before KEYBOARD_STATES changed">
+      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\CodeMaster\src\sk\BusinessLogic\DatabaseHandlers.java" afterPath="$PROJECT_DIR$/src/sk/BackEnd/DatabaseHandlers.java" />
+      <change type="MOVED" beforePath="C:\Users\pipo\IdeaProjects\CodeMaster\src\sk\BusinessLogic\PerConIKDatabaseHandler.java" afterPath="$PROJECT_DIR$/src/sk/BackEnd/PerConIKDatabaseHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/Thumbs.db" afterPath="$PROJECT_DIR$/web/img/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/.picasaoriginals/Thumbs.db" afterPath="$PROJECT_DIR$/web/img/.picasaoriginals/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BackEnd/DatabaseFactory.java" afterPath="$PROJECT_DIR$/src/sk/BackEnd/DatabaseFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/FileVersionExtendedDto.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/FileVersionExtendedDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/GetDevelepersServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/GetDevelepersServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BackEnd/MyObjectFactory.java" afterPath="$PROJECT_DIR$/src/sk/BackEnd/MyObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/ProjectsEntity.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/ProjectsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/TransformToJson.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/TransformToJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/UsersEntity.java" afterPath="$PROJECT_DIR$/src/sk/BusinessLogic/entities/UsersEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sk/Servlets/VisualisationServlet.java" afterPath="$PROJECT_DIR$/src/sk/Servlets/VisualisationServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/javadoc/sk/BusinessLogic/PerConIKDatabaseHandler.html" afterPath="$PROJECT_DIR$/web/javadoc/sk/BusinessLogic/PerConIKDatabaseHandler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/dashboard.css" afterPath="$PROJECT_DIR$/web/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/graph.js" afterPath="$PROJECT_DIR$/web/js/graph.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/template.jsp" afterPath="$PROJECT_DIR$/web/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/visualisation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/pageHandling.js" afterPath="$PROJECT_DIR$/web/js/pageHandling.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/visualisation.jsp" afterPath="$PROJECT_DIR$/web/visualisation.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/visualisation3.js" afterPath="$PROJECT_DIR$/web/js/visualisation3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ChangeLogVisualisation.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399332222385" ignored="false" />
+    <file path="/Dummy.txt" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399494228098" ignored="false" />
     <file path="/GetAllUsersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395866980680" ignored="false" />
     <file path="/visualisation.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1393180082495" ignored="false" />
-    <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399334091911" ignored="false" />
+    <file path="/index.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399336393610" ignored="false" />
     <file path="/fragment.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398974648872" ignored="false" />
     <file path="/MyObjectFactory.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399323252431" ignored="false" />
     <file path="/TransformToJson.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398716919872" ignored="false" />
@@ -55,12 +43,12 @@
     <file path="/GetAllUsers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394047671654" ignored="false" />
     <file path="/GetServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396037397259" ignored="false" />
     <file path="/BusinessLogic.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394485587165" ignored="false" />
-    <file path="/visualisation3.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399054488586" ignored="false" />
+    <file path="/visualisation3.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399430080856" ignored="false" />
     <file path="/FileVersionDto.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394233232410" ignored="false" />
     <file path="/PathTreeCreator.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399325254822" ignored="false" />
     <file path="/nocotodalo.json" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1394288904409" ignored="false" />
-    <file path="/web.xml" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398906029007" ignored="false" />
-    <file path="/dashboard.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399072502554" ignored="false" />
+    <file path="/web.xml" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399334630669" ignored="false" />
+    <file path="/dashboard.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399417025556" ignored="false" />
     <file path="/GetProjectsServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1395865288092" ignored="false" />
     <file path="/ProjectsEntity.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399323692467" ignored="false" />
     <file path="/AppServletContextListener.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399328401616" ignored="false" />
@@ -133,10 +121,10 @@
     <file path="$PROJECT_DIR$/../UI2/src/Animator.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396636955391" ignored="false" />
     <file path="$PROJECT_DIR$/../UI2/src/MainPanel.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1396636955847" ignored="false" />
     <file path="/graph.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399059107534" ignored="false" />
-    <file path="/graph.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398957895753" ignored="false" />
+    <file path="/graph.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399424038943" ignored="false" />
     <file path="/GetDevelepers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397334743778" ignored="false" />
     <file path="/GetDevelepersServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399329530366" ignored="false" />
-    <file path="/pageHandling.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398958719995" ignored="false" />
+    <file path="/pageHandling.js" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399415348938" ignored="false" />
     <file path="$PROJECT_DIR$/../UI3/src/Main.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397676799299" ignored="false" />
     <file path="$PROJECT_DIR$/../UI3/src/Form.form" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397867468274" ignored="false" />
     <file path="$PROJECT_DIR$/../UI3/src/Form.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1397864385344" ignored="false" />
@@ -154,7 +142,7 @@
     <file path="/DatabaseFactory.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399323196301" ignored="false" />
     <file path="/Controller.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399328023253" ignored="false" />
     <file path="/UsersCodeActivitiesServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399329767489" ignored="false" />
-    <file path="/DatabaseHandlers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399328248088" ignored="false" />
+    <file path="/DatabaseHandlers.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399412889127" ignored="false" />
     <file path="/UsersEntity.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399323949331" ignored="false" />
     <file path="/jScrollbar.jquery.css" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398701057726" ignored="false" />
     <file path="/UserActivities.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398715001763" ignored="false" />
@@ -165,8 +153,10 @@
     <file path="/ActivitySvc.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1398961383949" ignored="false" />
     <file path="/VisualisationServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399329994224" ignored="false" />
     <file path="/PerConIKDatabaseHandler.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399329229099" ignored="false" />
-    <file path="/visualisation.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399045281156" ignored="false" />
+    <file path="/visualisation.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399394447766" ignored="false" />
     <file path="/UserActivitiesEntity.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399324040148" ignored="false" />
+    <file path="/JavadocServlet.java" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399335593952" ignored="false" />
+    <file path="/javadoc.jsp" changelist="074b9915-dbaa-4d9a-9abf-c6845a54b763" time="1399334813149" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,19 +223,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="graph.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="77" selection-start="607" selection-end="607" vertical-scroll-proportion="0.321513">
+            <state line="43" column="0" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/template.jsp">
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="16" selection-start="1683" selection-end="1684" vertical-scroll-proportion="-12.923077">
+            <state line="57" column="44" selection-start="2073" selection-end="2089" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerConIKDatabaseHandler.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/javadoc/sk/BusinessLogic/PerConIKDatabaseHandler.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="540" column="21" selection-start="23802" selection-end="23802" vertical-scroll-proportion="1.3130841">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="63" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation3.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/visualisation3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="34" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -277,22 +294,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/entities/ProjectsEntity.java" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/entities/UsersEntity.java" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/entities/UserActivitiesEntity.java" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java" />
-        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/GetDevelepersServlet.java" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java" />
-        <option value="$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java" />
         <option value="$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java" />
         <option value="$PROJECT_DIR$/src/sk/Servlets/VisualisationServlet.java" />
         <option value="$PROJECT_DIR$/web/template.jsp" />
+        <option value="$PROJECT_DIR$/src/sk/Servlets/javadocServlet.java" />
+        <option value="$PROJECT_DIR$/web/javadoc.jsp" />
+        <option value="$PROJECT_DIR$/src/sk/Servlets/JavadocServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/visualisation.jsp" />
+        <option value="$PROJECT_DIR$/src/sk/BackEnd/DatabaseHandlers.java" />
+        <option value="$PROJECT_DIR$/web/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/web/js/pageHandling.js" />
+        <option value="$PROJECT_DIR$/web/js/graph.js" />
+        <option value="$PROJECT_DIR$/web/js/visualisation3.js" />
+        <option value="$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java" />
+        <option value="$PROJECT_DIR$/web/javadoc/sk/BusinessLogic/PerConIKDatabaseHandler.html" />
       </list>
     </option>
   </component>
@@ -382,6 +399,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -424,15 +442,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sk" />
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Servlets" />
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -451,6 +519,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BusinessLogic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeMaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackEnd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,20 +596,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="276" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="293" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="296" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="296" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="301" />
@@ -513,8 +624,8 @@
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -532,6 +643,7 @@
       <recent name="sk.AjaxRequestServlet" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pipo\IdeaProjects\CodeMaster\web" />
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web" />
       <recent name="C:\Users\pipo\IdeaProjects\ChangeLogVisualisation\web\js" />
     </key>
@@ -574,19 +686,6 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -613,6 +712,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -904,7 +1016,6 @@
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27282852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -914,7 +1025,7 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21269488" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21269488" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2037862" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -922,16 +1033,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10356347" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437567" sideWeight="0.7271715" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2470651" sideWeight="0.7271715" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" x="1458" y="-220" width="1736" height="856" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14354323" sideWeight="0.7873051" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17395945" sideWeight="0.7873051" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" x="1458" y="-220" width="1736" height="856" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.87193763" order="2" side_tool="false" content_ui="combo" />
       <window_info id="soapUI Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27282852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23051225" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="soapUI Navigator" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.518931" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -984,7 +1096,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="before KEYBOARD_STATES changed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1015,6 +1127,7 @@
     <MESSAGE value="after massive refractor" />
     <MESSAGE value="final state" />
     <MESSAGE value="adding JavaDoc" />
+    <MESSAGE value="before KEYBOARD_STATES changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1026,77 +1139,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/entities/ProjectsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="64" selection-end="193" vertical-scroll-proportion="0.16267942">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/JsonConverter/PathTreeCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="38" selection-start="1723" selection-end="1723" vertical-scroll-proportion="0.94577354" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/DatabaseHandlers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="31" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/AppServletContextListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="52" selection-start="294" selection-end="294" vertical-scroll-proportion="0.27113238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/GetAllChangesetsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="33" selection-start="616" selection-end="616" vertical-scroll-proportion="0.4338118">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/PerConIKDatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="7" selection-start="8544" selection-end="8544" vertical-scroll-proportion="0.50162864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Resources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="402" selection-end="402" vertical-scroll-proportion="0.2982456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/GetDevelepersServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="309" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="327" selection-end="327" vertical-scroll-proportion="0.24401914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/GetProjectTreeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="283" selection-end="363" vertical-scroll-proportion="0.10845295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sk/Servlets/UsersCodeActivitiesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="1" selection-start="943" selection-end="943" vertical-scroll-proportion="0.6507177">
@@ -1111,32 +1153,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/sk/Servlets/IndexServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="45" selection-start="1561" selection-end="1584" vertical-scroll-proportion="0.51943463">
-          <folding />
-        </state>
+        <state line="18" column="22" selection-start="521" selection-end="601" vertical-scroll-proportion="0.0" />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/template.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="16" selection-start="1683" selection-end="1684" vertical-scroll-proportion="-12.923077">
+        <state line="66" column="54" selection-start="2038" selection-end="2038" vertical-scroll-proportion="-25.72">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="77" selection-start="607" selection-end="607" vertical-scroll-proportion="0.321513">
+        <state line="11" column="27" selection-start="475" selection-end="475" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="44" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/template.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.25650117">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/PerConIKDatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="13" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/visualisation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="63" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="20" selection-start="3640" selection-end="3640" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/pageHandling.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/visualisation3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sk/BackEnd/DatabaseHandlers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.81352836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sk/BusinessLogic/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="44" selection-start="2073" selection-end="2089" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/javadoc/sk/BusinessLogic/PerConIKDatabaseHandler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="540" column="21" selection-start="23802" selection-end="23802" vertical-scroll-proportion="1.3130841">
           <folding />
         </state>
       </provider>
@@ -1196,7 +1313,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ChangeLogVisualisation</last-edited>
+          <last-edited>CodeMaster</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
