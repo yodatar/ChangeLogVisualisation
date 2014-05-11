@@ -1,8 +1,9 @@
 package sk.BusinessLogic;
 
 import com.gratex.perconik.astrcs.iactivitysvc.ActivityDto;
-import com.gratex.perconik.astrcs.iactivitysvc.EventDto;
-import com.gratex.perconik.astrcs.iactivitysvc.IdeCodeOperationDto;
+import com.gratex.perconik.astrcs.iactivitysvc.KeyboardGraphDto;
+import com.gratex.perconik.astrcs.iactivitysvc.KeyboardStateDto;
+import com.gratex.perconik.astrcs.iactivitysvc.StateDto;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.ChangesetDto;
 import org.datacontract.schemas._2004._07.gratex_perconik_astrcs_svc.FileVersionDto;
 import org.json.simple.JSONArray;
@@ -54,18 +55,18 @@ public class Controller {
 	 */
 	public JSONObject getUsersCodeActivities(String user) {
 
-		final int pieces = 100;
-		String eventName = "IdeCodeOperation";
+		final int PIECES = 100;
+		String eventName = "IdeEvent";
 
 		XMLGregorianCalendar calendarFrom = Resources.getInstance().getChangesetFrom().getTimeStamp();
 		XMLGregorianCalendar calendarTo = Resources.getInstance().getChangesetTo().getTimeStamp();
 
 		long timeFrom = calendarFrom.toGregorianCalendar().getTime().getTime();
 		long timeTo = calendarTo.toGregorianCalendar().getTime().getTime();
-		final long interval = (timeTo - timeFrom) / (pieces - 1);
-		Integer[] intervals = new Integer[pieces];
-		Date[] dateList = new Date[pieces];
-		for (int i = 0; i < pieces; i++) {
+		final long interval = (timeTo - timeFrom) / (PIECES - 1);
+		Integer[] intervals = new Integer[PIECES];
+		Date[] dateList = new Date[PIECES];
+		for (int i = 0; i < PIECES; i++) {
 			dateList[i] = new Date(timeFrom + i * interval);
 			intervals[i] = 0;
 		}
@@ -73,31 +74,46 @@ public class Controller {
 		List<ActivityDto> activityDtoList = databaseHandlers.getActivities(user, calendarFrom, calendarTo, eventName);
 
 		for (ActivityDto activityDto : activityDtoList) {
-			for (EventDto eventDto : activityDto.getEvents().getOneNoteNavigateDtoOrOneNoteViewChangeDtoOrLyncStatusChangeDto()) {
-				if (IdeCodeOperationDto.class.isInstance(eventDto)) {
 
-					IdeCodeOperationDto dto = (IdeCodeOperationDto) eventDto;
-					try {
-						if (!dto.getCode().equals("null")) {
+			long delay = activityDto.getStartTime().toGregorianCalendar().getTime().getTime() - timeFrom;
 
-							if (dto.getDocument().getPathType().value().equals("SHORT_NAME") ||
-									dto.getDocument().getPathType().value().equals("RELATIVE_LOCAL") ||
-									dto.getDocument().getPath().contains(Resources.getInstance().getProjectDto().getName())) {
-								long delay = dto.getTime().toGregorianCalendar().getTime().getTime() - timeFrom;
-								try {
-									intervals[(int) (delay / interval)] += dto.getCode().length();
-								} catch (ArrayIndexOutOfBoundsException exception) {
-									intervals[0] += 0;
-								}
+			for (StateDto stateDto : activityDto.getStates().getKeyboardStateDtoOrMouseStateDtoOrRunningApplicationsListDto()) {
+				if (KeyboardStateDto.class.isInstance(stateDto)) {
+					KeyboardStateDto keyboardStateDto = (KeyboardStateDto) stateDto;
+
+					if (!keyboardStateDto.getDeserializedBlob().getGraphs().equals("null")) {
+						for (KeyboardGraphDto keyboardGraphDto : keyboardStateDto.getDeserializedBlob().getGraphs().getKeyboardGraphDto()) {
+							try {
+								intervals[(int) (delay / interval)] += 1;
+							} catch (ArrayIndexOutOfBoundsException exception) {
+								exception.getMessage();
 							}
-
 						}
-					} catch (java.lang.NullPointerException e) {
-						e.getMessage();
+					}
+
+					if (!keyboardStateDto.getDeserializedBlob().getDiGraphs().equals("null")) {
+						for (KeyboardGraphDto keyboardGraphDto : keyboardStateDto.getDeserializedBlob().getDiGraphs().getKeyboardGraphDto()) {
+							try {
+								intervals[(int) (delay / interval)] += 2;
+							} catch (ArrayIndexOutOfBoundsException exception) {
+								exception.getMessage();
+							}
+						}
+					}
+
+					if (!keyboardStateDto.getDeserializedBlob().getTriGraphs().equals("null")) {
+						for (KeyboardGraphDto keyboardGraphDto : keyboardStateDto.getDeserializedBlob().getTriGraphs().getKeyboardGraphDto()) {
+							try {
+								intervals[(int) (delay / interval)] += 3;
+							} catch (ArrayIndexOutOfBoundsException exception) {
+								exception.getMessage();
+							}
+						}
 					}
 				}
 			}
 		}
+
 
 		for (UserActivitiesEntity userActivitiesEntity : Resources.getInstance().getListUsersActivities()) {
 			if (userActivitiesEntity.getName().equals(user)) {
@@ -106,7 +122,7 @@ public class Controller {
 		}
 
 		JSONObject jsonObject = transformToJson.usersCodeActivityToJson(
-				Resources.getInstance().getListUsers(), Resources.getInstance().getListUsersActivities(), dateList, pieces);
+				Resources.getInstance().getListUsers(), Resources.getInstance().getListUsersActivities(), dateList, PIECES);
 
 		return jsonObject;
 	}
@@ -144,6 +160,9 @@ public class Controller {
 	 * @see DatabaseHandlers
 	 */
 	public JSONObject getProjectTree() {
+		DatabaseHandlers databaseHandlers = new PerConIKDatabaseHandler();
+		TransformToJson transformToJson = new TransformToJson();
+
 		List<FileVersionDto> listFileVersionDto = databaseHandlers.searchFiles(Resources.getInstance().getChangesetToId());
 		List<FileVersionExtendedDto> changedFilesList = databaseHandlers
 				.getChangedFiles(Resources.getInstance().getChangesetFromId(), Resources.getInstance().getChangesetToId(),

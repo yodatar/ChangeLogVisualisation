@@ -27,11 +27,17 @@
 		</h3>
 		Thesis analysis software development visualization and explores existing solutions.
 		Searching for couplings between code fragments and metadata collected during software development thanks to tool
-		developed in the PerConIK project.
+		developed in the <a href="http://perconik.fiit.stuba.sk/">PerConIK project</a>.
 		Special attention is paid to the relationship between developer and modification of the source code fragment,
 		he/she has done.
 		In implementation can be seen visualized data from PerConIKs databases.</p>
 
 		<p><a class="btn btn-lg btn-primary" href="/visualisation/vis" role="button">Visualisation</a></p>
+
 	</div>
+
+	<div class="alert alert-info">Please, use <strong>Google Chrome</strong> or <strong>Opera</strong> to display
+		website properly.
+	</div>
+
 </div>

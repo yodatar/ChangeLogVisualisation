@@ -30,7 +30,7 @@
 	<script src="js/visualisation3.js"></script>
 	<script src="js/graph.js"></script>
 	<script src="js/legend.js"></script>
-
+	<script src="js/d3-tip.js"></script>
 	<script src="js/pageHandling.js"></script>
 
 

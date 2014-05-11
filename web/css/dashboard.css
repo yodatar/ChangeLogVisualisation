@@ -154,6 +154,10 @@ g.context rect.background {
     fill: #68a3d4;
 }
 
+.bars rect:hover {
+    fill: #5479a3;
+}
+
 .axis path, .axis line {
     fill: none;
     stroke: #aaa;
@@ -206,4 +210,14 @@ g.tick {
 
 .col-md-offset-2 {
     margin-left: 225px;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    z-index: 3000;
 }

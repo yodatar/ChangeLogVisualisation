@@ -121,8 +121,18 @@ function Chart(options) {
 	var xS = xScale;
 	var yS = yScale;
 
+	var tip = d3.tip()
+		.attr('class', 'd3-tip')
+		.offset([-5, 0])
+		.html(function (d) {
+			return "characters: " +
+				"<span style='color:#3276b1'>" + d[ids] + "</span>";
+		});
+
 	var chartContainer = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + (margin.top + (height * id) + (3 * id)) + ")");
+
+	svg.call(tip);
 
 	var bars = chartContainer.append('g')
 		.attr('class', 'bars');
@@ -145,7 +155,10 @@ function Chart(options) {
 				return 2;
 			return height - yS(d[ids]);
 		})
+		.on('mouseover', tip.show)
+		.on('mouseout', tip.hide)
 		.append('g');
+
 
 	var xAxisTop = d3.svg.axis().scale(xScale).orient("bottom");
 	var xAxisBottom = d3.svg.axis().scale(xScale).orient("top");
@@ -232,8 +245,8 @@ function Chart(options) {
 		});
 
 
-	svg.transition().attr("width", 230).duration(1000);
-	d3.select("#chart-container").transition().attr("width", 230).duration(1000);
+	svg.attr("width", 230);
+	d3.select("#chart-container").attr("width", 230);
 }
 
 function userSelection(d) {

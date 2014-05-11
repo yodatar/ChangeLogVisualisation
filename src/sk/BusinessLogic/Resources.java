@@ -15,7 +15,7 @@ import java.util.List;
  * Time: 21:15
  */
 
-
+@SessionScoped
 public class Resources {
 	private static Resources _instance;
 
